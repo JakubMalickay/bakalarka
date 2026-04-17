@@ -1,0 +1,3174 @@
+{
+  "questions_file": "analysis_questions.template.json",
+  "workflows": [
+    "classic",
+    "vector",
+    "vector_hierarchical"
+  ],
+  "per_question": [
+    {
+      "question_id": "q01",
+      "workflow": "classic",
+      "question": "What is the total internet sales amount?",
+      "tp": 1,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "task_success": 1,
+      "predicted": [
+        "[Customer Geography].[Country]",
+        "[Measures].[Internet Sales Amount]",
+        "[Product].[Category]",
+        "[Ship Date].[Calendar Year]"
+      ],
+      "gold": [
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "actual_value": 293586772207.0,
+      "gold_value": 293586772207.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 26.972422300139442,
+        "metadata_selection_measures_seconds": 5.927420299965888,
+        "metadata_selection_total_seconds": 32.89984260010533,
+        "mdx_generation_seconds": 6.541590000037104,
+        "mdx_execution_seconds": 0.2597974999807775,
+        "mdx_repair_generation_seconds": 3.500755799934268,
+        "mdx_repair_execution_seconds": 0.19563860003836453,
+        "final_answer_generation_seconds": 3.168145899893716,
+        "total_time_seconds": 46.57465610001236
+      },
+      "error": null
+    },
+    {
+      "question_id": "q01",
+      "workflow": "vector",
+      "question": "What is the total internet sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "actual_value": 293586772207.0,
+      "gold_value": 293586772207.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.5076972001697868,
+        "metadata_selection_total_seconds": 5.472681100014597,
+        "mdx_generation_seconds": 2.770901900017634,
+        "mdx_execution_seconds": 0.163690899964422,
+        "final_answer_generation_seconds": 3.2374164999928325,
+        "total_time_seconds": 26.79636049992405
+      },
+      "error": null
+    },
+    {
+      "question_id": "q01",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total internet sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "actual_value": 293586772207.0,
+      "gold_value": 293586772207.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.18250079988501966,
+        "vector_retrieval_children_seconds": 0.14815899985842407,
+        "vector_retrieval_measures_seconds": 0.14753030007705092,
+        "vector_retrieval_seconds": 0.47819009982049465,
+        "metadata_selection_total_seconds": 9.39513949980028,
+        "mdx_generation_seconds": 2.690654299920425,
+        "mdx_execution_seconds": 0.18088079988956451,
+        "final_answer_generation_seconds": 3.1363004001323134,
+        "total_time_seconds": 15.881776600144804
+      },
+      "error": null
+    },
+    {
+      "question_id": "q02",
+      "workflow": "classic",
+      "question": "What is the total reseller sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "actual_value": 804505969823.0,
+      "gold_value": 804505969823.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 10.700329799903557,
+        "metadata_selection_measures_seconds": 5.970329799922183,
+        "metadata_selection_total_seconds": 16.67065959982574,
+        "mdx_generation_seconds": 2.7067299000918865,
+        "mdx_execution_seconds": 0.1597044998779893,
+        "final_answer_generation_seconds": 3.353620999958366,
+        "total_time_seconds": 22.891154600074515
+      },
+      "error": null
+    },
+    {
+      "question_id": "q02",
+      "workflow": "vector",
+      "question": "What is the total reseller sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "actual_value": 804505969823.0,
+      "gold_value": 804505969823.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.1335560001898557,
+        "metadata_selection_total_seconds": 4.479050299851224,
+        "mdx_generation_seconds": 2.775001199916005,
+        "mdx_execution_seconds": 0.16318359994329512,
+        "final_answer_generation_seconds": 3.280621499987319,
+        "total_time_seconds": 10.831871700007468
+      },
+      "error": null
+    },
+    {
+      "question_id": "q02",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total reseller sales amount?",
+      "tp": 1,
+      "fp": 10,
+      "fn": 0,
+      "precision": 0.09090909090909091,
+      "recall": 1.0,
+      "f1": 0.16666666666666669,
+      "task_success": 1,
+      "predicted": [
+        "[Customer].[Customer PO Number]",
+        "[Measures].[Reseller Sales Amount]",
+        "[Reseller].[Number of Employees]",
+        "[Reseller].[Reseller Order Frequency]",
+        "[Reseller].[Reseller Order Frequency].[Reseller]",
+        "[Reseller].[Reseller Type]",
+        "[Reseller].[Reseller Type].[Business Type]",
+        "[Sales Channel].[Sales Channel]",
+        "[Sales Channel].[Sales Channel].[Sales Channel]",
+        "[Sales Territory].[Group]",
+        "[Sales Territory].[Group].[Region]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "actual_value": 804505969823.0,
+      "gold_value": 804505969823.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.16114150010980666,
+        "vector_retrieval_children_seconds": 0.13334889989346266,
+        "vector_retrieval_measures_seconds": 0.14658440020866692,
+        "vector_retrieval_seconds": 0.44107480021193624,
+        "metadata_selection_total_seconds": 19.1014598000329,
+        "mdx_generation_seconds": 2.9965093000791967,
+        "mdx_execution_seconds": 0.17702750000171363,
+        "final_answer_generation_seconds": 3.3354269999545068,
+        "total_time_seconds": 26.05234339996241
+      },
+      "error": null
+    },
+    {
+      "question_id": "q03",
+      "workflow": "classic",
+      "question": "What is the total sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Sales Amount]"
+      ],
+      "actual_value": 109809274.20300001,
+      "gold_value": 109809274.20300001,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 13.57090920000337,
+        "metadata_selection_measures_seconds": 5.876594200031832,
+        "metadata_selection_total_seconds": 19.447503400035203,
+        "mdx_generation_seconds": 2.608830099925399,
+        "mdx_execution_seconds": 0.16110570007003844,
+        "final_answer_generation_seconds": 2.9420045998413116,
+        "total_time_seconds": 25.159905100008473
+      },
+      "error": null
+    },
+    {
+      "question_id": "q03",
+      "workflow": "vector",
+      "question": "What is the total sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Sales Amount]"
+      ],
+      "actual_value": 109809274.20300001,
+      "gold_value": 109809274.20300001,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.12151880003511906,
+        "metadata_selection_total_seconds": 5.023401000071317,
+        "mdx_generation_seconds": 2.534108699997887,
+        "mdx_execution_seconds": 0.16300960001535714,
+        "final_answer_generation_seconds": 2.9282543999142945,
+        "total_time_seconds": 10.770635399967432
+      },
+      "error": null
+    },
+    {
+      "question_id": "q03",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total sales amount?",
+      "tp": 1,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.125,
+      "recall": 1.0,
+      "f1": 0.2222222222222222,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Sales Amount]",
+        "[Sales Summary].[Country]",
+        "[Sales Summary].[Region]",
+        "[Sales Summary].[Sales Amount Quota]",
+        "[Sales Summary].[Sales Orders].[Order Line]",
+        "[Sales Summary].[Sales Orders].[Order Number]",
+        "[Sales Summary].[Sales Reason Type]",
+        "[Sales Summary].[Sales Territory Group]"
+      ],
+      "gold": [
+        "[Measures].[Sales Amount]"
+      ],
+      "actual_value": null,
+      "gold_value": 109809274.20300001,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.11856810003519058,
+        "vector_retrieval_children_seconds": 0.1104523001704365,
+        "vector_retrieval_measures_seconds": 0.11587930005043745,
+        "vector_retrieval_seconds": 0.34489970025606453,
+        "metadata_selection_total_seconds": 20.38926719990559,
+        "mdx_generation_seconds": 7.97202520002611,
+        "mdx_execution_seconds": 1.13524470012635,
+        "mdx_repair_generation_seconds": 3.5721263999585062,
+        "mdx_repair_execution_seconds": 0.48097500018775463,
+        "total_time_seconds": 33.89624370005913
+      },
+      "error": null
+    },
+    {
+      "question_id": "q04",
+      "workflow": "classic",
+      "question": "How many internet orders are there in total?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Order Count]"
+      ],
+      "gold": [
+        "[Measures].[Internet Order Count]"
+      ],
+      "actual_value": 27659.0,
+      "gold_value": 27659.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 9.25537159992382,
+        "metadata_selection_measures_seconds": 5.8457432999275625,
+        "metadata_selection_total_seconds": 15.101114899851382,
+        "mdx_generation_seconds": 3.6593154000584036,
+        "mdx_execution_seconds": 0.5209204000420868,
+        "mdx_repair_generation_seconds": 2.781354100210592,
+        "mdx_repair_execution_seconds": 0.1561605001334101,
+        "final_answer_generation_seconds": 2.3660953000653535,
+        "total_time_seconds": 24.58591979998164
+      },
+      "error": null
+    },
+    {
+      "question_id": "q04",
+      "workflow": "vector",
+      "question": "How many internet orders are there in total?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Order Count]"
+      ],
+      "gold": [
+        "[Measures].[Internet Order Count]"
+      ],
+      "actual_value": 27659.0,
+      "gold_value": 27659.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.1787044000811875,
+        "metadata_selection_total_seconds": 5.216119199991226,
+        "mdx_generation_seconds": 2.644570699892938,
+        "mdx_execution_seconds": 0.1663851998746395,
+        "final_answer_generation_seconds": 2.5088949999772012,
+        "total_time_seconds": 10.715058699948713
+      },
+      "error": null
+    },
+    {
+      "question_id": "q04",
+      "workflow": "vector_hierarchical",
+      "question": "How many internet orders are there in total?",
+      "tp": 0,
+      "fp": 6,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Customer Geography].[Country]",
+        "[Date].[Calendar Year]",
+        "[Measures].[Internet Sales Amount]",
+        "[Product].[Product Line]",
+        "[Reseller Sales Order Details].[Sales Summary Order].[Order Number]",
+        "[Reseller Sales Order Details].[Sales Summary Order].[Sales Order]"
+      ],
+      "gold": [
+        "[Measures].[Internet Order Count]"
+      ],
+      "actual_value": null,
+      "gold_value": 27659.0,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.18552699987776577,
+        "vector_retrieval_children_seconds": 0.16720349993556738,
+        "vector_retrieval_measures_seconds": 0.1759941999334842,
+        "vector_retrieval_seconds": 0.5287246997468174,
+        "metadata_selection_total_seconds": 18.282714999979362,
+        "mdx_generation_seconds": 9.746725999983028,
+        "mdx_execution_seconds": 0.4682499999180436,
+        "mdx_repair_generation_seconds": 6.236298199975863,
+        "mdx_repair_execution_seconds": 0.16135280020534992,
+        "total_time_seconds": 35.42622489994392
+      },
+      "error": null
+    },
+    {
+      "question_id": "q05",
+      "workflow": "classic",
+      "question": "How many reseller orders are there in total?",
+      "tp": 1,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Order Count]",
+        "[Measures].[Total Orders]",
+        "[Resellers].[Resellers]",
+        "[Ship Date].[Date]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Order Count]"
+      ],
+      "actual_value": 3796.0,
+      "gold_value": 3796.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 16.98174800002016,
+        "metadata_selection_measures_seconds": 6.030384500045329,
+        "metadata_selection_total_seconds": 23.01213250006549,
+        "mdx_generation_seconds": 4.64532639994286,
+        "mdx_execution_seconds": 0.6704723001457751,
+        "mdx_repair_generation_seconds": 2.821398900123313,
+        "mdx_repair_execution_seconds": 0.14713429985567927,
+        "final_answer_generation_seconds": 2.368084500078112,
+        "total_time_seconds": 33.66559870005585
+      },
+      "error": null
+    },
+    {
+      "question_id": "q05",
+      "workflow": "vector",
+      "question": "How many reseller orders are there in total?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Order Count]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Order Count]"
+      ],
+      "actual_value": 3796.0,
+      "gold_value": 3796.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.15485399984754622,
+        "metadata_selection_total_seconds": 5.333130699815229,
+        "mdx_generation_seconds": 2.82486809999682,
+        "mdx_execution_seconds": 0.16124519985169172,
+        "final_answer_generation_seconds": 2.3837975000496954,
+        "total_time_seconds": 10.858316200086847
+      },
+      "error": null
+    },
+    {
+      "question_id": "q05",
+      "workflow": "vector_hierarchical",
+      "question": "How many reseller orders are there in total?",
+      "tp": 1,
+      "fp": 10,
+      "fn": 0,
+      "precision": 0.09090909090909091,
+      "recall": 1.0,
+      "f1": 0.16666666666666669,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Channel Revenue Status]",
+        "[Measures].[Reseller Average Sales Amount]",
+        "[Measures].[Reseller Order Count]",
+        "[Measures].[Reseller Order Quantity]",
+        "[Measures].[Reseller Ratio to All Products]",
+        "[Measures].[Reseller Sales Amount]",
+        "[Measures].[Reseller Tax Amount]",
+        "[Measures].[Reseller Transaction Count]",
+        "[Measures].[Reseller Unit Price]",
+        "[Measures].[___Channel Revenue Goal]",
+        "[Reseller].[Number of Employees]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Order Count]"
+      ],
+      "actual_value": 3796.0,
+      "gold_value": 3796.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.15025549987331033,
+        "vector_retrieval_children_seconds": 0.14847390004433692,
+        "vector_retrieval_measures_seconds": 0.15036289999261498,
+        "vector_retrieval_seconds": 0.4490922999102622,
+        "metadata_selection_total_seconds": 18.538624699926004,
+        "mdx_generation_seconds": 2.901379300048575,
+        "mdx_execution_seconds": 0.1576286000199616,
+        "final_answer_generation_seconds": 2.3510749000124633,
+        "total_time_seconds": 24.39843659987673
+      },
+      "error": null
+    },
+    {
+      "question_id": "q06",
+      "workflow": "classic",
+      "question": "What is the total order count?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Order Count]",
+        "[Order Date].[Calendar Year]",
+        "[Ship Date].[Calendar Year]"
+      ],
+      "gold": [
+        "[Measures].[Order Count]"
+      ],
+      "actual_value": 31455.0,
+      "gold_value": 31455.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 15.585953200003132,
+        "metadata_selection_measures_seconds": 5.7907120999880135,
+        "metadata_selection_total_seconds": 21.376665299991146,
+        "mdx_generation_seconds": 5.223533599870279,
+        "mdx_execution_seconds": 0.6527513999026269,
+        "mdx_repair_generation_seconds": 3.22788740019314,
+        "mdx_repair_execution_seconds": 0.16407969989813864,
+        "final_answer_generation_seconds": 2.340386399999261,
+        "total_time_seconds": 32.98629709985107
+      },
+      "error": null
+    },
+    {
+      "question_id": "q06",
+      "workflow": "vector",
+      "question": "What is the total order count?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Order Count]"
+      ],
+      "gold": [
+        "[Measures].[Order Count]"
+      ],
+      "actual_value": 31455.0,
+      "gold_value": 31455.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.11399869993329048,
+        "metadata_selection_total_seconds": 6.112505600089207,
+        "mdx_generation_seconds": 2.5796733999159187,
+        "mdx_execution_seconds": 0.1796352998353541,
+        "final_answer_generation_seconds": 2.299049499910325,
+        "total_time_seconds": 11.285252699861303
+      },
+      "error": null
+    },
+    {
+      "question_id": "q06",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total order count?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Order Count]",
+        "[Sales Summary].[Internet Sales Order]"
+      ],
+      "gold": [
+        "[Measures].[Order Count]"
+      ],
+      "actual_value": 31455.0,
+      "gold_value": 31455.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.1139369998127222,
+        "vector_retrieval_children_seconds": 0.11684349994175136,
+        "vector_retrieval_measures_seconds": 0.11482100002467632,
+        "vector_retrieval_seconds": 0.3456014997791499,
+        "metadata_selection_total_seconds": 11.95401220000349,
+        "mdx_generation_seconds": 3.7069973999168724,
+        "mdx_execution_seconds": 0.17026529996655881,
+        "mdx_repair_generation_seconds": 2.7451357999816537,
+        "mdx_repair_execution_seconds": 0.162919299909845,
+        "final_answer_generation_seconds": 2.4958700998686254,
+        "total_time_seconds": 21.581773499958217
+      },
+      "error": null
+    },
+    {
+      "question_id": "q07",
+      "workflow": "classic",
+      "question": "What is the customer count?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 0,
+      "predicted": [
+        "[Customer].[Customer Geography].[Country]",
+        "[Measures].[Customer Count]"
+      ],
+      "gold": [
+        "[Measures].[Customer Count]"
+      ],
+      "actual_value": 3591.0,
+      "gold_value": 18484.0,
+      "values_match": false,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 11.243110499810427,
+        "metadata_selection_measures_seconds": 5.770781500032172,
+        "metadata_selection_total_seconds": 17.0138919998426,
+        "mdx_generation_seconds": 3.5292701001744717,
+        "mdx_execution_seconds": 0.2384029000531882,
+        "final_answer_generation_seconds": 2.1626234999857843,
+        "total_time_seconds": 22.944524200167507
+      },
+      "error": null
+    },
+    {
+      "question_id": "q07",
+      "workflow": "vector",
+      "question": "What is the customer count?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Customer Count]"
+      ],
+      "gold": [
+        "[Measures].[Customer Count]"
+      ],
+      "actual_value": 18484.0,
+      "gold_value": 18484.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.12142169987782836,
+        "metadata_selection_total_seconds": 4.153204999864101,
+        "mdx_generation_seconds": 2.62324250000529,
+        "mdx_execution_seconds": 0.16971260006539524,
+        "final_answer_generation_seconds": 2.2323435000143945,
+        "total_time_seconds": 9.300281399860978
+      },
+      "error": null
+    },
+    {
+      "question_id": "q07",
+      "workflow": "vector_hierarchical",
+      "question": "What is the customer count?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "task_success": 1,
+      "predicted": [
+        "[Internet Customers].[Customer Geography]",
+        "[Internet Customers].[Customer Geography].[Country]",
+        "[Measures].[Customer Count]"
+      ],
+      "gold": [
+        "[Measures].[Customer Count]"
+      ],
+      "actual_value": 18484.0,
+      "gold_value": 18484.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.11583320004865527,
+        "vector_retrieval_children_seconds": 0.11165470001287758,
+        "vector_retrieval_measures_seconds": 0.11199710005894303,
+        "vector_retrieval_seconds": 0.3394850001204759,
+        "metadata_selection_total_seconds": 11.03090830007568,
+        "mdx_generation_seconds": 2.6654090001247823,
+        "mdx_execution_seconds": 0.160336600150913,
+        "final_answer_generation_seconds": 2.2454232000745833,
+        "total_time_seconds": 16.44220900000073
+      },
+      "error": null
+    },
+    {
+      "question_id": "q08",
+      "workflow": "classic",
+      "question": "What is the total transaction count?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "task_success": 1,
+      "predicted": [
+        "[Date].[Date Key].[Date Key]",
+        "[Measures].[Transaction Count]",
+        "[Transaction].[Transaction Key].[Transaction Key]"
+      ],
+      "gold": [
+        "[Measures].[Transaction Count]"
+      ],
+      "actual_value": 121253.0,
+      "gold_value": 121253.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 11.13524890015833,
+        "metadata_selection_measures_seconds": 5.807785399956629,
+        "metadata_selection_total_seconds": 16.94303430011496,
+        "mdx_generation_seconds": 2.5869485998991877,
+        "mdx_execution_seconds": 0.15843060007318854,
+        "final_answer_generation_seconds": 2.394683899823576,
+        "total_time_seconds": 22.083518099971116
+      },
+      "error": null
+    },
+    {
+      "question_id": "q08",
+      "workflow": "vector",
+      "question": "What is the total transaction count?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Transaction Count]"
+      ],
+      "gold": [
+        "[Measures].[Transaction Count]"
+      ],
+      "actual_value": 121253.0,
+      "gold_value": 121253.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.12018570001237094,
+        "metadata_selection_total_seconds": 5.0309518000576645,
+        "mdx_generation_seconds": 2.6179686000104994,
+        "mdx_execution_seconds": 0.16490649990737438,
+        "final_answer_generation_seconds": 2.431058800080791,
+        "total_time_seconds": 10.365412099985406
+      },
+      "error": null
+    },
+    {
+      "question_id": "q08",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total transaction count?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Transaction Count]"
+      ],
+      "gold": [
+        "[Measures].[Transaction Count]"
+      ],
+      "actual_value": 121253.0,
+      "gold_value": 121253.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.11315890005789697,
+        "vector_retrieval_children_seconds": 0.11191279999911785,
+        "vector_retrieval_measures_seconds": 0.11384450015611947,
+        "vector_retrieval_seconds": 0.3389162002131343,
+        "metadata_selection_total_seconds": 10.71030979999341,
+        "mdx_generation_seconds": 2.6559871998615563,
+        "mdx_execution_seconds": 0.20679680001921952,
+        "final_answer_generation_seconds": 2.368082799948752,
+        "total_time_seconds": 16.280803799862042
+      },
+      "error": null
+    },
+    {
+      "question_id": "q09",
+      "workflow": "classic",
+      "question": "What is the total internet tax amount?",
+      "tp": 1,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "task_success": 1,
+      "predicted": [
+        "[Internet Order].[Internet Order Key].[Internet Order Key]",
+        "[Measures].[Internet Tax Amount]",
+        "[Measures].[Tax Amount]",
+        "[Tax Amount].[Amount].[Amount]"
+      ],
+      "gold": [
+        "[Measures].[Internet Tax Amount]"
+      ],
+      "actual_value": 23486942301.0,
+      "gold_value": 23486942301.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 17.03774009994231,
+        "metadata_selection_measures_seconds": 5.88575329980813,
+        "metadata_selection_total_seconds": 22.92349339975044,
+        "mdx_generation_seconds": 4.384366300189868,
+        "mdx_execution_seconds": 0.7743710000067949,
+        "mdx_repair_generation_seconds": 3.3230322001036257,
+        "mdx_repair_execution_seconds": 0.5630870999302715,
+        "final_answer_generation_seconds": 3.1798702001105994,
+        "total_time_seconds": 35.149219600018114
+      },
+      "error": null
+    },
+    {
+      "question_id": "q09",
+      "workflow": "vector",
+      "question": "What is the total internet tax amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Tax Amount]"
+      ],
+      "gold": [
+        "[Measures].[Internet Tax Amount]"
+      ],
+      "actual_value": 23486942301.0,
+      "gold_value": 23486942301.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.13724910002201796,
+        "metadata_selection_total_seconds": 4.292662999825552,
+        "mdx_generation_seconds": 2.760165899991989,
+        "mdx_execution_seconds": 0.18937599984928966,
+        "final_answer_generation_seconds": 3.433231000090018,
+        "total_time_seconds": 10.813102999934927
+      },
+      "error": null
+    },
+    {
+      "question_id": "q09",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total internet tax amount?",
+      "tp": 0,
+      "fp": 17,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Internet Sales].[Customer]",
+        "[Internet Sales].[Date]",
+        "[Internet Sales].[Due Date]",
+        "[Internet Sales].[Employee]",
+        "[Internet Sales].[Order Quantity]",
+        "[Internet Sales].[Product]",
+        "[Internet Sales].[Promotion]",
+        "[Internet Sales].[Sales Order Detail]",
+        "[Internet Sales].[Sales Order Detail].[Customer Key]",
+        "[Internet Sales].[Sales Order Detail].[Employee Key]",
+        "[Internet Sales].[Sales Order Detail].[Order Quantity]",
+        "[Internet Sales].[Sales Order Detail].[Product Key]",
+        "[Internet Sales].[Sales Order Detail].[Promotion Key]",
+        "[Internet Sales].[Sales Order Detail].[Sales Order ID]",
+        "[Internet Sales].[Sales Order]",
+        "[Internet Sales].[Ship Date]",
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Internet Tax Amount]"
+      ],
+      "actual_value": 293586772207.0,
+      "gold_value": 23486942301.0,
+      "values_match": false,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.135281499940902,
+        "vector_retrieval_children_seconds": 0.13444680022075772,
+        "vector_retrieval_measures_seconds": 0.12918399996124208,
+        "vector_retrieval_seconds": 0.3989123001229018,
+        "metadata_selection_total_seconds": 30.178932999959216,
+        "mdx_generation_seconds": 2.98131259996444,
+        "mdx_execution_seconds": 0.16630240017548203,
+        "final_answer_generation_seconds": 3.322315099881962,
+        "total_time_seconds": 37.04856010014191
+      },
+      "error": null
+    },
+    {
+      "question_id": "q10",
+      "workflow": "classic",
+      "question": "What is the total reseller tax amount?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Tax Amount]",
+        "[Reseller].[Reseller Key]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Tax Amount]"
+      ],
+      "actual_value": 64360476066.0,
+      "gold_value": 64360476066.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 11.698620500043035,
+        "metadata_selection_measures_seconds": 5.923325000097975,
+        "metadata_selection_total_seconds": 17.62194550014101,
+        "mdx_generation_seconds": 2.7770925001241267,
+        "mdx_execution_seconds": 0.15762809989973903,
+        "final_answer_generation_seconds": 3.3421915001235902,
+        "total_time_seconds": 23.89940860006027
+      },
+      "error": null
+    },
+    {
+      "question_id": "q10",
+      "workflow": "vector",
+      "question": "What is the total reseller tax amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Tax Amount]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Tax Amount]"
+      ],
+      "actual_value": 64360476066.0,
+      "gold_value": 64360476066.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.13491010013967752,
+        "metadata_selection_total_seconds": 4.40176280005835,
+        "mdx_generation_seconds": 2.7375707998871803,
+        "mdx_execution_seconds": 0.20047380006872118,
+        "final_answer_generation_seconds": 3.393023099983111,
+        "total_time_seconds": 10.868258100003004
+      },
+      "error": null
+    },
+    {
+      "question_id": "q10",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total reseller tax amount?",
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]",
+        "[Reseller Sales Order Details].[Reseller Sales Orders].[Order Number]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Tax Amount]"
+      ],
+      "actual_value": null,
+      "gold_value": 64360476066.0,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.13319789990782738,
+        "vector_retrieval_children_seconds": 0.1317509999498725,
+        "vector_retrieval_measures_seconds": 0.13166049984283745,
+        "vector_retrieval_seconds": 0.3966093997005373,
+        "metadata_selection_total_seconds": 13.059973299968988,
+        "mdx_generation_seconds": 3.5128236000891775,
+        "mdx_execution_seconds": 0.16198029997758567,
+        "mdx_repair_generation_seconds": 3.1562326999846846,
+        "mdx_repair_execution_seconds": 0.17710889992304146,
+        "total_time_seconds": 20.466283700196072
+      },
+      "error": null
+    },
+    {
+      "question_id": "q11",
+      "workflow": "classic",
+      "question": "What is the total freight cost?",
+      "tp": 0,
+      "fp": 6,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[DimensionCustomer].[Customer Name]",
+        "[DimensionProduct].[Product Name]",
+        "[DimensionSalesTerritory].[Sales Territory]",
+        "[DimensionShipDate].[Calendar Year]",
+        "[DimensionSourceCurrency].[Source Currency Code]",
+        "[Measures].[Internet Freight Cost]"
+      ],
+      "gold": [
+        "[Measures].[Freight Cost]"
+      ],
+      "actual_value": null,
+      "gold_value": 2745235.524900003,
+      "values_match": null,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 17.473867899971083,
+        "metadata_selection_measures_seconds": 6.043375599896535,
+        "metadata_selection_total_seconds": 23.517243499867618,
+        "mdx_generation_seconds": 8.882632799912244,
+        "mdx_execution_seconds": 1.153882300015539,
+        "mdx_repair_generation_seconds": 3.912213900126517,
+        "mdx_repair_execution_seconds": 0.4822402000427246,
+        "total_time_seconds": 37.949552400037646
+      },
+      "error": null
+    },
+    {
+      "question_id": "q11",
+      "workflow": "vector",
+      "question": "What is the total freight cost?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Freight Cost]"
+      ],
+      "gold": [
+        "[Measures].[Freight Cost]"
+      ],
+      "actual_value": 2745235.524900003,
+      "gold_value": 2745235.524900003,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.1468936000019312,
+        "metadata_selection_total_seconds": 5.200837400043383,
+        "mdx_generation_seconds": 2.632965800119564,
+        "mdx_execution_seconds": 0.1780795999802649,
+        "final_answer_generation_seconds": 2.8194615999236703,
+        "total_time_seconds": 10.978720299899578
+      },
+      "error": null
+    },
+    {
+      "question_id": "q11",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total freight cost?",
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Average Unit Price]",
+        "[Measures].[Freight Cost]",
+        "[Measures].[Internet Freight Cost]",
+        "[Measures].[Internet Total Product Cost]",
+        "[Measures].[Reseller Freight Cost]",
+        "[Measures].[Reseller Standard Product Cost]",
+        "[Measures].[Reseller Total Product Cost]",
+        "[Measures].[Standard Product Cost]",
+        "[Measures].[Total Product Cost]",
+        "[Measures].[Unit Price]"
+      ],
+      "gold": [
+        "[Measures].[Freight Cost]"
+      ],
+      "actual_value": 2745235.524900003,
+      "gold_value": 2745235.524900003,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.1462038999889046,
+        "vector_retrieval_children_seconds": 0.13941830000840127,
+        "vector_retrieval_measures_seconds": 0.1516954000107944,
+        "vector_retrieval_seconds": 0.43731760000810027,
+        "metadata_selection_total_seconds": 16.819381899898872,
+        "mdx_generation_seconds": 2.8130242000333965,
+        "mdx_execution_seconds": 0.16589859989471734,
+        "final_answer_generation_seconds": 2.7546576000750065,
+        "total_time_seconds": 22.990932299988344
+      },
+      "error": null
+    },
+    {
+      "question_id": "q12",
+      "workflow": "classic",
+      "question": "What is the total discount amount?",
+      "tp": 1,
+      "fp": 4,
+      "fn": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "task_success": 1,
+      "predicted": [
+        "[\n    [Ship Date].[Calendar Year]",
+        "[Customer].[Customer Name]",
+        "[Measures].[Discount Amount]",
+        "[Product].[Product Name]",
+        "[Promotion].[Promotion Name]"
+      ],
+      "gold": [
+        "[Measures].[Discount Amount]"
+      ],
+      "actual_value": 527507.9262000001,
+      "gold_value": 527507.9262000001,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 11.665189899969846,
+        "metadata_selection_measures_seconds": 5.845927899936214,
+        "metadata_selection_total_seconds": 17.51111779990606,
+        "mdx_generation_seconds": 2.5843936998862773,
+        "mdx_execution_seconds": 0.17731860000640154,
+        "final_answer_generation_seconds": 2.610001699998975,
+        "total_time_seconds": 22.883122500032187
+      },
+      "error": null
+    },
+    {
+      "question_id": "q12",
+      "workflow": "vector",
+      "question": "What is the total discount amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Discount Amount]"
+      ],
+      "gold": [
+        "[Measures].[Discount Amount]"
+      ],
+      "actual_value": 527507.9262000001,
+      "gold_value": 527507.9262000001,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.1244007998611778,
+        "metadata_selection_total_seconds": 6.072296400088817,
+        "mdx_generation_seconds": 2.5711077998857945,
+        "mdx_execution_seconds": 0.17325419979169965,
+        "final_answer_generation_seconds": 2.6324056000448763,
+        "total_time_seconds": 11.573842199984938
+      },
+      "error": null
+    },
+    {
+      "question_id": "q12",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total discount amount?",
+      "tp": 0,
+      "fp": 6,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Customer Geography].[Country]",
+        "[Internet Sales Order Details].[Internet Sales Order].[Internet Sales Order]",
+        "[Measures].[Sales Amount]",
+        "[Product].[Category]",
+        "[Reseller Sales Order Details].[Reseller Sales Order].[Reseller Sales Order]",
+        "[Time].[Year]"
+      ],
+      "gold": [
+        "[Measures].[Discount Amount]"
+      ],
+      "actual_value": null,
+      "gold_value": 527507.9262000001,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.12707849987782538,
+        "vector_retrieval_children_seconds": 0.12371389986947179,
+        "vector_retrieval_measures_seconds": 0.12074599997140467,
+        "vector_retrieval_seconds": 0.37153839971870184,
+        "metadata_selection_total_seconds": 18.110628900118172,
+        "mdx_generation_seconds": 9.699364200001583,
+        "mdx_execution_seconds": 0.16453869990073144,
+        "mdx_repair_generation_seconds": 6.070598799968138,
+        "mdx_repair_execution_seconds": 0.15319389989599586,
+        "total_time_seconds": 35.559035799931735
+      },
+      "error": null
+    },
+    {
+      "question_id": "q13",
+      "workflow": "classic",
+      "question": "What is the internet gross profit?",
+      "tp": 1,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Gross Profit]",
+        "[Product].[Product Name].[Product Name]",
+        "[Sales Territory].[Country].[Country]",
+        "[Ship Date].[Calendar Year].[Calendar Year]"
+      ],
+      "gold": [
+        "[Measures].[Internet Gross Profit]"
+      ],
+      "actual_value": 12080883645.0,
+      "gold_value": 12080883645.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 13.090869200183079,
+        "metadata_selection_measures_seconds": 5.8696673000231385,
+        "metadata_selection_total_seconds": 18.960536500206217,
+        "mdx_generation_seconds": 2.642499400069937,
+        "mdx_execution_seconds": 0.1799753000959754,
+        "final_answer_generation_seconds": 3.0530473000835627,
+        "total_time_seconds": 24.836381499888375
+      },
+      "error": null
+    },
+    {
+      "question_id": "q13",
+      "workflow": "vector",
+      "question": "What is the internet gross profit?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Gross Profit]"
+      ],
+      "gold": [
+        "[Measures].[Internet Gross Profit]"
+      ],
+      "actual_value": 12080883645.0,
+      "gold_value": 12080883645.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.1248607998713851,
+        "metadata_selection_total_seconds": 4.285166600020602,
+        "mdx_generation_seconds": 2.7155070998705924,
+        "mdx_execution_seconds": 0.13719199993647635,
+        "final_answer_generation_seconds": 3.191021799808368,
+        "total_time_seconds": 10.454170299926773
+      },
+      "error": null
+    },
+    {
+      "question_id": "q13",
+      "workflow": "vector_hierarchical",
+      "question": "What is the internet gross profit?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Gross Profit]"
+      ],
+      "gold": [
+        "[Measures].[Internet Gross Profit]"
+      ],
+      "actual_value": 12080883645.0,
+      "gold_value": 12080883645.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.24429739988408983,
+        "vector_retrieval_children_seconds": 0.14226279989816248,
+        "vector_retrieval_measures_seconds": 0.132360499817878,
+        "vector_retrieval_seconds": 0.5189206996001303,
+        "metadata_selection_total_seconds": 8.275366300018504,
+        "mdx_generation_seconds": 2.7516596999485046,
+        "mdx_execution_seconds": 0.16165020014159381,
+        "final_answer_generation_seconds": 3.0416959999129176,
+        "total_time_seconds": 14.751858100062236
+      },
+      "error": null
+    },
+    {
+      "question_id": "q14",
+      "workflow": "classic",
+      "question": "What is the reseller gross profit?",
+      "tp": 1,
+      "fp": 5,
+      "fn": 0,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "f1": 0.2857142857142857,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Gross Profit]",
+        "[Measures].[Reseller Gross Profit]",
+        "[Product].[Product]",
+        "[Reseller Channel].[Reseller Channel]",
+        "[Sales Territory].[Sales Territory]",
+        "[Ship Date].[Calendar Year]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Gross Profit]"
+      ],
+      "actual_value": null,
+      "gold_value": 4704826033.0,
+      "values_match": null,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 19.551567000104114,
+        "metadata_selection_measures_seconds": 5.963502400089055,
+        "metadata_selection_total_seconds": 25.51506940019317,
+        "mdx_generation_seconds": 6.646962200058624,
+        "mdx_execution_seconds": 0.6507757001090795,
+        "mdx_repair_generation_seconds": 6.121782399946824,
+        "mdx_repair_execution_seconds": 0.4898713999427855,
+        "total_time_seconds": 39.42558230017312
+      },
+      "error": null
+    },
+    {
+      "question_id": "q14",
+      "workflow": "vector",
+      "question": "What is the reseller gross profit?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Gross Profit]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Gross Profit]"
+      ],
+      "actual_value": 4704826033.0,
+      "gold_value": 4704826033.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.14467340009287,
+        "metadata_selection_total_seconds": 4.483808600110933,
+        "mdx_generation_seconds": 2.6730541998986155,
+        "mdx_execution_seconds": 0.19097170000895858,
+        "final_answer_generation_seconds": 3.0815519001334906,
+        "total_time_seconds": 10.574636399978772
+      },
+      "error": null
+    },
+    {
+      "question_id": "q14",
+      "workflow": "vector_hierarchical",
+      "question": "What is the reseller gross profit?",
+      "tp": 0,
+      "fp": 16,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]",
+        "[Reseller Sales Order Details].[Customer PO Number].[Customer PO Number]",
+        "[Reseller Sales Order Details].[Reseller Sales Orders].[Order Number]",
+        "[Reseller Sales Order Details].[Sales Order Line].[Sales Order Line]",
+        "[Reseller Sales Order Details].[Sales Order Number].[Sales Order Number]",
+        "[Reseller].[Annual Revenue].[Annual Revenue]",
+        "[Reseller].[Annual Sales].[Annual Sales]",
+        "[Reseller].[Business Type].[Business Type]",
+        "[Reseller].[Reseller Bank].[Reseller]",
+        "[Reseller].[Reseller Type].[Business Type]",
+        "[Sales Territory].[Sales Territory Country].[Sales Territory Country]",
+        "[Sales Territory].[Sales Territory Group].[Sales Territory Group]",
+        "[Sales Territory].[Sales Territory Region].[Sales Territory Region]",
+        "[Sales Territory].[Sales Territory].[Country]",
+        "[Sales Territory].[Sales Territory].[Group]",
+        "[Sales Territory].[Sales Territory].[Region]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Gross Profit]"
+      ],
+      "actual_value": 804505969823.0,
+      "gold_value": 4704826033.0,
+      "values_match": false,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14681990002281964,
+        "vector_retrieval_children_seconds": 0.14630460017360747,
+        "vector_retrieval_measures_seconds": 0.1382190000731498,
+        "vector_retrieval_seconds": 0.4313435002695769,
+        "metadata_selection_total_seconds": 29.713461499894038,
+        "mdx_generation_seconds": 3.0127734998241067,
+        "mdx_execution_seconds": 0.17842680006287992,
+        "final_answer_generation_seconds": 3.2103039000649005,
+        "total_time_seconds": 36.54707959992811
+      },
+      "error": null
+    },
+    {
+      "question_id": "q15",
+      "workflow": "classic",
+      "question": "What is the internet gross profit margin?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "task_success": 1,
+      "predicted": [
+        "[Internet Sales].[Internet Gross Profit]",
+        "[Internet Sales].[Internet Sales Amount]",
+        "[Measures].[Internet Gross Profit Margin]"
+      ],
+      "gold": [
+        "[Measures].[Internet Gross Profit Margin]"
+      ],
+      "actual_value": 0.411492777899479,
+      "gold_value": 0.411492777899479,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 19.295406999997795,
+        "metadata_selection_measures_seconds": 5.9857377000153065,
+        "metadata_selection_total_seconds": 25.2811447000131,
+        "mdx_generation_seconds": 4.530623399885371,
+        "mdx_execution_seconds": 0.9651656001806259,
+        "mdx_repair_generation_seconds": 2.894659300101921,
+        "mdx_repair_execution_seconds": 0.17284849984571338,
+        "final_answer_generation_seconds": 2.4659629000816494,
+        "total_time_seconds": 36.31143889995292
+      },
+      "error": null
+    },
+    {
+      "question_id": "q15",
+      "workflow": "vector",
+      "question": "What is the internet gross profit margin?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Gross Profit Margin]"
+      ],
+      "gold": [
+        "[Measures].[Internet Gross Profit Margin]"
+      ],
+      "actual_value": 0.411492777899479,
+      "gold_value": 0.411492777899479,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.14812869997695088,
+        "metadata_selection_total_seconds": 4.326233899919316,
+        "mdx_generation_seconds": 2.743265099823475,
+        "mdx_execution_seconds": 0.16004300001077354,
+        "final_answer_generation_seconds": 2.6012546001002192,
+        "total_time_seconds": 9.979279699968174
+      },
+      "error": null
+    },
+    {
+      "question_id": "q15",
+      "workflow": "vector_hierarchical",
+      "question": "What is the internet gross profit margin?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Internet Sales Order Details].[Internet Sales Orders].[Order Number]",
+        "[Measures].[Internet Gross Profit Margin]"
+      ],
+      "gold": [
+        "[Measures].[Internet Gross Profit Margin]"
+      ],
+      "actual_value": 0.411492777899479,
+      "gold_value": 0.411492777899479,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.18055110005661845,
+        "vector_retrieval_children_seconds": 0.1939350999891758,
+        "vector_retrieval_measures_seconds": 0.18218569993041456,
+        "vector_retrieval_seconds": 0.5566718999762088,
+        "metadata_selection_total_seconds": 13.0508038001135,
+        "mdx_generation_seconds": 3.2388812000863254,
+        "mdx_execution_seconds": 0.17263919999822974,
+        "final_answer_generation_seconds": 2.342454799916595,
+        "total_time_seconds": 19.362103700172156
+      },
+      "error": null
+    },
+    {
+      "question_id": "q16",
+      "workflow": "classic",
+      "question": "What is the reseller gross profit margin?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Gross Profit Margin]",
+        "[Measures].[Reseller Gross Profit Margin]",
+        "[Reseller].[@Reseller Key]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Gross Profit Margin]"
+      ],
+      "actual_value": 0.005848093375907593,
+      "gold_value": 0.005848093375907593,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 11.121038399869576,
+        "metadata_selection_measures_seconds": 6.052558199968189,
+        "metadata_selection_total_seconds": 17.173596599837765,
+        "mdx_generation_seconds": 3.58714980003424,
+        "mdx_execution_seconds": 0.16413270006887615,
+        "mdx_repair_generation_seconds": 2.8078825999982655,
+        "mdx_repair_execution_seconds": 0.15278240013867617,
+        "final_answer_generation_seconds": 2.479015199933201,
+        "total_time_seconds": 26.365179900079966
+      },
+      "error": null
+    },
+    {
+      "question_id": "q16",
+      "workflow": "vector",
+      "question": "What is the reseller gross profit margin?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Gross Profit Margin]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Gross Profit Margin]"
+      ],
+      "actual_value": 0.005848093375907593,
+      "gold_value": 0.005848093375907593,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.15035430015996099,
+        "metadata_selection_total_seconds": 4.5156164998188615,
+        "mdx_generation_seconds": 2.758818899979815,
+        "mdx_execution_seconds": 0.18329619988799095,
+        "final_answer_generation_seconds": 2.4803675001021475,
+        "total_time_seconds": 10.08882090006955
+      },
+      "error": null
+    },
+    {
+      "question_id": "q16",
+      "workflow": "vector_hierarchical",
+      "question": "What is the reseller gross profit margin?",
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]",
+        "[Reseller Sales Order Details].[Customer PO Number].[Customer PO Number]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Gross Profit Margin]"
+      ],
+      "actual_value": null,
+      "gold_value": 0.005848093375907593,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.24269260000437498,
+        "vector_retrieval_children_seconds": 0.22456620004959404,
+        "vector_retrieval_measures_seconds": 0.17343989992514253,
+        "vector_retrieval_seconds": 0.6406986999791116,
+        "metadata_selection_total_seconds": 12.985256500076503,
+        "mdx_generation_seconds": 5.056850700173527,
+        "mdx_execution_seconds": 0.18161730002611876,
+        "mdx_repair_generation_seconds": 4.478639799868688,
+        "mdx_repair_execution_seconds": 0.1919245000462979,
+        "total_time_seconds": 23.536230700090528
+      },
+      "error": null
+    },
+    {
+      "question_id": "q17",
+      "workflow": "classic",
+      "question": "What is the internet average unit price?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Internet Sales].[Internet Average Unit Price]",
+        "[Measures].[Internet Average Unit Price]"
+      ],
+      "gold": [
+        "[Measures].[Internet Average Unit Price]"
+      ],
+      "actual_value": 486.08691050531473,
+      "gold_value": 486.08691050531473,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 9.763261000160128,
+        "metadata_selection_measures_seconds": 5.936190100153908,
+        "metadata_selection_total_seconds": 15.699451100314036,
+        "mdx_generation_seconds": 2.761283100116998,
+        "mdx_execution_seconds": 0.15230090008117259,
+        "final_answer_generation_seconds": 2.4089053000789136,
+        "total_time_seconds": 21.0222845999524
+      },
+      "error": null
+    },
+    {
+      "question_id": "q17",
+      "workflow": "vector",
+      "question": "What is the internet average unit price?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Average Unit Price]"
+      ],
+      "gold": [
+        "[Measures].[Internet Average Unit Price]"
+      ],
+      "actual_value": 486.08691050531473,
+      "gold_value": 486.08691050531473,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.14778689993545413,
+        "metadata_selection_total_seconds": 4.338759999955073,
+        "mdx_generation_seconds": 2.7199672998394817,
+        "mdx_execution_seconds": 0.16977669997140765,
+        "final_answer_generation_seconds": 2.339988599997014,
+        "total_time_seconds": 9.716619699960575
+      },
+      "error": null
+    },
+    {
+      "question_id": "q17",
+      "workflow": "vector_hierarchical",
+      "question": "What is the internet average unit price?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Average Unit Price]"
+      ],
+      "gold": [
+        "[Measures].[Internet Average Unit Price]"
+      ],
+      "actual_value": 486.08691050531473,
+      "gold_value": 486.08691050531473,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14083790010772645,
+        "vector_retrieval_children_seconds": 0.14569859998300672,
+        "vector_retrieval_measures_seconds": 0.14587779995054007,
+        "vector_retrieval_seconds": 0.43241430004127324,
+        "metadata_selection_total_seconds": 12.205334700178355,
+        "mdx_generation_seconds": 3.5646023999433964,
+        "mdx_execution_seconds": 0.1622236999683082,
+        "mdx_repair_generation_seconds": 2.752903899876401,
+        "mdx_repair_execution_seconds": 0.17227460001595318,
+        "final_answer_generation_seconds": 2.384589800145477,
+        "total_time_seconds": 21.675213100155815
+      },
+      "error": null
+    },
+    {
+      "question_id": "q18",
+      "workflow": "classic",
+      "question": "What is the reseller average unit price?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Average Unit Price]",
+        "[Measures].[Reseller Average Unit Price]",
+        "[Reseller].[Reseller]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Average Unit Price]"
+      ],
+      "actual_value": 465.1805148845802,
+      "gold_value": 444.4311190633473,
+      "values_match": false,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 11.794372000033036,
+        "metadata_selection_measures_seconds": 6.01171649992466,
+        "metadata_selection_total_seconds": 17.806088499957696,
+        "mdx_generation_seconds": 4.056391599820927,
+        "mdx_execution_seconds": 0.22214339999482036,
+        "final_answer_generation_seconds": 2.4287509000860155,
+        "total_time_seconds": 24.51380019984208
+      },
+      "error": null
+    },
+    {
+      "question_id": "q18",
+      "workflow": "vector",
+      "question": "What is the reseller average unit price?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Average Unit Price]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Average Unit Price]"
+      ],
+      "actual_value": 444.4311190633473,
+      "gold_value": 444.4311190633473,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.14266949985176325,
+        "metadata_selection_total_seconds": 4.456082500051707,
+        "mdx_generation_seconds": 2.8272071999963373,
+        "mdx_execution_seconds": 0.16022620000876486,
+        "final_answer_generation_seconds": 2.5238935998640954,
+        "total_time_seconds": 10.110394899966195
+      },
+      "error": null
+    },
+    {
+      "question_id": "q18",
+      "workflow": "vector_hierarchical",
+      "question": "What is the reseller average unit price?",
+      "tp": 0,
+      "fp": 5,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]",
+        "[Reseller Sales Order Details].[Reseller Sales Order].[Reseller Sales Order]",
+        "[Reseller Sales Order Details].[Reseller Sales Orders].[Order Number]",
+        "[Sales Channel].[Sales Channel].[Sales Channel]",
+        "[Sales Reason].[Sales Reasons].[Reason Type]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Average Unit Price]"
+      ],
+      "actual_value": null,
+      "gold_value": 444.4311190633473,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14809620007872581,
+        "vector_retrieval_children_seconds": 0.14494589995592833,
+        "vector_retrieval_measures_seconds": 0.13408910017460585,
+        "vector_retrieval_seconds": 0.42713120020926,
+        "metadata_selection_total_seconds": 15.920546099776402,
+        "mdx_generation_seconds": 7.421238499926403,
+        "mdx_execution_seconds": 0.1835145999211818,
+        "mdx_repair_generation_seconds": 6.007014200091362,
+        "mdx_repair_execution_seconds": 0.15844799997285008,
+        "total_time_seconds": 30.11932549998164
+      },
+      "error": null
+    },
+    {
+      "question_id": "q19",
+      "workflow": "classic",
+      "question": "What is the internet average sales amount?",
+      "tp": 1,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Average Sales Amount]",
+        "[Measures].[Internet Sales Amount]",
+        "[Sales Territory].[Internet Sales Territory].[_Total]",
+        "[Ship Date].[Calendar Year].[Calendar Year]"
+      ],
+      "gold": [
+        "[Measures].[Internet Average Sales Amount]"
+      ],
+      "actual_value": 1061.451145041397,
+      "gold_value": 1061.451145041397,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 11.979897900018841,
+        "metadata_selection_measures_seconds": 5.9718276001513,
+        "metadata_selection_total_seconds": 17.95172550017014,
+        "mdx_generation_seconds": 4.788330799899995,
+        "mdx_execution_seconds": 0.159444099990651,
+        "mdx_repair_generation_seconds": 2.7998504999559373,
+        "mdx_repair_execution_seconds": 0.17249380005523562,
+        "final_answer_generation_seconds": 2.4284285998437554,
+        "total_time_seconds": 28.300938799977303
+      },
+      "error": null
+    },
+    {
+      "question_id": "q19",
+      "workflow": "vector",
+      "question": "What is the internet average sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Average Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Internet Average Sales Amount]"
+      ],
+      "actual_value": 1061.451145041397,
+      "gold_value": 1061.451145041397,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.15365709993056953,
+        "metadata_selection_total_seconds": 4.332282399991527,
+        "mdx_generation_seconds": 2.777710200054571,
+        "mdx_execution_seconds": 0.6215087999589741,
+        "final_answer_generation_seconds": 2.480168400099501,
+        "total_time_seconds": 10.365695199929178
+      },
+      "error": null
+    },
+    {
+      "question_id": "q19",
+      "workflow": "vector_hierarchical",
+      "question": "What is the internet average sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Internet Average Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Internet Average Sales Amount]"
+      ],
+      "actual_value": 1061.451145041397,
+      "gold_value": 1061.451145041397,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.143004700075835,
+        "vector_retrieval_children_seconds": 0.1388662001118064,
+        "vector_retrieval_measures_seconds": 0.14495340012945235,
+        "vector_retrieval_seconds": 0.42682430031709373,
+        "metadata_selection_total_seconds": 11.35669060004875,
+        "mdx_generation_seconds": 2.783106900053099,
+        "mdx_execution_seconds": 0.1661696000955999,
+        "final_answer_generation_seconds": 2.5178465999197215,
+        "total_time_seconds": 17.25136599992402
+      },
+      "error": null
+    },
+    {
+      "question_id": "q20",
+      "workflow": "classic",
+      "question": "What is the reseller average sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Average Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Average Sales Amount]"
+      ],
+      "actual_value": 21193.518699236036,
+      "gold_value": 21193.518699236036,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 13.698047100100666,
+        "metadata_selection_measures_seconds": 6.0501794998999685,
+        "metadata_selection_total_seconds": 19.748226600000635,
+        "mdx_generation_seconds": 2.8323301998898387,
+        "mdx_execution_seconds": 0.15005500009283423,
+        "final_answer_generation_seconds": 2.646017099963501,
+        "total_time_seconds": 25.376937600085512
+      },
+      "error": null
+    },
+    {
+      "question_id": "q20",
+      "workflow": "vector",
+      "question": "What is the reseller average sales amount?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Average Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Reseller Average Sales Amount]"
+      ],
+      "actual_value": 21193.518699236036,
+      "gold_value": 21193.518699236036,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.13848150009289384,
+        "metadata_selection_total_seconds": 4.446774699958041,
+        "mdx_generation_seconds": 2.8300697000231594,
+        "mdx_execution_seconds": 0.48327399999834597,
+        "final_answer_generation_seconds": 2.621967300074175,
+        "total_time_seconds": 10.520967499818653
+      },
+      "error": null
+    },
+    {
+      "question_id": "q20",
+      "workflow": "vector_hierarchical",
+      "question": "What is the reseller average sales amount?",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [],
+      "gold": [
+        "[Measures].[Reseller Average Sales Amount]"
+      ],
+      "actual_value": 804505969823.0,
+      "gold_value": 21193.518699236036,
+      "values_match": false,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.1551035000011325,
+        "vector_retrieval_children_seconds": 0.15978520014323294,
+        "vector_retrieval_measures_seconds": 0.1541377000976354,
+        "vector_retrieval_seconds": 0.4690264002420008,
+        "metadata_selection_total_seconds": 14.25348489987664,
+        "mdx_generation_seconds": 2.9492492000572383,
+        "mdx_execution_seconds": 0.1984293998684734,
+        "final_answer_generation_seconds": 3.316236099926755,
+        "total_time_seconds": 21.18712370004505
+      },
+      "error": null
+    },
+    {
+      "question_id": "q21",
+      "workflow": "classic",
+      "question": "What is the average sales amount overall?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Average Sales Amount]",
+        "[Measures].[Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Average Sales Amount]"
+      ],
+      "actual_value": 3490.995841773963,
+      "gold_value": 3490.995841773963,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 9.611593100009486,
+        "metadata_selection_measures_seconds": 5.833832700038329,
+        "metadata_selection_total_seconds": 15.445425800047815,
+        "mdx_generation_seconds": 2.8123170998878777,
+        "mdx_execution_seconds": 0.28844070015475154,
+        "final_answer_generation_seconds": 2.4938382001128048,
+        "total_time_seconds": 21.040413100039586
+      },
+      "error": null
+    },
+    {
+      "question_id": "q21",
+      "workflow": "vector",
+      "question": "What is the average sales amount overall?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Average Sales Amount]"
+      ],
+      "gold": [
+        "[Measures].[Average Sales Amount]"
+      ],
+      "actual_value": 3490.995841773963,
+      "gold_value": 3490.995841773963,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.15896050003357232,
+        "metadata_selection_total_seconds": 4.2927486000116915,
+        "mdx_generation_seconds": 2.7023602998815477,
+        "mdx_execution_seconds": 0.2352712000720203,
+        "final_answer_generation_seconds": 2.5779247998725623,
+        "total_time_seconds": 9.967635300010443
+      },
+      "error": null
+    },
+    {
+      "question_id": "q21",
+      "workflow": "vector_hierarchical",
+      "question": "What is the average sales amount overall?",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [],
+      "gold": [
+        "[Measures].[Average Sales Amount]"
+      ],
+      "actual_value": null,
+      "gold_value": 3490.995841773963,
+      "values_match": null,
+      "timings": {},
+      "error": "The Axis0 function expects a tuple set expression for the  argument. A string or numeric expression was used.\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)\r\n   v Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)\r\n   v Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)"
+    },
+    {
+      "question_id": "q22",
+      "workflow": "classic",
+      "question": "What is the unit price discount percent?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Unit Price Discount Percent]",
+        "[Promotion].[Promotion Discount Type]",
+        "[Promotion].[Promotion Discount Type].[Discount Percent]"
+      ],
+      "gold": [
+        "[Measures].[Unit Price Discount Percent]"
+      ],
+      "actual_value": null,
+      "gold_value": 342.85,
+      "values_match": null,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 12.178786000004038,
+        "metadata_selection_measures_seconds": 5.9697813000530005,
+        "metadata_selection_total_seconds": 18.14856730005704,
+        "mdx_generation_seconds": 4.531654400052503,
+        "mdx_execution_seconds": 0.28164850012399256,
+        "mdx_repair_generation_seconds": 4.258421299979091,
+        "mdx_repair_execution_seconds": 0.29631560016423464,
+        "total_time_seconds": 27.517652899958193
+      },
+      "error": null
+    },
+    {
+      "question_id": "q22",
+      "workflow": "vector",
+      "question": "What is the unit price discount percent?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Unit Price Discount Percent]"
+      ],
+      "gold": [
+        "[Measures].[Unit Price Discount Percent]"
+      ],
+      "actual_value": 342.85,
+      "gold_value": 342.85,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.17319330014288425,
+        "metadata_selection_total_seconds": 5.189188200049102,
+        "mdx_generation_seconds": 2.820756600005552,
+        "mdx_execution_seconds": 0.3009526999667287,
+        "final_answer_generation_seconds": 2.497571999905631,
+        "total_time_seconds": 10.98197799990885
+      },
+      "error": null
+    },
+    {
+      "question_id": "q22",
+      "workflow": "vector_hierarchical",
+      "question": "What is the unit price discount percent?",
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 1,
+      "predicted": [
+        "[Internet Sales Order].[Internet Sales Orders].[Order Number]",
+        "[Measures].[Sales Amount Quota]"
+      ],
+      "gold": [
+        "[Measures].[Unit Price Discount Percent]"
+      ],
+      "actual_value": 342.85,
+      "gold_value": 342.85,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14772570016793907,
+        "vector_retrieval_children_seconds": 0.16145380004309118,
+        "vector_retrieval_measures_seconds": 0.16525960015133023,
+        "vector_retrieval_seconds": 0.4744391003623605,
+        "metadata_selection_total_seconds": 12.090072700055316,
+        "mdx_generation_seconds": 4.472513299901038,
+        "mdx_execution_seconds": 0.5040889999363571,
+        "mdx_repair_generation_seconds": 3.023091600043699,
+        "mdx_repair_execution_seconds": 0.22167760017327964,
+        "final_answer_generation_seconds": 2.3182794000022113,
+        "total_time_seconds": 23.10496009979397
+      },
+      "error": null
+    },
+    {
+      "question_id": "q23",
+      "workflow": "classic",
+      "question": "What is the discount percentage?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Discount].[Discount Name].[Discount Name]",
+        "[Measures].[Discount Percentage]"
+      ],
+      "gold": [
+        "[Measures].[Discount Percentage]"
+      ],
+      "actual_value": 0.006556917487089096,
+      "gold_value": 0.006556917487089096,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 12.195216299965978,
+        "metadata_selection_measures_seconds": 5.827221000101417,
+        "metadata_selection_total_seconds": 18.022437300067395,
+        "mdx_generation_seconds": 4.178710599895567,
+        "mdx_execution_seconds": 0.7530201999470592,
+        "mdx_repair_generation_seconds": 3.1967751998454332,
+        "mdx_repair_execution_seconds": 0.27021429990418255,
+        "final_answer_generation_seconds": 2.1776066001039,
+        "total_time_seconds": 28.59946610010229
+      },
+      "error": null
+    },
+    {
+      "question_id": "q23",
+      "workflow": "vector",
+      "question": "What is the discount percentage?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Discount Percentage]"
+      ],
+      "gold": [
+        "[Measures].[Discount Percentage]"
+      ],
+      "actual_value": 0.006556917487089096,
+      "gold_value": 0.006556917487089096,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.14178469986654818,
+        "metadata_selection_total_seconds": 6.120022699935362,
+        "mdx_generation_seconds": 2.573070300044492,
+        "mdx_execution_seconds": 0.2796882998663932,
+        "final_answer_generation_seconds": 2.1226043000351638,
+        "total_time_seconds": 11.237551599973813
+      },
+      "error": null
+    },
+    {
+      "question_id": "q23",
+      "workflow": "vector_hierarchical",
+      "question": "What is the discount percentage?",
+      "tp": 0,
+      "fp": 5,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Date].[Calendar Year]",
+        "[Measures].[Reseller Sales Amount]",
+        "[Reseller Sales Order Details].[Customer PO Number]",
+        "[Reseller Sales Order Details].[Reseller Sales Order].[Order Number]",
+        "[Reseller Sales Order Details].[Sales Reason].[Sales Reason]"
+      ],
+      "gold": [
+        "[Measures].[Discount Percentage]"
+      ],
+      "actual_value": null,
+      "gold_value": 0.006556917487089096,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14100940013304353,
+        "vector_retrieval_children_seconds": 0.1275667001027614,
+        "vector_retrieval_measures_seconds": 0.12926469999365509,
+        "vector_retrieval_seconds": 0.39784080022946,
+        "metadata_selection_total_seconds": 18.31813309993595,
+        "mdx_generation_seconds": 10.164790199836716,
+        "mdx_execution_seconds": 0.4673134000040591,
+        "mdx_repair_generation_seconds": 6.267315899953246,
+        "mdx_repair_execution_seconds": 0.2719381998758763,
+        "total_time_seconds": 35.888383200159296
+      },
+      "error": null
+    },
+    {
+      "question_id": "q24",
+      "workflow": "classic",
+      "question": "How many sales reasons are recorded?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Sales Reason Count]",
+        "[Sales Reason].[Sales Reason]"
+      ],
+      "gold": [
+        "[Measures].[Sales Reason Count]"
+      ],
+      "actual_value": 64515.0,
+      "gold_value": 64515.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 12.318291899980977,
+        "metadata_selection_measures_seconds": 5.989050100091845,
+        "metadata_selection_total_seconds": 18.307342000072822,
+        "mdx_generation_seconds": 2.8124450999312103,
+        "mdx_execution_seconds": 0.2654156000353396,
+        "final_answer_generation_seconds": 2.3622793999966234,
+        "total_time_seconds": 23.74777980009094
+      },
+      "error": null
+    },
+    {
+      "question_id": "q24",
+      "workflow": "vector",
+      "question": "How many sales reasons are recorded?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Sales Reason Count]"
+      ],
+      "gold": [
+        "[Measures].[Sales Reason Count]"
+      ],
+      "actual_value": 64515.0,
+      "gold_value": 64515.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.2073246999643743,
+        "metadata_selection_total_seconds": 5.099867600016296,
+        "mdx_generation_seconds": 2.6662253998219967,
+        "mdx_execution_seconds": 0.22836380009539425,
+        "final_answer_generation_seconds": 2.3622972001321614,
+        "total_time_seconds": 10.564392799977213
+      },
+      "error": null
+    },
+    {
+      "question_id": "q24",
+      "workflow": "vector_hierarchical",
+      "question": "How many sales reasons are recorded?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Sales Reason Count]"
+      ],
+      "gold": [
+        "[Measures].[Sales Reason Count]"
+      ],
+      "actual_value": 64515.0,
+      "gold_value": 64515.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.17229919997043908,
+        "vector_retrieval_children_seconds": 0.1899683999363333,
+        "vector_retrieval_measures_seconds": 0.14910659985616803,
+        "vector_retrieval_seconds": 0.5113741997629404,
+        "metadata_selection_total_seconds": 9.30452540004626,
+        "mdx_generation_seconds": 2.769692000001669,
+        "mdx_execution_seconds": 0.2473218000959605,
+        "final_answer_generation_seconds": 2.334539100062102,
+        "total_time_seconds": 15.168018500087783
+      },
+      "error": null
+    },
+    {
+      "question_id": "q25",
+      "workflow": "classic",
+      "question": "What is the sales amount quota?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Sales Amount Quota]",
+        "[Sales Amount Quota].[Sales Amount Quota]"
+      ],
+      "gold": [
+        "[Measures].[Sales Amount Quota]"
+      ],
+      "actual_value": 140597000.0,
+      "gold_value": 140597000.0,
+      "values_match": true,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 13.280497600091621,
+        "metadata_selection_measures_seconds": 6.129007900133729,
+        "metadata_selection_total_seconds": 19.40950550022535,
+        "mdx_generation_seconds": 2.763343600090593,
+        "mdx_execution_seconds": 0.28946020011790097,
+        "final_answer_generation_seconds": 2.688196700066328,
+        "total_time_seconds": 25.15284699993208
+      },
+      "error": null
+    },
+    {
+      "question_id": "q25",
+      "workflow": "vector",
+      "question": "What is the sales amount quota?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Sales Amount Quota]"
+      ],
+      "gold": [
+        "[Measures].[Sales Amount Quota]"
+      ],
+      "actual_value": 140597000.0,
+      "gold_value": 140597000.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.1517539001069963,
+        "metadata_selection_total_seconds": 4.290540300076827,
+        "mdx_generation_seconds": 2.7856755999382585,
+        "mdx_execution_seconds": 0.25531679997220635,
+        "final_answer_generation_seconds": 2.7895279000513256,
+        "total_time_seconds": 10.273182299919426
+      },
+      "error": null
+    },
+    {
+      "question_id": "q25",
+      "workflow": "vector_hierarchical",
+      "question": "What is the sales amount quota?",
+      "tp": 0,
+      "fp": 9,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Internet Sales Order Details].[Internet Sales Orders].[Order Line]",
+        "[Internet Sales Order Details].[Internet Sales Orders].[Order Number]",
+        "[Measures].[Sales Amount]",
+        "[Reseller Sales Order Details].[Reseller Sales Orders].[Order Line]",
+        "[Reseller Sales Order Details].[Reseller Sales Orders].[Order Number]",
+        "[Sales Reason].[Sales Reasons].[Reason Type]",
+        "[Sales Reason].[Sales Reasons].[Sales Reason]",
+        "[Sales Summary Order Details].[Sales Orders].[Order Line]",
+        "[Sales Summary Order Details].[Sales Orders].[Order Number]"
+      ],
+      "gold": [
+        "[Measures].[Sales Amount Quota]"
+      ],
+      "actual_value": 109809274.20300001,
+      "gold_value": 140597000.0,
+      "values_match": false,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14819610002450645,
+        "vector_retrieval_children_seconds": 0.14435580000281334,
+        "vector_retrieval_measures_seconds": 0.13094960013404489,
+        "vector_retrieval_seconds": 0.4235015001613647,
+        "metadata_selection_total_seconds": 19.335438800044358,
+        "mdx_generation_seconds": 2.8934239000082016,
+        "mdx_execution_seconds": 0.2280163001269102,
+        "final_answer_generation_seconds": 2.9067532001063228,
+        "total_time_seconds": 25.787943499861285
+      },
+      "error": null
+    },
+    {
+      "question_id": "q26",
+      "workflow": "classic",
+      "question": "What is the internet sales amount in 2013?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Internet Sales Amount]",
+        "[Ship Date].[Calendar Year]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "actual_value": 162816201381.0,
+      "gold_value": 1635155034.0,
+      "values_match": false,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 14.538512599887326,
+        "metadata_selection_measures_seconds": 5.976623999886215,
+        "metadata_selection_total_seconds": 20.51513659977354,
+        "mdx_generation_seconds": 4.9467363997828215,
+        "mdx_execution_seconds": 0.2904697998892516,
+        "final_answer_generation_seconds": 3.708222100045532,
+        "total_time_seconds": 29.46220069983974
+      },
+      "error": null
+    },
+    {
+      "question_id": "q26",
+      "workflow": "vector",
+      "question": "What is the internet sales amount in 2013?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "task_success": 1,
+      "predicted": [
+        "[Date].[Calendar Year]",
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "actual_value": 1635155034.0,
+      "gold_value": 1635155034.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.18802049988880754,
+        "metadata_selection_total_seconds": 6.962236799998209,
+        "mdx_generation_seconds": 4.09489080007188,
+        "mdx_execution_seconds": 0.16271889978088439,
+        "final_answer_generation_seconds": 3.783355499850586,
+        "total_time_seconds": 15.191626699874178
+      },
+      "error": null
+    },
+    {
+      "question_id": "q26",
+      "workflow": "vector_hierarchical",
+      "question": "What is the internet sales amount in 2013?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "task_success": 1,
+      "predicted": [
+        "[Date].[Calendar Year]",
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Internet Sales Amount]"
+      ],
+      "actual_value": 1635155034.0,
+      "gold_value": 1635155034.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.16957589983940125,
+        "vector_retrieval_children_seconds": 0.18767730006948113,
+        "vector_retrieval_measures_seconds": 0.15779930003918707,
+        "vector_retrieval_seconds": 0.5150524999480695,
+        "metadata_selection_total_seconds": 13.556121799862012,
+        "mdx_generation_seconds": 4.887667200062424,
+        "mdx_execution_seconds": 0.21885480009950697,
+        "mdx_repair_generation_seconds": 4.281997699989006,
+        "mdx_repair_execution_seconds": 0.19044229993596673,
+        "final_answer_generation_seconds": 3.559611599892378,
+        "total_time_seconds": 27.210468399804085
+      },
+      "error": null
+    },
+    {
+      "question_id": "q27",
+      "workflow": "classic",
+      "question": "What is the reseller sales amount in 2012?",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]",
+        "[Ship Date].[Calendar Year]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "actual_value": 2012.0,
+      "gold_value": 281936315321.0,
+      "values_match": false,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 17.192465799860656,
+        "metadata_selection_measures_seconds": 6.1232815000694245,
+        "metadata_selection_total_seconds": 23.31574729993008,
+        "mdx_generation_seconds": 5.183514999924228,
+        "mdx_execution_seconds": 0.17850759997963905,
+        "final_answer_generation_seconds": 2.833411500090733,
+        "total_time_seconds": 31.512176800053567
+      },
+      "error": null
+    },
+    {
+      "question_id": "q27",
+      "workflow": "vector",
+      "question": "What is the reseller sales amount in 2012?",
+      "tp": 1,
+      "fp": 3,
+      "fn": 1,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333,
+      "task_success": 0,
+      "predicted": [
+        "[Date].[Calendar Year]",
+        "[Measures].[Reseller Sales Amount]",
+        "[Measures].[Sales Amount 2012]",
+        "[Reseller].[Reseller Name]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "actual_value": null,
+      "gold_value": 281936315321.0,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_seconds": 0.187924699857831,
+        "metadata_selection_total_seconds": 12.566544300178066,
+        "mdx_generation_seconds": 3.1984005998820066,
+        "mdx_execution_seconds": 0.17750949994660914,
+        "mdx_repair_generation_seconds": 2.9838266000151634,
+        "mdx_repair_execution_seconds": 0.16558760008774698,
+        "total_time_seconds": 19.28383530001156
+      },
+      "error": null
+    },
+    {
+      "question_id": "q27",
+      "workflow": "vector_hierarchical",
+      "question": "What is the reseller sales amount in 2012?",
+      "tp": 1,
+      "fp": 6,
+      "fn": 1,
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "f1": 0.22222222222222224,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]",
+        "[Reseller Sales Order Details].[Reseller Sales Order].[Reseller Sales Order]",
+        "[Reseller Sales Order Details].[Sales Order Line].[Sales Order Line]",
+        "[Reseller].[Annual Sales]",
+        "[Reseller].[Reseller Type]",
+        "[Sales Reason].[Reason Type]",
+        "[Sales Territory].[Country]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Reseller Sales Amount]"
+      ],
+      "actual_value": null,
+      "gold_value": 281936315321.0,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14487880002707243,
+        "vector_retrieval_children_seconds": 0.14424449997022748,
+        "vector_retrieval_measures_seconds": 0.150235699955374,
+        "vector_retrieval_seconds": 0.4393589999526739,
+        "metadata_selection_total_seconds": 22.793701800052077,
+        "mdx_generation_seconds": 13.383522499818355,
+        "mdx_execution_seconds": 0.20645539998076856,
+        "mdx_repair_generation_seconds": 11.094255199888721,
+        "mdx_repair_execution_seconds": 0.16887430008500814,
+        "total_time_seconds": 48.08766969991848
+      },
+      "error": null
+    },
+    {
+      "question_id": "q28",
+      "workflow": "classic",
+      "question": "What is the total order count in 2014?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Order Count]",
+        "[Sales].[Order Count]",
+        "[Ship Date].[Calendar Year]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Order Count]"
+      ],
+      "actual_value": null,
+      "gold_value": 871.0,
+      "values_match": null,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 14.84686559997499,
+        "metadata_selection_measures_seconds": 5.891245099948719,
+        "metadata_selection_total_seconds": 20.73811069992371,
+        "mdx_generation_seconds": 4.679459400009364,
+        "mdx_execution_seconds": 0.20920549985021353,
+        "mdx_repair_generation_seconds": 5.075808299938217,
+        "mdx_repair_execution_seconds": 0.1918909999076277,
+        "total_time_seconds": 30.896596899954602
+      },
+      "error": null
+    },
+    {
+      "question_id": "q28",
+      "workflow": "vector",
+      "question": "What is the total order count in 2014?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Order Count]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Order Count]"
+      ],
+      "actual_value": 31455.0,
+      "gold_value": 871.0,
+      "values_match": false,
+      "timings": {
+        "vector_retrieval_seconds": 0.1528707998804748,
+        "metadata_selection_total_seconds": 7.638604300096631,
+        "mdx_generation_seconds": 2.8381528998725116,
+        "mdx_execution_seconds": 0.1519277999177575,
+        "final_answer_generation_seconds": 2.699192199856043,
+        "total_time_seconds": 13.481204000068828
+      },
+      "error": null
+    },
+    {
+      "question_id": "q28",
+      "workflow": "vector_hierarchical",
+      "question": "What is the total order count in 2014?",
+      "tp": 0,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Sales Amount]",
+        "[Sales Reason].[Reason Type]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Order Count]"
+      ],
+      "actual_value": 45694.71999999986,
+      "gold_value": 871.0,
+      "values_match": false,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14828759990632534,
+        "vector_retrieval_children_seconds": 0.16752190003171563,
+        "vector_retrieval_measures_seconds": 0.16683609993197024,
+        "vector_retrieval_seconds": 0.4826455998700112,
+        "metadata_selection_total_seconds": 11.650953999953344,
+        "mdx_generation_seconds": 4.399716299958527,
+        "mdx_execution_seconds": 0.17865739995613694,
+        "mdx_repair_generation_seconds": 3.8802300000097603,
+        "mdx_repair_execution_seconds": 0.1551018999889493,
+        "final_answer_generation_seconds": 2.750166700221598,
+        "total_time_seconds": 23.49844629992731
+      },
+      "error": null
+    },
+    {
+      "question_id": "q29",
+      "workflow": "classic",
+      "question": "What is the internet order quantity in 2011?",
+      "tp": 0,
+      "fp": 4,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Quantity]",
+        "[Order Channel].[Internet]",
+        "[Order Channel].[Order Channel Hierarchy]",
+        "[Ship Date].[Calendar Year]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Internet Order Quantity]"
+      ],
+      "actual_value": null,
+      "gold_value": 2216.0,
+      "values_match": null,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 18.93567889998667,
+        "metadata_selection_measures_seconds": 5.54567060014233,
+        "metadata_selection_total_seconds": 24.481349500129,
+        "mdx_generation_seconds": 5.197517599910498,
+        "mdx_execution_seconds": 0.15599190001375973,
+        "mdx_repair_generation_seconds": 4.833889700006694,
+        "mdx_repair_execution_seconds": 0.18746440019458532,
+        "total_time_seconds": 35.99452369986102
+      },
+      "error": null
+    },
+    {
+      "question_id": "q29",
+      "workflow": "vector",
+      "question": "What is the internet order quantity in 2011?",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Internet Order Quantity]"
+      ],
+      "actual_value": null,
+      "gold_value": 2216.0,
+      "values_match": null,
+      "timings": {},
+      "error": "Query (1, 75) Operator or expression '&' is not supported in this context.\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForSoapFault(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.CheckForError(XmlReader reader, XmlaResult xmlaResult, Boolean throwIfError)\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.SendMessage(Boolean endReceivalIfException, Boolean readSession, Boolean readNamespaceCompatibility)\r\n   v Microsoft.AnalysisServices.AdomdClient.XmlaClient.ExecuteStatement(String statement, IDictionary connectionProperties, IDictionary commandProperties, IDataParameterCollection parameters, Boolean isMdx)\r\n   v Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)\r\n   v Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)"
+    },
+    {
+      "question_id": "q29",
+      "workflow": "vector_hierarchical",
+      "question": "What is the internet order quantity in 2011?",
+      "tp": 0,
+      "fp": 15,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Internet Sales Amount]",
+        "[Sales Summary Order Details].[Customer Geography Key]",
+        "[Sales Summary Order Details].[Customer Geography].[Country Group]",
+        "[Sales Summary Order Details].[Customer Key]",
+        "[Sales Summary Order Details].[Date Key]",
+        "[Sales Summary Order Details].[Order Date Key]",
+        "[Sales Summary Order Details].[Product Category Key]",
+        "[Sales Summary Order Details].[Product Key]",
+        "[Sales Summary Order Details].[Product Subcategory Key]",
+        "[Sales Summary Order Details].[Promotion Key]",
+        "[Sales Summary Order Details].[Reseller Key]",
+        "[Sales Summary Order Details].[Sales Reason Key]",
+        "[Sales Summary Order Details].[Sales Territory Key]",
+        "[Sales Summary Order Details].[Salesperson Key]",
+        "[Sales Summary Order Details].[Ship Date Key]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Internet Order Quantity]"
+      ],
+      "actual_value": null,
+      "gold_value": 2216.0,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.14798109978437424,
+        "vector_retrieval_children_seconds": 0.14865149999968708,
+        "vector_retrieval_measures_seconds": 0.14350089989602566,
+        "vector_retrieval_seconds": 0.44013349968008697,
+        "metadata_selection_total_seconds": 29.26242639985867,
+        "mdx_generation_seconds": 8.165106399916112,
+        "mdx_execution_seconds": 0.16953930002637208,
+        "mdx_repair_generation_seconds": 16.585119100054726,
+        "mdx_repair_execution_seconds": 0.9423088999465108,
+        "total_time_seconds": 55.566629900131375
+      },
+      "error": null
+    },
+    {
+      "question_id": "q30",
+      "workflow": "classic",
+      "question": "What is the reseller transaction count in 2013?",
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Transaction Count]",
+        "[Sales Facts].[Reseller Transaction Count]",
+        "[Time].[Calendar Year].[2013]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Reseller Transaction Count]"
+      ],
+      "actual_value": null,
+      "gold_value": 28540.0,
+      "values_match": null,
+      "timings": {
+        "metadata_selection_dimensions_seconds": 10.7157590999268,
+        "metadata_selection_measures_seconds": 5.972674100194126,
+        "metadata_selection_total_seconds": 16.688433200120926,
+        "mdx_generation_seconds": 4.154400800121948,
+        "mdx_execution_seconds": 0.6483161000069231,
+        "mdx_repair_generation_seconds": 4.291681499918923,
+        "mdx_repair_execution_seconds": 0.6454201999586076,
+        "total_time_seconds": 26.429053199943155
+      },
+      "error": null
+    },
+    {
+      "question_id": "q30",
+      "workflow": "vector",
+      "question": "What is the reseller transaction count in 2013?",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "task_success": 1,
+      "predicted": [
+        "[Measures].[Reseller Transaction Count]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Reseller Transaction Count]"
+      ],
+      "actual_value": 28540.0,
+      "gold_value": 28540.0,
+      "values_match": true,
+      "timings": {
+        "vector_retrieval_seconds": 0.16910270019434392,
+        "metadata_selection_total_seconds": 4.4737797998823225,
+        "mdx_generation_seconds": 3.997139000101015,
+        "mdx_execution_seconds": 0.1971917999908328,
+        "final_answer_generation_seconds": 2.850665799807757,
+        "total_time_seconds": 11.68821240006946
+      },
+      "error": null
+    },
+    {
+      "question_id": "q30",
+      "workflow": "vector_hierarchical",
+      "question": "What is the reseller transaction count in 2013?",
+      "tp": 0,
+      "fp": 3,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "task_success": 0,
+      "predicted": [
+        "[Measures].[Reseller Sales Amount]",
+        "[Sales Territory].[Group]",
+        "[Time].[Year]"
+      ],
+      "gold": [
+        "[Date].[Calendar Year].[Calendar Year]",
+        "[Measures].[Reseller Transaction Count]"
+      ],
+      "actual_value": null,
+      "gold_value": 28540.0,
+      "values_match": null,
+      "timings": {
+        "vector_retrieval_dimensions_seconds": 0.16570320003665984,
+        "vector_retrieval_children_seconds": 0.1436707000248134,
+        "vector_retrieval_measures_seconds": 0.14451220002956688,
+        "vector_retrieval_seconds": 0.45388610009104013,
+        "metadata_selection_total_seconds": 13.042923000175506,
+        "mdx_generation_seconds": 4.611331700114533,
+        "mdx_execution_seconds": 0.49025949998758733,
+        "mdx_repair_generation_seconds": 4.480543600162491,
+        "mdx_repair_execution_seconds": 0.5020810998976231,
+        "total_time_seconds": 23.582825500052422
+      },
+      "error": null
+    }
+  ],
+  "summaries": {
+    "classic": {
+      "workflow": "classic",
+      "questions": 30,
+      "macro_precision": 0.4261111111111111,
+      "macro_recall": 0.8666666666666667,
+      "macro_f1": 0.5361904761904762,
+      "task_success_rate": 0.6666666666666666,
+      "time_totals_seconds": {
+        "total_time_seconds": 857.2781307999976,
+        "metadata_selection_total_seconds": 597.2465389005374,
+        "metadata_selection_dimensions_seconds": 419.4286384000443,
+        "metadata_selection_measures_seconds": 177.81790050049312,
+        "mdx_generation_seconds": 123.23569989949465,
+        "mdx_execution_seconds": 11.089254100807011,
+        "mdx_repair_generation_seconds": 55.84739310038276,
+        "mdx_repair_execution_seconds": 4.287642000010237,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 64.40139030036516,
+        "vector_retrieval_seconds": 0.0,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 28.575937693333252,
+        "metadata_selection_total_seconds": 19.908217963351248,
+        "metadata_selection_dimensions_seconds": 13.98095461333481,
+        "metadata_selection_measures_seconds": 5.927263350016437,
+        "mdx_generation_seconds": 4.107856663316488,
+        "mdx_execution_seconds": 0.3696418033602337,
+        "mdx_repair_generation_seconds": 1.8615797700127588,
+        "mdx_repair_execution_seconds": 0.14292140000034123,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.146713010012172,
+        "vector_retrieval_seconds": 0.0,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      }
+    },
+    "vector": {
+      "workflow": "vector",
+      "questions": 30,
+      "macro_precision": 0.925,
+      "macro_recall": 0.9,
+      "macro_f1": 0.9055555555555556,
+      "task_success_rate": 0.9,
+      "time_totals_seconds": {
+        "total_time_seconds": 339.6373152988963,
+        "metadata_selection_total_seconds": 152.60686209984124,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 81.79441659874283,
+        "mdx_execution_seconds": 6.168181898538023,
+        "mdx_repair_generation_seconds": 2.9838266000151634,
+        "mdx_repair_execution_seconds": 0.16558760008774698,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 76.58291139965877,
+        "vector_retrieval_seconds": 4.67693810001947,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 11.321243843296543,
+        "metadata_selection_total_seconds": 5.086895403328041,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 2.726480553291428,
+        "mdx_execution_seconds": 0.20560606328460077,
+        "mdx_repair_generation_seconds": 0.09946088666717211,
+        "mdx_repair_execution_seconds": 0.005519586669591566,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.552763713321959,
+        "vector_retrieval_seconds": 0.15589793666731566,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      }
+    },
+    "vector_hierarchical": {
+      "workflow": "vector_hierarchical",
+      "questions": 30,
+      "macro_precision": 0.2794336219336219,
+      "macro_recall": 0.4666666666666667,
+      "macro_f1": 0.30976430976430974,
+      "task_success_rate": 0.4666666666666667,
+      "time_totals_seconds": {
+        "total_time_seconds": 768.3502689001616,
+        "metadata_selection_total_seconds": 464.68659499962814,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 140.86833789967932,
+        "mdx_execution_seconds": 7.4303280003368855,
+        "mdx_repair_generation_seconds": 84.63150289980695,
+        "mdx_repair_execution_seconds": 4.110621300060302,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 52.69162830011919,
+        "vector_retrieval_seconds": 12.911625300301239,
+        "vector_retrieval_dimensions_seconds": 4.469744099536911,
+        "vector_retrieval_children_seconds": 4.288853800389916,
+        "vector_retrieval_measures_seconds": 4.1530274003744125
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 25.611675630005386,
+        "metadata_selection_total_seconds": 15.489553166654272,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 4.695611263322644,
+        "mdx_execution_seconds": 0.24767760001122952,
+        "mdx_repair_generation_seconds": 2.8210500966602314,
+        "mdx_repair_execution_seconds": 0.13702071000201008,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 1.756387610003973,
+        "vector_retrieval_seconds": 0.4303875100100413,
+        "vector_retrieval_dimensions_seconds": 0.1489914699845637,
+        "vector_retrieval_children_seconds": 0.14296179334633052,
+        "vector_retrieval_measures_seconds": 0.13843424667914708
+      }
+    }
+  }
+}

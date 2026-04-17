@@ -1,0 +1,1052 @@
+[
+  {
+    "object_type": "measure",
+    "name": "Internet Sales Amount",
+    "unique_name": "[Measures].[Internet Sales Amount]",
+    "search_text": "measure | Internet Sales Amount | [Measures].[Internet Sales Amount] | measure group Internet Sales | Internet Sales Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Sales Amount",
+      "unique_name": "[Measures].[Internet Sales Amount]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Sales Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Order Quantity",
+    "unique_name": "[Measures].[Internet Order Quantity]",
+    "search_text": "measure | Internet Order Quantity | [Measures].[Internet Order Quantity] | measure group Internet Sales | Internet Order Quantity",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Order Quantity",
+      "unique_name": "[Measures].[Internet Order Quantity]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Order Quantity"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Extended Amount",
+    "unique_name": "[Measures].[Internet Extended Amount]",
+    "search_text": "measure | Internet Extended Amount | [Measures].[Internet Extended Amount] | measure group Internet Sales | Internet Extended Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Extended Amount",
+      "unique_name": "[Measures].[Internet Extended Amount]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Extended Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Tax Amount",
+    "unique_name": "[Measures].[Internet Tax Amount]",
+    "search_text": "measure | Internet Tax Amount | [Measures].[Internet Tax Amount] | measure group Internet Sales | Internet Tax Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Tax Amount",
+      "unique_name": "[Measures].[Internet Tax Amount]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Tax Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Freight Cost",
+    "unique_name": "[Measures].[Internet Freight Cost]",
+    "search_text": "measure | Internet Freight Cost | [Measures].[Internet Freight Cost] | measure group Internet Sales | Internet Freight Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Freight Cost",
+      "unique_name": "[Measures].[Internet Freight Cost]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Freight Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Unit Price",
+    "unique_name": "[Measures].[Internet Unit Price]",
+    "search_text": "measure | Internet Unit Price | [Measures].[Internet Unit Price] | measure group Internet Sales | Internet Unit Price",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Unit Price",
+      "unique_name": "[Measures].[Internet Unit Price]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Unit Price"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Total Product Cost",
+    "unique_name": "[Measures].[Internet Total Product Cost]",
+    "search_text": "measure | Internet Total Product Cost | [Measures].[Internet Total Product Cost] | measure group Internet Sales | Internet Total Product Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Total Product Cost",
+      "unique_name": "[Measures].[Internet Total Product Cost]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Total Product Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Standard Product Cost",
+    "unique_name": "[Measures].[Internet Standard Product Cost]",
+    "search_text": "measure | Internet Standard Product Cost | [Measures].[Internet Standard Product Cost] | measure group Internet Sales | Internet Standard Product Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Standard Product Cost",
+      "unique_name": "[Measures].[Internet Standard Product Cost]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Standard Product Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Transaction Count",
+    "unique_name": "[Measures].[Internet Transaction Count]",
+    "search_text": "measure | Internet Transaction Count | [Measures].[Internet Transaction Count] | measure group Internet Sales | Internet Transaction Count",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Transaction Count",
+      "unique_name": "[Measures].[Internet Transaction Count]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Transaction Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Order Count",
+    "unique_name": "[Measures].[Internet Order Count]",
+    "search_text": "measure | Internet Order Count | [Measures].[Internet Order Count] | measure group Internet Orders | Internet Order Count",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Order Count",
+      "unique_name": "[Measures].[Internet Order Count]",
+      "measure_group": "Internet Orders",
+      "description": "Internet Order Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Customer Count",
+    "unique_name": "[Measures].[Customer Count]",
+    "search_text": "measure | Customer Count | [Measures].[Customer Count] | measure group Internet Customers | Customer Count",
+    "payload": {
+      "type": "measure",
+      "name": "Customer Count",
+      "unique_name": "[Measures].[Customer Count]",
+      "measure_group": "Internet Customers",
+      "description": "Customer Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Sales Reason Count",
+    "unique_name": "[Measures].[Sales Reason Count]",
+    "search_text": "measure | Sales Reason Count | [Measures].[Sales Reason Count] | measure group Sales Reasons | Sales Reason Count",
+    "payload": {
+      "type": "measure",
+      "name": "Sales Reason Count",
+      "unique_name": "[Measures].[Sales Reason Count]",
+      "measure_group": "Sales Reasons",
+      "description": "Sales Reason Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Sales Amount",
+    "unique_name": "[Measures].[Reseller Sales Amount]",
+    "search_text": "measure | Reseller Sales Amount | [Measures].[Reseller Sales Amount] | measure group Reseller Sales | Reseller Sales Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Sales Amount",
+      "unique_name": "[Measures].[Reseller Sales Amount]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Sales Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Order Quantity",
+    "unique_name": "[Measures].[Reseller Order Quantity]",
+    "search_text": "measure | Reseller Order Quantity | [Measures].[Reseller Order Quantity] | measure group Reseller Sales | Reseller Order Quantity",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Order Quantity",
+      "unique_name": "[Measures].[Reseller Order Quantity]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Order Quantity"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Extended Amount",
+    "unique_name": "[Measures].[Reseller Extended Amount]",
+    "search_text": "measure | Reseller Extended Amount | [Measures].[Reseller Extended Amount] | measure group Reseller Sales | Reseller Extended Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Extended Amount",
+      "unique_name": "[Measures].[Reseller Extended Amount]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Extended Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Tax Amount",
+    "unique_name": "[Measures].[Reseller Tax Amount]",
+    "search_text": "measure | Reseller Tax Amount | [Measures].[Reseller Tax Amount] | measure group Reseller Sales | Reseller Tax Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Tax Amount",
+      "unique_name": "[Measures].[Reseller Tax Amount]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Tax Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Freight Cost",
+    "unique_name": "[Measures].[Reseller Freight Cost]",
+    "search_text": "measure | Reseller Freight Cost | [Measures].[Reseller Freight Cost] | measure group Reseller Sales | Reseller Freight Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Freight Cost",
+      "unique_name": "[Measures].[Reseller Freight Cost]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Freight Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Discount Amount",
+    "unique_name": "[Measures].[Discount Amount]",
+    "search_text": "measure | Discount Amount | [Measures].[Discount Amount] | measure group Reseller Sales | Discount Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Discount Amount",
+      "unique_name": "[Measures].[Discount Amount]",
+      "measure_group": "Reseller Sales",
+      "description": "Discount Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Unit Price",
+    "unique_name": "[Measures].[Reseller Unit Price]",
+    "search_text": "measure | Reseller Unit Price | [Measures].[Reseller Unit Price] | measure group Reseller Sales | Reseller Unit Price",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Unit Price",
+      "unique_name": "[Measures].[Reseller Unit Price]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Unit Price"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Unit Price Discount Percent",
+    "unique_name": "[Measures].[Unit Price Discount Percent]",
+    "search_text": "measure | Unit Price Discount Percent | [Measures].[Unit Price Discount Percent] | measure group Reseller Sales | Unit Price Discount Percent",
+    "payload": {
+      "type": "measure",
+      "name": "Unit Price Discount Percent",
+      "unique_name": "[Measures].[Unit Price Discount Percent]",
+      "measure_group": "Reseller Sales",
+      "description": "Unit Price Discount Percent"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Total Product Cost",
+    "unique_name": "[Measures].[Reseller Total Product Cost]",
+    "search_text": "measure | Reseller Total Product Cost | [Measures].[Reseller Total Product Cost] | measure group Reseller Sales | Reseller Total Product Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Total Product Cost",
+      "unique_name": "[Measures].[Reseller Total Product Cost]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Total Product Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Standard Product Cost",
+    "unique_name": "[Measures].[Reseller Standard Product Cost]",
+    "search_text": "measure | Reseller Standard Product Cost | [Measures].[Reseller Standard Product Cost] | measure group Reseller Sales | Reseller Standard Product Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Standard Product Cost",
+      "unique_name": "[Measures].[Reseller Standard Product Cost]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Standard Product Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Transaction Count",
+    "unique_name": "[Measures].[Reseller Transaction Count]",
+    "search_text": "measure | Reseller Transaction Count | [Measures].[Reseller Transaction Count] | measure group Reseller Sales | Reseller Transaction Count",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Transaction Count",
+      "unique_name": "[Measures].[Reseller Transaction Count]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Transaction Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Order Count",
+    "unique_name": "[Measures].[Reseller Order Count]",
+    "search_text": "measure | Reseller Order Count | [Measures].[Reseller Order Count] | measure group Reseller Orders | Reseller Order Count",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Order Count",
+      "unique_name": "[Measures].[Reseller Order Count]",
+      "measure_group": "Reseller Orders",
+      "description": "Reseller Order Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Order Quantity",
+    "unique_name": "[Measures].[Order Quantity]",
+    "search_text": "measure | Order Quantity | [Measures].[Order Quantity] | measure group Sales Summary | Order Quantity",
+    "payload": {
+      "type": "measure",
+      "name": "Order Quantity",
+      "unique_name": "[Measures].[Order Quantity]",
+      "measure_group": "Sales Summary",
+      "description": "Order Quantity"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Unit Price",
+    "unique_name": "[Measures].[Unit Price]",
+    "search_text": "measure | Unit Price | [Measures].[Unit Price] | measure group Sales Summary | Unit Price",
+    "payload": {
+      "type": "measure",
+      "name": "Unit Price",
+      "unique_name": "[Measures].[Unit Price]",
+      "measure_group": "Sales Summary",
+      "description": "Unit Price"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Extended Amount",
+    "unique_name": "[Measures].[Extended Amount]",
+    "search_text": "measure | Extended Amount | [Measures].[Extended Amount] | measure group Sales Summary | Extended Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Extended Amount",
+      "unique_name": "[Measures].[Extended Amount]",
+      "measure_group": "Sales Summary",
+      "description": "Extended Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Standard Product Cost",
+    "unique_name": "[Measures].[Standard Product Cost]",
+    "search_text": "measure | Standard Product Cost | [Measures].[Standard Product Cost] | measure group Sales Summary | Standard Product Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Standard Product Cost",
+      "unique_name": "[Measures].[Standard Product Cost]",
+      "measure_group": "Sales Summary",
+      "description": "Standard Product Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Total Product Cost",
+    "unique_name": "[Measures].[Total Product Cost]",
+    "search_text": "measure | Total Product Cost | [Measures].[Total Product Cost] | measure group Sales Summary | Total Product Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Total Product Cost",
+      "unique_name": "[Measures].[Total Product Cost]",
+      "measure_group": "Sales Summary",
+      "description": "Total Product Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Sales Amount",
+    "unique_name": "[Measures].[Sales Amount]",
+    "search_text": "measure | Sales Amount | [Measures].[Sales Amount] | measure group Sales Summary | Sales Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Sales Amount",
+      "unique_name": "[Measures].[Sales Amount]",
+      "measure_group": "Sales Summary",
+      "description": "Sales Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Tax Amount",
+    "unique_name": "[Measures].[Tax Amount]",
+    "search_text": "measure | Tax Amount | [Measures].[Tax Amount] | measure group Sales Summary | Tax Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Tax Amount",
+      "unique_name": "[Measures].[Tax Amount]",
+      "measure_group": "Sales Summary",
+      "description": "Tax Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Freight Cost",
+    "unique_name": "[Measures].[Freight Cost]",
+    "search_text": "measure | Freight Cost | [Measures].[Freight Cost] | measure group Sales Summary | Freight Cost",
+    "payload": {
+      "type": "measure",
+      "name": "Freight Cost",
+      "unique_name": "[Measures].[Freight Cost]",
+      "measure_group": "Sales Summary",
+      "description": "Freight Cost"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Transaction Count",
+    "unique_name": "[Measures].[Transaction Count]",
+    "search_text": "measure | Transaction Count | [Measures].[Transaction Count] | measure group Sales Summary | Transaction Count",
+    "payload": {
+      "type": "measure",
+      "name": "Transaction Count",
+      "unique_name": "[Measures].[Transaction Count]",
+      "measure_group": "Sales Summary",
+      "description": "Transaction Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Order Count",
+    "unique_name": "[Measures].[Order Count]",
+    "search_text": "measure | Order Count | [Measures].[Order Count] | measure group Sales Orders | Order Count",
+    "payload": {
+      "type": "measure",
+      "name": "Order Count",
+      "unique_name": "[Measures].[Order Count]",
+      "measure_group": "Sales Orders",
+      "description": "Order Count"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Sales Amount Quota",
+    "unique_name": "[Measures].[Sales Amount Quota]",
+    "search_text": "measure | Sales Amount Quota | [Measures].[Sales Amount Quota] | measure group Sales Targets | Sales Amount Quota",
+    "payload": {
+      "type": "measure",
+      "name": "Sales Amount Quota",
+      "unique_name": "[Measures].[Sales Amount Quota]",
+      "measure_group": "Sales Targets",
+      "description": "Sales Amount Quota"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Gross Profit",
+    "unique_name": "[Measures].[Internet Gross Profit]",
+    "search_text": "measure | Internet Gross Profit | [Measures].[Internet Gross Profit] | measure group Internet Sales | Internet Gross Profit",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Gross Profit",
+      "unique_name": "[Measures].[Internet Gross Profit]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Gross Profit"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Gross Profit Margin",
+    "unique_name": "[Measures].[Internet Gross Profit Margin]",
+    "search_text": "measure | Internet Gross Profit Margin | [Measures].[Internet Gross Profit Margin] | measure group Internet Sales | Internet Gross Profit Margin",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Gross Profit Margin",
+      "unique_name": "[Measures].[Internet Gross Profit Margin]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Gross Profit Margin"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Average Unit Price",
+    "unique_name": "[Measures].[Internet Average Unit Price]",
+    "search_text": "measure | Internet Average Unit Price | [Measures].[Internet Average Unit Price] | measure group Internet Sales | Internet Average Unit Price",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Average Unit Price",
+      "unique_name": "[Measures].[Internet Average Unit Price]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Average Unit Price"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Average Sales Amount",
+    "unique_name": "[Measures].[Internet Average Sales Amount]",
+    "search_text": "measure | Internet Average Sales Amount | [Measures].[Internet Average Sales Amount] | measure group Internet Sales | Internet Average Sales Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Average Sales Amount",
+      "unique_name": "[Measures].[Internet Average Sales Amount]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Average Sales Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Ratio to All Products",
+    "unique_name": "[Measures].[Internet Ratio to All Products]",
+    "search_text": "measure | Internet Ratio to All Products | [Measures].[Internet Ratio to All Products] | measure group Internet Sales | Internet Ratio to All Products",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Ratio to All Products",
+      "unique_name": "[Measures].[Internet Ratio to All Products]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Ratio to All Products"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Ratio to Parent Product",
+    "unique_name": "[Measures].[Internet Ratio to Parent Product]",
+    "search_text": "measure | Internet Ratio to Parent Product | [Measures].[Internet Ratio to Parent Product] | measure group Internet Sales | Internet Ratio to Parent Product",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Ratio to Parent Product",
+      "unique_name": "[Measures].[Internet Ratio to Parent Product]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Ratio to Parent Product"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Growth in Customer Base",
+    "unique_name": "[Measures].[Growth in Customer Base]",
+    "search_text": "measure | Growth in Customer Base | [Measures].[Growth in Customer Base] | measure group Internet Sales | Growth in Customer Base",
+    "payload": {
+      "type": "measure",
+      "name": "Growth in Customer Base",
+      "unique_name": "[Measures].[Growth in Customer Base]",
+      "measure_group": "Internet Sales",
+      "description": "Growth in Customer Base"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Gross Profit",
+    "unique_name": "[Measures].[Reseller Gross Profit]",
+    "search_text": "measure | Reseller Gross Profit | [Measures].[Reseller Gross Profit] | measure group Reseller Sales | Reseller Gross Profit",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Gross Profit",
+      "unique_name": "[Measures].[Reseller Gross Profit]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Gross Profit"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Gross Profit Margin",
+    "unique_name": "[Measures].[Reseller Gross Profit Margin]",
+    "search_text": "measure | Reseller Gross Profit Margin | [Measures].[Reseller Gross Profit Margin] | measure group Reseller Sales | Reseller Gross Profit Margin",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Gross Profit Margin",
+      "unique_name": "[Measures].[Reseller Gross Profit Margin]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Gross Profit Margin"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Average Unit Price",
+    "unique_name": "[Measures].[Reseller Average Unit Price]",
+    "search_text": "measure | Reseller Average Unit Price | [Measures].[Reseller Average Unit Price] | measure group Reseller Sales | Reseller Average Unit Price",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Average Unit Price",
+      "unique_name": "[Measures].[Reseller Average Unit Price]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Average Unit Price"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Average Sales Amount",
+    "unique_name": "[Measures].[Reseller Average Sales Amount]",
+    "search_text": "measure | Reseller Average Sales Amount | [Measures].[Reseller Average Sales Amount] | measure group Reseller Sales | Reseller Average Sales Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Average Sales Amount",
+      "unique_name": "[Measures].[Reseller Average Sales Amount]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Average Sales Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Ratio to All Products",
+    "unique_name": "[Measures].[Reseller Ratio to All Products]",
+    "search_text": "measure | Reseller Ratio to All Products | [Measures].[Reseller Ratio to All Products] | measure group Reseller Sales | Reseller Ratio to All Products",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Ratio to All Products",
+      "unique_name": "[Measures].[Reseller Ratio to All Products]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Ratio to All Products"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Reseller Ratio to Parent Product",
+    "unique_name": "[Measures].[Reseller Ratio to Parent Product]",
+    "search_text": "measure | Reseller Ratio to Parent Product | [Measures].[Reseller Ratio to Parent Product] | measure group Reseller Sales | Reseller Ratio to Parent Product",
+    "payload": {
+      "type": "measure",
+      "name": "Reseller Ratio to Parent Product",
+      "unique_name": "[Measures].[Reseller Ratio to Parent Product]",
+      "measure_group": "Reseller Sales",
+      "description": "Reseller Ratio to Parent Product"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Discount Percentage",
+    "unique_name": "[Measures].[Discount Percentage]",
+    "search_text": "measure | Discount Percentage | [Measures].[Discount Percentage] | measure group Reseller Sales | Discount Percentage",
+    "payload": {
+      "type": "measure",
+      "name": "Discount Percentage",
+      "unique_name": "[Measures].[Discount Percentage]",
+      "measure_group": "Reseller Sales",
+      "description": "Discount Percentage"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Average Unit Price",
+    "unique_name": "[Measures].[Average Unit Price]",
+    "search_text": "measure | Average Unit Price | [Measures].[Average Unit Price] | measure group Sales Summary | Average Unit Price",
+    "payload": {
+      "type": "measure",
+      "name": "Average Unit Price",
+      "unique_name": "[Measures].[Average Unit Price]",
+      "measure_group": "Sales Summary",
+      "description": "Average Unit Price"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Average Sales Amount",
+    "unique_name": "[Measures].[Average Sales Amount]",
+    "search_text": "measure | Average Sales Amount | [Measures].[Average Sales Amount] | measure group Sales Summary | Average Sales Amount",
+    "payload": {
+      "type": "measure",
+      "name": "Average Sales Amount",
+      "unique_name": "[Measures].[Average Sales Amount]",
+      "measure_group": "Sales Summary",
+      "description": "Average Sales Amount"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Gross Profit",
+    "unique_name": "[Measures].[Gross Profit]",
+    "search_text": "measure | Gross Profit | [Measures].[Gross Profit] | measure group Sales Summary | Gross Profit",
+    "payload": {
+      "type": "measure",
+      "name": "Gross Profit",
+      "unique_name": "[Measures].[Gross Profit]",
+      "measure_group": "Sales Summary",
+      "description": "Gross Profit"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Gross Profit Margin",
+    "unique_name": "[Measures].[Gross Profit Margin]",
+    "search_text": "measure | Gross Profit Margin | [Measures].[Gross Profit Margin] | measure group Sales Summary | Gross Profit Margin",
+    "payload": {
+      "type": "measure",
+      "name": "Gross Profit Margin",
+      "unique_name": "[Measures].[Gross Profit Margin]",
+      "measure_group": "Sales Summary",
+      "description": "Gross Profit Margin"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Ratio to All Products",
+    "unique_name": "[Measures].[Ratio to All Products]",
+    "search_text": "measure | Ratio to All Products | [Measures].[Ratio to All Products] | measure group Sales Summary | Ratio to All Products",
+    "payload": {
+      "type": "measure",
+      "name": "Ratio to All Products",
+      "unique_name": "[Measures].[Ratio to All Products]",
+      "measure_group": "Sales Summary",
+      "description": "Ratio to All Products"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Ratio to Parent Product",
+    "unique_name": "[Measures].[Ratio to Parent Product]",
+    "search_text": "measure | Ratio to Parent Product | [Measures].[Ratio to Parent Product] | measure group Sales Summary | Ratio to Parent Product",
+    "payload": {
+      "type": "measure",
+      "name": "Ratio to Parent Product",
+      "unique_name": "[Measures].[Ratio to Parent Product]",
+      "measure_group": "Sales Summary",
+      "description": "Ratio to Parent Product"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "___Growth in Customer Base Value",
+    "unique_name": "[Measures].[___Growth in Customer Base Value]",
+    "search_text": "measure | ___Growth in Customer Base Value | [Measures].[___Growth in Customer Base Value] | measure group Internet Sales | ___Growth in Customer Base Value",
+    "payload": {
+      "type": "measure",
+      "name": "___Growth in Customer Base Value",
+      "unique_name": "[Measures].[___Growth in Customer Base Value]",
+      "measure_group": "Internet Sales",
+      "description": "___Growth in Customer Base Value"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Growth in Customer Base Goal",
+    "unique_name": "[Measures].[Growth in Customer Base Goal]",
+    "search_text": "measure | Growth in Customer Base Goal | [Measures].[Growth in Customer Base Goal] | measure group Internet Sales | Growth in Customer Base Goal",
+    "payload": {
+      "type": "measure",
+      "name": "Growth in Customer Base Goal",
+      "unique_name": "[Measures].[Growth in Customer Base Goal]",
+      "measure_group": "Internet Sales",
+      "description": "Growth in Customer Base Goal"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Growth in Customer Base Status",
+    "unique_name": "[Measures].[Growth in Customer Base Status]",
+    "search_text": "measure | Growth in Customer Base Status | [Measures].[Growth in Customer Base Status] | measure group Internet Sales | Growth in Customer Base Status",
+    "payload": {
+      "type": "measure",
+      "name": "Growth in Customer Base Status",
+      "unique_name": "[Measures].[Growth in Customer Base Status]",
+      "measure_group": "Internet Sales",
+      "description": "Growth in Customer Base Status"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Growth in Customer Base Trend",
+    "unique_name": "[Measures].[Growth in Customer Base Trend]",
+    "search_text": "measure | Growth in Customer Base Trend | [Measures].[Growth in Customer Base Trend] | measure group Internet Sales | Growth in Customer Base Trend",
+    "payload": {
+      "type": "measure",
+      "name": "Growth in Customer Base Trend",
+      "unique_name": "[Measures].[Growth in Customer Base Trend]",
+      "measure_group": "Internet Sales",
+      "description": "Growth in Customer Base Trend"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "___Product Gross Profit Margin Value",
+    "unique_name": "[Measures].[___Product Gross Profit Margin Value]",
+    "search_text": "measure | ___Product Gross Profit Margin Value | [Measures].[___Product Gross Profit Margin Value] | measure group Sales Summary | ___Product Gross Profit Margin Value",
+    "payload": {
+      "type": "measure",
+      "name": "___Product Gross Profit Margin Value",
+      "unique_name": "[Measures].[___Product Gross Profit Margin Value]",
+      "measure_group": "Sales Summary",
+      "description": "___Product Gross Profit Margin Value"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Product Gross Profit Margin Goal",
+    "unique_name": "[Measures].[Product Gross Profit Margin Goal]",
+    "search_text": "measure | Product Gross Profit Margin Goal | [Measures].[Product Gross Profit Margin Goal] | measure group Sales Summary | Product Gross Profit Margin Goal",
+    "payload": {
+      "type": "measure",
+      "name": "Product Gross Profit Margin Goal",
+      "unique_name": "[Measures].[Product Gross Profit Margin Goal]",
+      "measure_group": "Sales Summary",
+      "description": "Product Gross Profit Margin Goal"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Product Gross Profit Margin Status",
+    "unique_name": "[Measures].[Product Gross Profit Margin Status]",
+    "search_text": "measure | Product Gross Profit Margin Status | [Measures].[Product Gross Profit Margin Status] | measure group Sales Summary | Product Gross Profit Margin Status",
+    "payload": {
+      "type": "measure",
+      "name": "Product Gross Profit Margin Status",
+      "unique_name": "[Measures].[Product Gross Profit Margin Status]",
+      "measure_group": "Sales Summary",
+      "description": "Product Gross Profit Margin Status"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Product Gross Profit Margin Trend",
+    "unique_name": "[Measures].[Product Gross Profit Margin Trend]",
+    "search_text": "measure | Product Gross Profit Margin Trend | [Measures].[Product Gross Profit Margin Trend] | measure group Sales Summary | Product Gross Profit Margin Trend",
+    "payload": {
+      "type": "measure",
+      "name": "Product Gross Profit Margin Trend",
+      "unique_name": "[Measures].[Product Gross Profit Margin Trend]",
+      "measure_group": "Sales Summary",
+      "description": "Product Gross Profit Margin Trend"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "___Revenue Value",
+    "unique_name": "[Measures].[___Revenue Value]",
+    "search_text": "measure | ___Revenue Value | [Measures].[___Revenue Value] | measure group Sales Summary | ___Revenue Value",
+    "payload": {
+      "type": "measure",
+      "name": "___Revenue Value",
+      "unique_name": "[Measures].[___Revenue Value]",
+      "measure_group": "Sales Summary",
+      "description": "___Revenue Value"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Revenue Goal",
+    "unique_name": "[Measures].[Revenue Goal]",
+    "search_text": "measure | Revenue Goal | [Measures].[Revenue Goal] | measure group Sales Summary | Revenue Goal",
+    "payload": {
+      "type": "measure",
+      "name": "Revenue Goal",
+      "unique_name": "[Measures].[Revenue Goal]",
+      "measure_group": "Sales Summary",
+      "description": "Revenue Goal"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Revenue Status",
+    "unique_name": "[Measures].[Revenue Status]",
+    "search_text": "measure | Revenue Status | [Measures].[Revenue Status] | measure group Sales Summary | Revenue Status",
+    "payload": {
+      "type": "measure",
+      "name": "Revenue Status",
+      "unique_name": "[Measures].[Revenue Status]",
+      "measure_group": "Sales Summary",
+      "description": "Revenue Status"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Revenue Trend",
+    "unique_name": "[Measures].[Revenue Trend]",
+    "search_text": "measure | Revenue Trend | [Measures].[Revenue Trend] | measure group Sales Summary | Revenue Trend",
+    "payload": {
+      "type": "measure",
+      "name": "Revenue Trend",
+      "unique_name": "[Measures].[Revenue Trend]",
+      "measure_group": "Sales Summary",
+      "description": "Revenue Trend"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "___Channel Revenue Value",
+    "unique_name": "[Measures].[___Channel Revenue Value]",
+    "search_text": "measure | ___Channel Revenue Value | [Measures].[___Channel Revenue Value] | measure group Reseller Sales | ___Channel Revenue Value",
+    "payload": {
+      "type": "measure",
+      "name": "___Channel Revenue Value",
+      "unique_name": "[Measures].[___Channel Revenue Value]",
+      "measure_group": "Reseller Sales",
+      "description": "___Channel Revenue Value"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "___Channel Revenue Goal",
+    "unique_name": "[Measures].[___Channel Revenue Goal]",
+    "search_text": "measure | ___Channel Revenue Goal | [Measures].[___Channel Revenue Goal] | measure group Reseller Sales | ___Channel Revenue Goal",
+    "payload": {
+      "type": "measure",
+      "name": "___Channel Revenue Goal",
+      "unique_name": "[Measures].[___Channel Revenue Goal]",
+      "measure_group": "Reseller Sales",
+      "description": "___Channel Revenue Goal"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Channel Revenue Status",
+    "unique_name": "[Measures].[Channel Revenue Status]",
+    "search_text": "measure | Channel Revenue Status | [Measures].[Channel Revenue Status] | measure group Reseller Sales | Channel Revenue Status",
+    "payload": {
+      "type": "measure",
+      "name": "Channel Revenue Status",
+      "unique_name": "[Measures].[Channel Revenue Status]",
+      "measure_group": "Reseller Sales",
+      "description": "Channel Revenue Status"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Channel Revenue Trend",
+    "unique_name": "[Measures].[Channel Revenue Trend]",
+    "search_text": "measure | Channel Revenue Trend | [Measures].[Channel Revenue Trend] | measure group Reseller Sales | Channel Revenue Trend",
+    "payload": {
+      "type": "measure",
+      "name": "Channel Revenue Trend",
+      "unique_name": "[Measures].[Channel Revenue Trend]",
+      "measure_group": "Reseller Sales",
+      "description": "Channel Revenue Trend"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "___Internet Revenue Value",
+    "unique_name": "[Measures].[___Internet Revenue Value]",
+    "search_text": "measure | ___Internet Revenue Value | [Measures].[___Internet Revenue Value] | measure group Internet Sales | ___Internet Revenue Value",
+    "payload": {
+      "type": "measure",
+      "name": "___Internet Revenue Value",
+      "unique_name": "[Measures].[___Internet Revenue Value]",
+      "measure_group": "Internet Sales",
+      "description": "___Internet Revenue Value"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Revenue Goal",
+    "unique_name": "[Measures].[Internet Revenue Goal]",
+    "search_text": "measure | Internet Revenue Goal | [Measures].[Internet Revenue Goal] | measure group Internet Sales | Internet Revenue Goal",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Revenue Goal",
+      "unique_name": "[Measures].[Internet Revenue Goal]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Revenue Goal"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Revenue Status",
+    "unique_name": "[Measures].[Internet Revenue Status]",
+    "search_text": "measure | Internet Revenue Status | [Measures].[Internet Revenue Status] | measure group Internet Sales | Internet Revenue Status",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Revenue Status",
+      "unique_name": "[Measures].[Internet Revenue Status]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Revenue Status"
+    },
+    "parent_dimension_unique_name": null
+  },
+  {
+    "object_type": "measure",
+    "name": "Internet Revenue Trend",
+    "unique_name": "[Measures].[Internet Revenue Trend]",
+    "search_text": "measure | Internet Revenue Trend | [Measures].[Internet Revenue Trend] | measure group Internet Sales | Internet Revenue Trend",
+    "payload": {
+      "type": "measure",
+      "name": "Internet Revenue Trend",
+      "unique_name": "[Measures].[Internet Revenue Trend]",
+      "measure_group": "Internet Sales",
+      "description": "Internet Revenue Trend"
+    },
+    "parent_dimension_unique_name": null
+  }
+]

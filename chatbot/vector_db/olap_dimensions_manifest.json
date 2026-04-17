@@ -1,0 +1,8 @@
+{
+  "dimensions_path": "C:\\Users\\malic\\bakalarka\\OLAP\\cube_dimensions.json",
+  "measures_path": "C:\\Users\\malic\\bakalarka\\OLAP\\cube_measures.json",
+  "dimensions_mtime": 1773061885.5391965,
+  "measures_mtime": 1773061885.5412204,
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_device": "auto"
+}

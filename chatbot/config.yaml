@@ -1,0 +1,35 @@
+# Chatbot backend configuration
+# Set 'backend' to either 'azure' or 'ollama'
+
+backend: ollama   # switch to 'azure' to use Azure AI Foundry
+
+metadata_selection:
+  workflow: vector    # 'classic', 'vector', or 'vector_hierarchical'
+  top_k: 20
+  dimension_top_k: 5
+  child_top_k_per_dimension: 5
+  measure_top_k: 10
+  prefer_scalar_template: true
+  embedding_models:
+    - "BAAI/bge-large-en-v1.5"
+    - "BAAI/bge-m3"
+    # - "intfloat/e5-mistral-7b-instruct"  # excluded from runs; kept for thesis discussion
+  embedding_model: ""  # optional explicit override; leave empty to use the preset below
+  embedding_model_preset: "strong"  # 'default' = BAAI/bge-large-en-v1.5, 'strong' = BAAI/bge-m3
+  embedding_device: "auto"  # 'auto', 'cpu', or 'cuda'
+  vector_dimensions: 512
+  vector_db_dir: "chatbot/vector_db"
+
+azure:
+  # Values can also be set in .env (AZURE_AI_ENDPOINT, AZURE_AI_API_KEY, etc.)
+  # Leave blank to use .env values
+  endpoint: ""
+  api_key: ""
+  deployment: "gpt-oss-120b"
+  api_version: "2024-05-01-preview"
+
+ollama:
+  base_url: "http://localhost:11434/v1"
+  model: "qwen2.5:7b"       # any model you have pulled, e.g. mistral, phi3, gemma3
+  temperature: 0.1
+  max_tokens: 20000

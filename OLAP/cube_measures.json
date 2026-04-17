@@ -1,0 +1,533 @@
+[
+  {
+    "type": "cube",
+    "cube": "Adventure Works",
+    "measures": [
+      {
+        "type": "measure",
+        "name": "Internet Sales Amount",
+        "unique_name": "[Measures].[Internet Sales Amount]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Sales Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Order Quantity",
+        "unique_name": "[Measures].[Internet Order Quantity]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Order Quantity"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Extended Amount",
+        "unique_name": "[Measures].[Internet Extended Amount]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Extended Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Tax Amount",
+        "unique_name": "[Measures].[Internet Tax Amount]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Tax Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Freight Cost",
+        "unique_name": "[Measures].[Internet Freight Cost]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Freight Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Unit Price",
+        "unique_name": "[Measures].[Internet Unit Price]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Unit Price"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Total Product Cost",
+        "unique_name": "[Measures].[Internet Total Product Cost]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Total Product Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Standard Product Cost",
+        "unique_name": "[Measures].[Internet Standard Product Cost]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Standard Product Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Transaction Count",
+        "unique_name": "[Measures].[Internet Transaction Count]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Transaction Count"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Order Count",
+        "unique_name": "[Measures].[Internet Order Count]",
+        "measure_group": "Internet Orders",
+        "description": "Internet Order Count"
+      },
+      {
+        "type": "measure",
+        "name": "Customer Count",
+        "unique_name": "[Measures].[Customer Count]",
+        "measure_group": "Internet Customers",
+        "description": "Customer Count"
+      },
+      {
+        "type": "measure",
+        "name": "Sales Reason Count",
+        "unique_name": "[Measures].[Sales Reason Count]",
+        "measure_group": "Sales Reasons",
+        "description": "Sales Reason Count"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Sales Amount",
+        "unique_name": "[Measures].[Reseller Sales Amount]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Sales Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Order Quantity",
+        "unique_name": "[Measures].[Reseller Order Quantity]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Order Quantity"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Extended Amount",
+        "unique_name": "[Measures].[Reseller Extended Amount]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Extended Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Tax Amount",
+        "unique_name": "[Measures].[Reseller Tax Amount]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Tax Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Freight Cost",
+        "unique_name": "[Measures].[Reseller Freight Cost]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Freight Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Discount Amount",
+        "unique_name": "[Measures].[Discount Amount]",
+        "measure_group": "Reseller Sales",
+        "description": "Discount Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Unit Price",
+        "unique_name": "[Measures].[Reseller Unit Price]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Unit Price"
+      },
+      {
+        "type": "measure",
+        "name": "Unit Price Discount Percent",
+        "unique_name": "[Measures].[Unit Price Discount Percent]",
+        "measure_group": "Reseller Sales",
+        "description": "Unit Price Discount Percent"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Total Product Cost",
+        "unique_name": "[Measures].[Reseller Total Product Cost]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Total Product Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Standard Product Cost",
+        "unique_name": "[Measures].[Reseller Standard Product Cost]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Standard Product Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Transaction Count",
+        "unique_name": "[Measures].[Reseller Transaction Count]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Transaction Count"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Order Count",
+        "unique_name": "[Measures].[Reseller Order Count]",
+        "measure_group": "Reseller Orders",
+        "description": "Reseller Order Count"
+      },
+      {
+        "type": "measure",
+        "name": "Order Quantity",
+        "unique_name": "[Measures].[Order Quantity]",
+        "measure_group": "Sales Summary",
+        "description": "Order Quantity"
+      },
+      {
+        "type": "measure",
+        "name": "Unit Price",
+        "unique_name": "[Measures].[Unit Price]",
+        "measure_group": "Sales Summary",
+        "description": "Unit Price"
+      },
+      {
+        "type": "measure",
+        "name": "Extended Amount",
+        "unique_name": "[Measures].[Extended Amount]",
+        "measure_group": "Sales Summary",
+        "description": "Extended Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Standard Product Cost",
+        "unique_name": "[Measures].[Standard Product Cost]",
+        "measure_group": "Sales Summary",
+        "description": "Standard Product Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Total Product Cost",
+        "unique_name": "[Measures].[Total Product Cost]",
+        "measure_group": "Sales Summary",
+        "description": "Total Product Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Sales Amount",
+        "unique_name": "[Measures].[Sales Amount]",
+        "measure_group": "Sales Summary",
+        "description": "Sales Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Tax Amount",
+        "unique_name": "[Measures].[Tax Amount]",
+        "measure_group": "Sales Summary",
+        "description": "Tax Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Freight Cost",
+        "unique_name": "[Measures].[Freight Cost]",
+        "measure_group": "Sales Summary",
+        "description": "Freight Cost"
+      },
+      {
+        "type": "measure",
+        "name": "Transaction Count",
+        "unique_name": "[Measures].[Transaction Count]",
+        "measure_group": "Sales Summary",
+        "description": "Transaction Count"
+      },
+      {
+        "type": "measure",
+        "name": "Order Count",
+        "unique_name": "[Measures].[Order Count]",
+        "measure_group": "Sales Orders",
+        "description": "Order Count"
+      },
+      {
+        "type": "measure",
+        "name": "Sales Amount Quota",
+        "unique_name": "[Measures].[Sales Amount Quota]",
+        "measure_group": "Sales Targets",
+        "description": "Sales Amount Quota"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Gross Profit",
+        "unique_name": "[Measures].[Internet Gross Profit]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Gross Profit"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Gross Profit Margin",
+        "unique_name": "[Measures].[Internet Gross Profit Margin]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Gross Profit Margin"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Average Unit Price",
+        "unique_name": "[Measures].[Internet Average Unit Price]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Average Unit Price"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Average Sales Amount",
+        "unique_name": "[Measures].[Internet Average Sales Amount]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Average Sales Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Ratio to All Products",
+        "unique_name": "[Measures].[Internet Ratio to All Products]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Ratio to All Products"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Ratio to Parent Product",
+        "unique_name": "[Measures].[Internet Ratio to Parent Product]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Ratio to Parent Product"
+      },
+      {
+        "type": "measure",
+        "name": "Growth in Customer Base",
+        "unique_name": "[Measures].[Growth in Customer Base]",
+        "measure_group": "Internet Sales",
+        "description": "Growth in Customer Base"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Gross Profit",
+        "unique_name": "[Measures].[Reseller Gross Profit]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Gross Profit"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Gross Profit Margin",
+        "unique_name": "[Measures].[Reseller Gross Profit Margin]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Gross Profit Margin"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Average Unit Price",
+        "unique_name": "[Measures].[Reseller Average Unit Price]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Average Unit Price"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Average Sales Amount",
+        "unique_name": "[Measures].[Reseller Average Sales Amount]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Average Sales Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Ratio to All Products",
+        "unique_name": "[Measures].[Reseller Ratio to All Products]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Ratio to All Products"
+      },
+      {
+        "type": "measure",
+        "name": "Reseller Ratio to Parent Product",
+        "unique_name": "[Measures].[Reseller Ratio to Parent Product]",
+        "measure_group": "Reseller Sales",
+        "description": "Reseller Ratio to Parent Product"
+      },
+      {
+        "type": "measure",
+        "name": "Discount Percentage",
+        "unique_name": "[Measures].[Discount Percentage]",
+        "measure_group": "Reseller Sales",
+        "description": "Discount Percentage"
+      },
+      {
+        "type": "measure",
+        "name": "Average Unit Price",
+        "unique_name": "[Measures].[Average Unit Price]",
+        "measure_group": "Sales Summary",
+        "description": "Average Unit Price"
+      },
+      {
+        "type": "measure",
+        "name": "Average Sales Amount",
+        "unique_name": "[Measures].[Average Sales Amount]",
+        "measure_group": "Sales Summary",
+        "description": "Average Sales Amount"
+      },
+      {
+        "type": "measure",
+        "name": "Gross Profit",
+        "unique_name": "[Measures].[Gross Profit]",
+        "measure_group": "Sales Summary",
+        "description": "Gross Profit"
+      },
+      {
+        "type": "measure",
+        "name": "Gross Profit Margin",
+        "unique_name": "[Measures].[Gross Profit Margin]",
+        "measure_group": "Sales Summary",
+        "description": "Gross Profit Margin"
+      },
+      {
+        "type": "measure",
+        "name": "Ratio to All Products",
+        "unique_name": "[Measures].[Ratio to All Products]",
+        "measure_group": "Sales Summary",
+        "description": "Ratio to All Products"
+      },
+      {
+        "type": "measure",
+        "name": "Ratio to Parent Product",
+        "unique_name": "[Measures].[Ratio to Parent Product]",
+        "measure_group": "Sales Summary",
+        "description": "Ratio to Parent Product"
+      },
+      {
+        "type": "measure",
+        "name": "___Growth in Customer Base Value",
+        "unique_name": "[Measures].[___Growth in Customer Base Value]",
+        "measure_group": "Internet Sales",
+        "description": "___Growth in Customer Base Value"
+      },
+      {
+        "type": "measure",
+        "name": "Growth in Customer Base Goal",
+        "unique_name": "[Measures].[Growth in Customer Base Goal]",
+        "measure_group": "Internet Sales",
+        "description": "Growth in Customer Base Goal"
+      },
+      {
+        "type": "measure",
+        "name": "Growth in Customer Base Status",
+        "unique_name": "[Measures].[Growth in Customer Base Status]",
+        "measure_group": "Internet Sales",
+        "description": "Growth in Customer Base Status"
+      },
+      {
+        "type": "measure",
+        "name": "Growth in Customer Base Trend",
+        "unique_name": "[Measures].[Growth in Customer Base Trend]",
+        "measure_group": "Internet Sales",
+        "description": "Growth in Customer Base Trend"
+      },
+      {
+        "type": "measure",
+        "name": "___Product Gross Profit Margin Value",
+        "unique_name": "[Measures].[___Product Gross Profit Margin Value]",
+        "measure_group": "Sales Summary",
+        "description": "___Product Gross Profit Margin Value"
+      },
+      {
+        "type": "measure",
+        "name": "Product Gross Profit Margin Goal",
+        "unique_name": "[Measures].[Product Gross Profit Margin Goal]",
+        "measure_group": "Sales Summary",
+        "description": "Product Gross Profit Margin Goal"
+      },
+      {
+        "type": "measure",
+        "name": "Product Gross Profit Margin Status",
+        "unique_name": "[Measures].[Product Gross Profit Margin Status]",
+        "measure_group": "Sales Summary",
+        "description": "Product Gross Profit Margin Status"
+      },
+      {
+        "type": "measure",
+        "name": "Product Gross Profit Margin Trend",
+        "unique_name": "[Measures].[Product Gross Profit Margin Trend]",
+        "measure_group": "Sales Summary",
+        "description": "Product Gross Profit Margin Trend"
+      },
+      {
+        "type": "measure",
+        "name": "___Revenue Value",
+        "unique_name": "[Measures].[___Revenue Value]",
+        "measure_group": "Sales Summary",
+        "description": "___Revenue Value"
+      },
+      {
+        "type": "measure",
+        "name": "Revenue Goal",
+        "unique_name": "[Measures].[Revenue Goal]",
+        "measure_group": "Sales Summary",
+        "description": "Revenue Goal"
+      },
+      {
+        "type": "measure",
+        "name": "Revenue Status",
+        "unique_name": "[Measures].[Revenue Status]",
+        "measure_group": "Sales Summary",
+        "description": "Revenue Status"
+      },
+      {
+        "type": "measure",
+        "name": "Revenue Trend",
+        "unique_name": "[Measures].[Revenue Trend]",
+        "measure_group": "Sales Summary",
+        "description": "Revenue Trend"
+      },
+      {
+        "type": "measure",
+        "name": "___Channel Revenue Value",
+        "unique_name": "[Measures].[___Channel Revenue Value]",
+        "measure_group": "Reseller Sales",
+        "description": "___Channel Revenue Value"
+      },
+      {
+        "type": "measure",
+        "name": "___Channel Revenue Goal",
+        "unique_name": "[Measures].[___Channel Revenue Goal]",
+        "measure_group": "Reseller Sales",
+        "description": "___Channel Revenue Goal"
+      },
+      {
+        "type": "measure",
+        "name": "Channel Revenue Status",
+        "unique_name": "[Measures].[Channel Revenue Status]",
+        "measure_group": "Reseller Sales",
+        "description": "Channel Revenue Status"
+      },
+      {
+        "type": "measure",
+        "name": "Channel Revenue Trend",
+        "unique_name": "[Measures].[Channel Revenue Trend]",
+        "measure_group": "Reseller Sales",
+        "description": "Channel Revenue Trend"
+      },
+      {
+        "type": "measure",
+        "name": "___Internet Revenue Value",
+        "unique_name": "[Measures].[___Internet Revenue Value]",
+        "measure_group": "Internet Sales",
+        "description": "___Internet Revenue Value"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Revenue Goal",
+        "unique_name": "[Measures].[Internet Revenue Goal]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Revenue Goal"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Revenue Status",
+        "unique_name": "[Measures].[Internet Revenue Status]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Revenue Status"
+      },
+      {
+        "type": "measure",
+        "name": "Internet Revenue Trend",
+        "unique_name": "[Measures].[Internet Revenue Trend]",
+        "measure_group": "Internet Sales",
+        "description": "Internet Revenue Trend"
+      }
+    ]
+  }
+]
