@@ -1,1 +1,30 @@
 python chatbot/multi_user_workflow.py --questions chatbot/analysis_questions.with_gold.json --users chatbot/chatbot/users.json --output chatbot/chatbot/multi_user_results.json --max-workers 2
+
+
+Set-Location D:\JMA
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+
+
+
+Force temp and cache to D for this shell
+$env:TEMP = "D:\tmp"
+$env:TMP = "D:\tmp"
+$env:PIP_CACHE_DIR = "D:\pip-cache"
+$env:PIP_NO_CACHE_DIR = "1"
+
+Create folders
+New-Item -ItemType Directory -Force -Path D:\tmp | Out-Null
+New-Item -ItemType Directory -Force -Path D:\pip-cache | Out-Null
+
+Verify where Python temp is pointing
+python -c "import tempfile,os; print('temp=', tempfile.gettempdir()); print('cache=', os.environ.get('PIP_CACHE_DIR'))"
+
+Check free space on both disks
+Get-PSDrive -Name C,D | Select Name,Free,Used
+
+Install with no cache
+python -m pip install --upgrade pip setuptools wheel --no-cache-dir
+python -m pip install -r requirements.txt --no-cache-dir
