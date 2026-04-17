@@ -1,0 +1,8 @@
+numpy
+pyyaml
+python-dotenv
+semantic-kernel
+openai
+faiss-cpu
+sentence-transformers
+pyadomd
