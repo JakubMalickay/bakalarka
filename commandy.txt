@@ -1,1 +1,59 @@
 python chatbot/multi_user_workflow.py --questions chatbot/analysis_questions.with_gold.json --users chatbot/chatbot/users.json --output chatbot/chatbot/multi_user_results.json --max-workers 2
+
+
+Set-Location D:\JMA
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+
+
+
+Force temp and cache to D for this shell
+$env:TEMP = "D:\tmp"
+$env:TMP = "D:\tmp"
+$env:PIP_CACHE_DIR = "D:\pip-cache"
+$env:PIP_NO_CACHE_DIR = "1"
+
+Create folders
+New-Item -ItemType Directory -Force -Path D:\tmp | Out-Null
+New-Item -ItemType Directory -Force -Path D:\pip-cache | Out-Null
+
+Verify where Python temp is pointing
+python -c "import tempfile,os; print('temp=', tempfile.gettempdir()); print('cache=', os.environ.get('PIP_CACHE_DIR'))"
+
+Install with no cache
+python -m pip install --upgrade pip setuptools wheel --no-cache-dir
+python -m pip install -r requirements.txt --no-cache-dir
+
+
+
+
+
+
+:: Run in CMD as Administrator
+
+:: 1) Create target folder on D
+mkdir D:\ollama\models
+
+:: 2) Set env var for this shell + persist for next sessions
+set OLLAMA_MODELS=D:\ollama\models
+setx OLLAMA_MODELS "D:\ollama\models"
+
+:: 3) Stop any running Ollama process/service
+taskkill /IM ollama.exe /F
+sc stop Ollama
+
+:: 4) (Optional but robust) hard-redirect default C models path to D via junction
+::    If C:\Users\adminJSN\.ollama\models exists and has data you need, move it first manually.
+rmdir /S /Q C:\Users\adminJSN\.ollama\models
+mklink /J C:\Users\adminJSN\.ollama\models D:\ollama\models
+
+:: 5) Start Ollama in this shell (it sees OLLAMA_MODELS)
+start "ollama-serve" cmd /k "set OLLAMA_MODELS=D:\ollama\models && ollama serve"
+
+:: 6) Pull model (in current shell)
+ollama pull gpt-oss:120b
+
+:: 7) Quick verify
+ollama list
