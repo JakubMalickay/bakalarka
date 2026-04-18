@@ -1,0 +1,180 @@
+[
+  {
+    "id": "q01",
+    "question": "Jaká je celková výše internetových tržeb?",
+    "mdx_query": "SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]"
+    ]
+  },
+  {
+    "id": "q02",
+    "question": "Jaké je celkové internetové objednané množství?",
+    "mdx_query": "SELECT {[Measures].[Internet Order Quantity]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Order Quantity]"
+    ]
+  },
+  {
+    "id": "q03",
+    "question": "Jaká je celková internetová částka daně?",
+    "mdx_query": "SELECT {[Measures].[Internet Tax Amount]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Tax Amount]"
+    ]
+  },
+  {
+    "id": "q04",
+    "question": "Jaké jsou celkové internetové náklady na dopravu?",
+    "mdx_query": "SELECT {[Measures].[Internet Freight Cost]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Freight Cost]"
+    ]
+  },
+  {
+    "id": "q05",
+    "question": "Jaké jsou celkové internetové náklady na produkty?",
+    "mdx_query": "SELECT {[Measures].[Internet Total Product Cost]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Total Product Cost]"
+    ]
+  },
+  {
+    "id": "q06",
+    "question": "Jaký je internetový hrubý zisk (internetové tržby minus celkové internetové náklady na produkty)?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Gross Profit] AS [Measures].[Internet Sales Amount] - [Measures].[Internet Total Product Cost] SELECT {[Measures].[Calc Internet Gross Profit]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Internet Total Product Cost]"
+    ]
+  },
+  {
+    "id": "q07",
+    "question": "Jaká je internetová hrubá marže (hrubý zisk dělený internetovými tržbami)?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Gross Margin] AS IIF([Measures].[Internet Sales Amount] = 0, NULL, ([Measures].[Internet Sales Amount] - [Measures].[Internet Total Product Cost]) / [Measures].[Internet Sales Amount]) SELECT {[Measures].[Calc Internet Gross Margin]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Internet Total Product Cost]"
+    ]
+  },
+  {
+    "id": "q08",
+    "question": "Jaká je průměrná výše internetových tržeb na jednu internetovou objednávku?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Avg Internet Sales Per Order] AS IIF([Measures].[Internet Order Count] = 0, NULL, [Measures].[Internet Sales Amount] / [Measures].[Internet Order Count]) SELECT {[Measures].[Calc Avg Internet Sales Per Order]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Internet Order Count]"
+    ]
+  },
+  {
+    "id": "q09",
+    "question": "Jaký je průměrný počet položek na jednu internetovou objednávku?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Avg Items Per Internet Order] AS IIF([Measures].[Internet Order Count] = 0, NULL, [Measures].[Internet Order Quantity] / [Measures].[Internet Order Count]) SELECT {[Measures].[Calc Avg Items Per Internet Order]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Order Quantity]",
+      "[Measures].[Internet Order Count]"
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Jaké procento internetových tržeb tvoří internetová částka daně?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Tax Percent] AS IIF([Measures].[Internet Sales Amount] = 0, NULL, [Measures].[Internet Tax Amount] / [Measures].[Internet Sales Amount]) SELECT {[Measures].[Calc Internet Tax Percent]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Tax Amount]",
+      "[Measures].[Internet Sales Amount]"
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Jaké procento internetových tržeb tvoří internetové náklady na dopravu?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Freight Percent] AS IIF([Measures].[Internet Sales Amount] = 0, NULL, [Measures].[Internet Freight Cost] / [Measures].[Internet Sales Amount]) SELECT {[Measures].[Calc Internet Freight Percent]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Freight Cost]",
+      "[Measures].[Internet Sales Amount]"
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "Jaká je výše internetových tržeb na jednu internetovou transakci?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Sales Per Transaction] AS IIF([Measures].[Internet Transaction Count] = 0, NULL, [Measures].[Internet Sales Amount] / [Measures].[Internet Transaction Count]) SELECT {[Measures].[Calc Internet Sales Per Transaction]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Internet Transaction Count]"
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Jaká je celková výše tržeb resellerů?",
+    "mdx_query": "SELECT {[Measures].[Reseller Sales Amount]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Reseller Sales Amount]"
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "Jaký je hrubý zisk resellerů (tržby resellerů minus celkové náklady resellerů na produkty)?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Reseller Gross Profit] AS [Measures].[Reseller Sales Amount] - [Measures].[Reseller Total Product Cost] SELECT {[Measures].[Calc Reseller Gross Profit]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Reseller Sales Amount]",
+      "[Measures].[Reseller Total Product Cost]"
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Jaký je rozdíl mezi internetovými tržbami a tržbami resellerů?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Minus Reseller Sales] AS [Measures].[Internet Sales Amount] - [Measures].[Reseller Sales Amount] SELECT {[Measures].[Calc Internet Minus Reseller Sales]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Reseller Sales Amount]"
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "Jaký podíl celkových tržeb (internet + reseller) pochází z internetových tržeb?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Sales Share] AS IIF(([Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount]) = 0, NULL, [Measures].[Internet Sales Amount] / ([Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount])) SELECT {[Measures].[Calc Internet Sales Share]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Reseller Sales Amount]"
+    ]
+  },
+  {
+    "id": "q17",
+    "question": "Jaká je kombinovaná výše tržeb (internet + reseller)?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Combined Sales Amount] AS [Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount] SELECT {[Measures].[Calc Combined Sales Amount]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Reseller Sales Amount]"
+    ]
+  },
+  {
+    "id": "q18",
+    "question": "Jaký je kombinovaný hrubý zisk (internet + reseller)?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Internet Gross Profit] AS [Measures].[Internet Sales Amount] - [Measures].[Internet Total Product Cost] MEMBER [Measures].[Calc Reseller Gross Profit] AS [Measures].[Reseller Sales Amount] - [Measures].[Reseller Total Product Cost] MEMBER [Measures].[Calc Combined Gross Profit] AS [Measures].[Calc Internet Gross Profit] + [Measures].[Calc Reseller Gross Profit] SELECT {[Measures].[Calc Combined Gross Profit]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Internet Total Product Cost]",
+      "[Measures].[Reseller Sales Amount]",
+      "[Measures].[Reseller Total Product Cost]"
+    ]
+  },
+  {
+    "id": "q19",
+    "question": "Jaká je celková hrubá marže při použití kombinovaných internetových tržeb a tržeb resellerů?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Combined Gross Profit] AS ([Measures].[Internet Sales Amount] - [Measures].[Internet Total Product Cost]) + ([Measures].[Reseller Sales Amount] - [Measures].[Reseller Total Product Cost]) MEMBER [Measures].[Calc Combined Gross Margin] AS IIF(([Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount]) = 0, NULL, [Measures].[Calc Combined Gross Profit] / ([Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount])) SELECT {[Measures].[Calc Combined Gross Margin]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Sales Amount]",
+      "[Measures].[Internet Total Product Cost]",
+      "[Measures].[Reseller Sales Amount]",
+      "[Measures].[Reseller Total Product Cost]"
+    ]
+  },
+  {
+    "id": "q20",
+    "question": "Jaký je poměr počtu internetových objednávek k počtu zákazníků?",
+    "mdx_query": "WITH MEMBER [Measures].[Calc Orders Per Customer] AS IIF([Measures].[Customer Count] = 0, NULL, [Measures].[Internet Order Count] / [Measures].[Customer Count]) SELECT {[Measures].[Calc Orders Per Customer]} ON COLUMNS FROM [Adventure Works]",
+    "gold_unique_names": [
+      "[Measures].[Internet Order Count]",
+      "[Measures].[Customer Count]"
+    ]
+  }
+]
