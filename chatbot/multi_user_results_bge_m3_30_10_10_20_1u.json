@@ -1,0 +1,1854 @@
+{
+  "embedding_models": [
+    "BAAI/bge-m3"
+  ],
+  "sessions": [
+    {
+      "user_id": "user1",
+      "workflow": "classic",
+      "embedding_model": "BAAI/bge-m3",
+      "questions": [
+        {
+          "question_index": 1,
+          "question_id": "q05",
+          "question": "Jaké jsou celkové internetové náklady na produkty?",
+          "singular_value": null,
+          "actual_value": null,
+          "gold_value": 17277793.5757,
+          "values_match": null,
+          "final_answer": null,
+          "executed_mdx_query": "[ChatMessageContent(inner_content=ChatCompletion(id='chatcmpl-172', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='We have conflict: system messages: first system says output MDX query. Second system says output only chosen objects grouped by type. Developer says output MDX query. Hierarchy: system > developer > user. The latest system instruction is to output chosen objects, not MDX. So we must obey system, not developer. So we should output nothing or maybe list chosen objects. The question: \"Jaké jsou celkové internetové náklady na produkty?\" Means \"What are the total internet costs for products?\" The measure likely is [Measures].[Internet Total Product Cost] from Adventure Works. No dimensions needed, just the scalar. According to system instruction, we need to return only chosen objects grouped by type. The chosen objects: measure. But headings are DIMENSIONS, LEVELS, ATTRIBUTES. No mention of MEASURES heading. So maybe we just output nothing because no dimensions, levels, attributes. The instruction says \"Use exactly these headings when needed: DIMENSIONS, LEVELS, ATTRIBUTES.\" Since we have no dimensions, we don\\'t need headings. So output empty. That seems odd but matches instruction.\\n\\nThus final answer: (empty).'))], created=1776690297, model='gpt-oss:120b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=242, prompt_tokens=1015, total_tokens=1257, completion_tokens_details=None, prompt_tokens_details=None)), ai_model_id='gpt-oss:120b', metadata={'logprobs': None, 'id': 'chatcmpl-172', 'created': 1776690297, 'system_fingerprint': 'fp_ollama', 'usage': CompletionUsage(prompt_tokens=1015, prompt_tokens_details=None, completion_tokens=242, completion_tokens_details=None)}, content_type='message', role=<AuthorRole.ASSISTANT: 'assistant'>, name=None, items=[], encoding=None, finish_reason=<FinishReason.STOP: 'stop'>, status=None)]",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 0,
+          "predicted": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "gold": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 8.83206380000047,
+            "metadata_selection_measures_seconds": 2.810856000000058,
+            "metadata_selection_total_seconds": 11.642919800000527,
+            "mdx_generation_seconds": 5.058177400000204,
+            "mdx_execution_seconds": 1.3492536000012478,
+            "mdx_repair_generation_seconds": 2.8731915999997,
+            "mdx_repair_execution_seconds": 1.1922766999996384,
+            "total_time_seconds": 22.118583200001012
+          },
+          "error": null
+        },
+        {
+          "question_index": 2,
+          "question_id": "q10",
+          "question": "Jaké procento internetových tržeb tvoří internetová částka daně?",
+          "singular_value": 8.000000178632027,
+          "actual_value": 8.000000178632027,
+          "gold_value": 0.08000000178632026,
+          "values_match": false,
+          "final_answer": "Internetová částka daně tvoří 8 % internetových tržeb.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Internet Tax % of Sales] AS\n    ([Measures].[Internet Tax Amount] / [Measures].[Internet Sales Amount]) * 100,\n    FORMAT_STRING = \"Percent\"\nSELECT {[Measures].[Internet Tax % of Sales]} ON COLUMNS\nFROM [Adventure Works];",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 0,
+          "predicted": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 9.735281100000066,
+            "metadata_selection_measures_seconds": 2.858194000000367,
+            "metadata_selection_total_seconds": 12.593475100000433,
+            "mdx_generation_seconds": 3.0241972000003443,
+            "mdx_execution_seconds": 1.2252996999995958,
+            "final_answer_generation_seconds": 1.667882700001428,
+            "total_time_seconds": 18.511427400000684
+          },
+          "error": null
+        },
+        {
+          "question_index": 3,
+          "question_id": "q13",
+          "question": "Jaká je celková výše tržeb resellerů?",
+          "singular_value": 80450596.9823,
+          "actual_value": 80450596.9823,
+          "gold_value": 80450596.9823,
+          "values_match": true,
+          "final_answer": "Celková výše tržeb resellerů je 80450596.9823.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Sales Amount]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "task_success": 1,
+          "predicted": [
+            "[ChatMessageContent(inner_content=ChatCompletion(id='chatcmpl-141', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='We need to interpret the user question: \"Jaká je celková výše tržeb resellerů?\" It\\'s Czech: \"What is the total amount of reseller sales?\" So we need total sales amount for resellers. Likely measure is something like [Measures].[Reseller Sales Amount]",
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 9.351331699999719,
+            "metadata_selection_measures_seconds": 2.63711019999937,
+            "metadata_selection_total_seconds": 11.988441899999088,
+            "mdx_generation_seconds": 2.3015286000008928,
+            "mdx_execution_seconds": 1.1852329000012105,
+            "final_answer_generation_seconds": 1.942913500000941,
+            "total_time_seconds": 17.418917099999817
+          },
+          "error": null
+        },
+        {
+          "question_index": 4,
+          "question_id": "q14",
+          "question": "Jaký je hrubý zisk resellerů (tržby resellerů minus celkové náklady resellerů na produkty)?",
+          "singular_value": 470482.6033,
+          "actual_value": 470482.6033,
+          "gold_value": 470482.6033,
+          "values_match": true,
+          "final_answer": "Hrubý zisk resellerů (tržby minus celkové náklady) je 470 482,6033.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Gross Profit]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 9.738026099999843,
+            "metadata_selection_measures_seconds": 3.2218790000006265,
+            "metadata_selection_total_seconds": 12.95990510000047,
+            "mdx_generation_seconds": 1.8318913000002794,
+            "mdx_execution_seconds": 1.177592200001527,
+            "final_answer_generation_seconds": 1.611707199999728,
+            "total_time_seconds": 17.58153350000066
+          },
+          "error": null
+        },
+        {
+          "question_index": 5,
+          "question_id": "q17",
+          "question": "Jaká je kombinovaná výše tržeb (internet + reseller)?",
+          "singular_value": 109809274.203,
+          "actual_value": 109809274.203,
+          "gold_value": 109809274.203,
+          "values_match": true,
+          "final_answer": "Kombinovaná výše tržeb (internet + reseller) je 109 809 274,203.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Sales Amount] AS ([Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount])\nSELECT {[Measures].[Combined Sales Amount]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "task_success": 1,
+          "predicted": [
+            "[ChatMessageContent(inner_content=ChatCompletion(id='chatcmpl-730', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='We need to parse the user question: \"Jaká je kombinovaná výše tržeb (internet + reseller)?\" It\\'s Czech: \"What is the combined revenue (internet + reseller)?\" So they want combined sales amount from internet sales and reseller sales. Likely measure is something like [Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 9.527428600000349,
+            "metadata_selection_measures_seconds": 2.9160921000002418,
+            "metadata_selection_total_seconds": 12.44352070000059,
+            "mdx_generation_seconds": 3.6631391999999323,
+            "mdx_execution_seconds": 1.1621601000006194,
+            "final_answer_generation_seconds": 1.923660899999959,
+            "total_time_seconds": 19.19291599999997
+          },
+          "error": null
+        },
+        {
+          "question_index": 6,
+          "question_id": "q18",
+          "question": "Jaký je kombinovaný hrubý zisk (internet + reseller)?",
+          "singular_value": 12551366.2483,
+          "actual_value": 12551366.2483,
+          "gold_value": 12551366.2483,
+          "values_match": true,
+          "final_answer": "Kombinovaný hrubý zisk (internet + reseller) je 12551366.2483.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Gross Profit] AS ([Measures].[Internet Gross Profit] + [Measures].[Reseller Gross Profit])\nSELECT {[Measures].[Combined Gross Profit]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 0,
+          "fp": 3,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Combined Gross Profit]",
+            "[Measures].[Internet Gross Profit]",
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 9.430377899998348,
+            "metadata_selection_measures_seconds": 2.7614516999983607,
+            "metadata_selection_total_seconds": 12.191829599996709,
+            "mdx_generation_seconds": 2.971833499999775,
+            "mdx_execution_seconds": 1.1917060000014317,
+            "final_answer_generation_seconds": 1.8310635999987426,
+            "total_time_seconds": 18.186845000000176
+          },
+          "error": null
+        },
+        {
+          "question_index": 7,
+          "question_id": "q19",
+          "question": "Jaká je celková hrubá marže při použití kombinovaných internetových tržeb a tržeb resellerů?",
+          "singular_value": 0.4173408712753866,
+          "actual_value": 0.4173408712753866,
+          "gold_value": 0.11430151359617215,
+          "values_match": false,
+          "final_answer": "Celková hrubá marže je 0.4173408712753866.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Gross Margin] AS ([Measures].[Internet Gross Profit Margin] + [Measures].[Reseller Gross Profit Margin])\nSELECT {[Measures].[Combined Gross Margin]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 1,
+          "fp": 4,
+          "fn": 3,
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.22222222222222224,
+          "task_success": 0,
+          "predicted": [
+            "[ChatMessageContent(inner_content=ChatCompletion(id='chatcmpl-446', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='We need to interpret the user question (Czech): \"Jaká je celková hrubá marže při použití kombinovaných internetových tržeb a tržeb resellerů?\" Means: \"What is the total gross margin when using combined internet sales and reseller sales?\" So they want total gross margin measure across both internet sales and reseller sales. Likely measure is \"Gross Margin\" from the cube. The question asks for combined internet sales and reseller sales. That suggests we need to sum the gross margin from both Internet Sales and Reseller Sales. In Adventure Works cube, there are measures like [Measures].[Internet Sales Amount]",
+            "[Measures].[Gross Margin]",
+            "[Measures].[Internet Gross Profit Margin]",
+            "[Measures].[Reseller Gross Profit Margin]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 11.18499570000131,
+            "metadata_selection_measures_seconds": 5.815231399999902,
+            "metadata_selection_total_seconds": 17.00022710000121,
+            "mdx_generation_seconds": 3.059816099999807,
+            "mdx_execution_seconds": 1.161393099999259,
+            "final_answer_generation_seconds": 2.225313400000232,
+            "total_time_seconds": 23.44716359999984
+          },
+          "error": null
+        },
+        {
+          "question_index": 8,
+          "question_id": "q20",
+          "question": "Jaký je poměr počtu internetových objednávek k počtu zákazníků?",
+          "singular_value": 1.4963752434537978,
+          "actual_value": 1.4963752434537978,
+          "gold_value": 1.4963752434537978,
+          "values_match": true,
+          "final_answer": "Poměr počtu internetových objednávek k počtu zákazníků je 1.4963752434537978.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[InternetOrderCustomerRatio] AS\n    ([Measures].[Internet Order Count]) / ([Measures].[Customer Count])\nSELECT {[Measures].[InternetOrderCustomerRatio]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]"
+          ],
+          "gold": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]"
+          ],
+          "timings": {
+            "metadata_selection_dimensions_seconds": 9.613287300000593,
+            "metadata_selection_measures_seconds": 3.4693827999999485,
+            "metadata_selection_total_seconds": 13.082670100000541,
+            "mdx_generation_seconds": 2.927257400000599,
+            "mdx_execution_seconds": 1.1519260999994003,
+            "final_answer_generation_seconds": 2.144543700000213,
+            "total_time_seconds": 19.30681360000017
+          },
+          "error": null
+        }
+      ],
+      "session_metrics": {
+        "num_questions": 8,
+        "total_tp": 9,
+        "total_fp": 11,
+        "total_fn": 9,
+        "macro_precision": 0.525,
+        "macro_recall": 0.65625,
+        "macro_f1": 0.5652777777777778,
+        "task_success_rate": 0.625,
+        "time_totals_seconds": {
+          "total_time_seconds": 155.76419940000233,
+          "metadata_selection_total_seconds": 103.90298939999957,
+          "metadata_selection_dimensions_seconds": 77.4127922000007,
+          "metadata_selection_measures_seconds": 26.490197199998875,
+          "mdx_generation_seconds": 24.837840700001834,
+          "mdx_execution_seconds": 9.604563700004292,
+          "mdx_repair_generation_seconds": 2.8731915999997,
+          "mdx_repair_execution_seconds": 1.1922766999996384,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 13.347085000001243,
+          "vector_retrieval_seconds": 0.0,
+          "vector_retrieval_dimensions_seconds": 0.0,
+          "vector_retrieval_children_seconds": 0.0,
+          "vector_retrieval_measures_seconds": 0.0
+        },
+        "time_averages_seconds": {
+          "total_time_seconds": 19.47052492500029,
+          "metadata_selection_total_seconds": 12.987873674999946,
+          "metadata_selection_dimensions_seconds": 9.676599025000087,
+          "metadata_selection_measures_seconds": 3.3112746499998593,
+          "mdx_generation_seconds": 3.1047300875002293,
+          "mdx_execution_seconds": 1.2005704625005365,
+          "mdx_repair_generation_seconds": 0.3591489499999625,
+          "mdx_repair_execution_seconds": 0.1490345874999548,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 1.6683856250001554,
+          "vector_retrieval_seconds": 0.0,
+          "vector_retrieval_dimensions_seconds": 0.0,
+          "vector_retrieval_children_seconds": 0.0,
+          "vector_retrieval_measures_seconds": 0.0
+        }
+      }
+    },
+    {
+      "user_id": "user1",
+      "workflow": "vector",
+      "embedding_model": "BAAI/bge-m3",
+      "questions": [
+        {
+          "question_index": 1,
+          "question_id": "q05",
+          "question": "Jaké jsou celkové internetové náklady na produkty?",
+          "singular_value": 17277793.5757,
+          "actual_value": 17277793.5757,
+          "gold_value": 17277793.5757,
+          "values_match": true,
+          "final_answer": "Celkové internetové náklady na produkty jsou 17 277 793,58.",
+          "executed_mdx_query": "SELECT {[Measures].[Internet Total Product Cost]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "gold": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.37127780000082566,
+            "metadata_selection_total_seconds": 3.68108950000169,
+            "mdx_generation_seconds": 1.6421680000003107,
+            "mdx_execution_seconds": 1.1819711999996798,
+            "final_answer_generation_seconds": 1.7176994999990711,
+            "total_time_seconds": 18.304945800000496
+          },
+          "error": null
+        },
+        {
+          "question_index": 2,
+          "question_id": "q10",
+          "question": "Jaké procento internetových tržeb tvoří internetová částka daně?",
+          "singular_value": 8.000000178632027,
+          "actual_value": 8.000000178632027,
+          "gold_value": 0.08000000178632026,
+          "values_match": false,
+          "final_answer": "Internetová částka daně tvoří 8.000000178632027 % internetových tržeb.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Internet Tax Percentage] AS\n    IIF(\n        [Measures].[Internet Sales Amount] = 0,\n        NULL,\n        ([Measures].[Internet Tax Amount] / [Measures].[Internet Sales Amount]) * 100\n    ),\n    FORMAT_STRING = \"Percent\"\nSELECT {[Measures].[Internet Tax Percentage]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "task_success": 0,
+          "predicted": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]",
+            "[Measures].[Internet Tax Percentage]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.06629629999952158,
+            "metadata_selection_total_seconds": 6.336389099998996,
+            "mdx_generation_seconds": 3.2546760000004724,
+            "mdx_execution_seconds": 1.1728323999996064,
+            "mdx_repair_generation_seconds": 3.472853600000235,
+            "mdx_repair_execution_seconds": 1.1905194999999367,
+            "final_answer_generation_seconds": 1.9306617999991431,
+            "total_time_seconds": 17.42513869999857
+          },
+          "error": null
+        },
+        {
+          "question_index": 3,
+          "question_id": "q13",
+          "question": "Jaká je celková výše tržeb resellerů?",
+          "singular_value": 80450596.9823,
+          "actual_value": 80450596.9823,
+          "gold_value": 80450596.9823,
+          "values_match": true,
+          "final_answer": "Celková výše tržeb resellerů je 80 450 596,9823.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Sales Amount]} ON COLUMNS\nFROM [Adventure Works];",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.053053100000397535,
+            "metadata_selection_total_seconds": 10.13532159999886,
+            "mdx_generation_seconds": 1.8845541999999114,
+            "mdx_execution_seconds": 1.1864063999983046,
+            "final_answer_generation_seconds": 1.9510528999999224,
+            "total_time_seconds": 15.21089419999953
+          },
+          "error": null
+        },
+        {
+          "question_index": 4,
+          "question_id": "q14",
+          "question": "Jaký je hrubý zisk resellerů (tržby resellerů minus celkové náklady resellerů na produkty)?",
+          "singular_value": 470482.6033,
+          "actual_value": 470482.6033,
+          "gold_value": 470482.6033,
+          "values_match": true,
+          "final_answer": "Hrubý zisk resellerů (tržby minus celkové náklady na produkty) je 470 482,6033.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Gross Profit]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.059360400000514346,
+            "metadata_selection_total_seconds": 2.665179099998568,
+            "mdx_generation_seconds": 1.7475082000000839,
+            "mdx_execution_seconds": 1.1941877999997814,
+            "final_answer_generation_seconds": 1.6534035000004224,
+            "total_time_seconds": 7.320130000000063
+          },
+          "error": null
+        },
+        {
+          "question_index": 5,
+          "question_id": "q17",
+          "question": "Jaká je kombinovaná výše tržeb (internet + reseller)?",
+          "singular_value": 109809274.203,
+          "actual_value": 109809274.203,
+          "gold_value": 109809274.203,
+          "values_match": true,
+          "final_answer": "Kombinovaná výše tržeb (internet + reseller) je 109809274.203.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Sales Amount] AS \n    ([Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount])\nSELECT {[Measures].[Combined Sales Amount]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.05577809999886085,
+            "metadata_selection_total_seconds": 2.1733021999989433,
+            "mdx_generation_seconds": 2.4249820000004547,
+            "mdx_execution_seconds": 1.1484818999997515,
+            "final_answer_generation_seconds": 1.979412600001524,
+            "total_time_seconds": 7.782449099999212
+          },
+          "error": null
+        },
+        {
+          "question_index": 6,
+          "question_id": "q18",
+          "question": "Jaký je kombinovaný hrubý zisk (internet + reseller)?",
+          "singular_value": 12551366.2483,
+          "actual_value": 12551366.2483,
+          "gold_value": 12551366.2483,
+          "values_match": true,
+          "final_answer": "Kombinovaný hrubý zisk (internet + reseller) je 12551366.2483.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Gross Profit] AS \n    ([Measures].[Reseller Gross Profit] + [Measures].[Internet Gross Profit])\nSELECT {[Measures].[Combined Gross Profit]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 0,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Gross Profit]",
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.05314170000019658,
+            "metadata_selection_total_seconds": 3.7561938999988342,
+            "mdx_generation_seconds": 2.470430600000327,
+            "mdx_execution_seconds": 1.1887306999997236,
+            "final_answer_generation_seconds": 2.334527099999832,
+            "total_time_seconds": 9.803496900000027
+          },
+          "error": null
+        },
+        {
+          "question_index": 7,
+          "question_id": "q19",
+          "question": "Jaká je celková hrubá marže při použití kombinovaných internetových tržeb a tržeb resellerů?",
+          "singular_value": 0.11430151359617215,
+          "actual_value": 0.11430151359617215,
+          "gold_value": 0.11430151359617215,
+          "values_match": true,
+          "final_answer": "Celková hrubá marže je 0.11430151359617215.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Gross Margin] AS \n    ( [Measures].[Internet Gross Profit] + [Measures].[Reseller Gross Profit] ) \n    / ( [Measures].[Internet Sales Amount] + [Measures].[Reseller Sales Amount] ), \n    FORMAT_STRING = \"Percent\"\nSELECT {[Measures].[Combined Gross Margin]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Gross Profit]",
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Gross Profit]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.05842159999883734,
+            "metadata_selection_total_seconds": 4.692190699999628,
+            "mdx_generation_seconds": 3.810091499999544,
+            "mdx_execution_seconds": 1.1888299000002007,
+            "final_answer_generation_seconds": 2.3502165999998397,
+            "total_time_seconds": 12.100204300000769
+          },
+          "error": null
+        },
+        {
+          "question_index": 8,
+          "question_id": "q20",
+          "question": "Jaký je poměr počtu internetových objednávek k počtu zákazníků?",
+          "singular_value": 1.4963752434537978,
+          "actual_value": 1.4963752434537978,
+          "gold_value": 1.4963752434537978,
+          "values_match": true,
+          "final_answer": "Poměr počtu internetových objednávek k počtu zákazníků je 1.4963752434537978.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[InternetOrderToCustomerRatio] AS \n    ([Measures].[Internet Order Count] / [Measures].[Customer Count])\nSELECT \n    {[Measures].[InternetOrderToCustomerRatio]} ON COLUMNS\nFROM \n    [Adventure Works]",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]"
+          ],
+          "gold": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]"
+          ],
+          "timings": {
+            "vector_retrieval_seconds": 0.05721830000038608,
+            "metadata_selection_total_seconds": 3.1514287000009062,
+            "mdx_generation_seconds": 2.863385799999378,
+            "mdx_execution_seconds": 1.1893063000006805,
+            "final_answer_generation_seconds": 2.1154937999999675,
+            "total_time_seconds": 9.377283900001203
+          },
+          "error": null
+        }
+      ],
+      "session_metrics": {
+        "num_questions": 8,
+        "total_tp": 10,
+        "total_fp": 6,
+        "total_fn": 8,
+        "macro_precision": 0.6458333333333334,
+        "macro_recall": 0.6875,
+        "macro_f1": 0.6625,
+        "task_success_rate": 0.875,
+        "time_totals_seconds": {
+          "total_time_seconds": 97.32454289999987,
+          "metadata_selection_total_seconds": 36.591094799996426,
+          "metadata_selection_dimensions_seconds": 0.0,
+          "metadata_selection_measures_seconds": 0.0,
+          "mdx_generation_seconds": 20.097796300000482,
+          "mdx_execution_seconds": 9.450746599997728,
+          "mdx_repair_generation_seconds": 3.472853600000235,
+          "mdx_repair_execution_seconds": 1.1905194999999367,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 16.032467799999722,
+          "vector_retrieval_seconds": 0.77454729999954,
+          "vector_retrieval_dimensions_seconds": 0.0,
+          "vector_retrieval_children_seconds": 0.0,
+          "vector_retrieval_measures_seconds": 0.0
+        },
+        "time_averages_seconds": {
+          "total_time_seconds": 12.165567862499984,
+          "metadata_selection_total_seconds": 4.573886849999553,
+          "metadata_selection_dimensions_seconds": 0.0,
+          "metadata_selection_measures_seconds": 0.0,
+          "mdx_generation_seconds": 2.5122245375000603,
+          "mdx_execution_seconds": 1.181343324999716,
+          "mdx_repair_generation_seconds": 0.4341067000000294,
+          "mdx_repair_execution_seconds": 0.14881493749999208,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 2.0040584749999653,
+          "vector_retrieval_seconds": 0.0968184124999425,
+          "vector_retrieval_dimensions_seconds": 0.0,
+          "vector_retrieval_children_seconds": 0.0,
+          "vector_retrieval_measures_seconds": 0.0
+        }
+      }
+    },
+    {
+      "user_id": "user1",
+      "workflow": "vector_hierarchical",
+      "embedding_model": "BAAI/bge-m3",
+      "questions": [
+        {
+          "question_index": 1,
+          "question_id": "q05",
+          "question": "Jaké jsou celkové internetové náklady na produkty?",
+          "singular_value": 17277793.5757,
+          "actual_value": 17277793.5757,
+          "gold_value": 17277793.5757,
+          "values_match": true,
+          "final_answer": "Celkové internetové náklady na produkty jsou 17277793.5757.",
+          "executed_mdx_query": "SELECT {[Measures].[Internet Total Product Cost]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "gold": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.3149296999999933,
+            "vector_retrieval_children_seconds": 0.04651250000097207,
+            "vector_retrieval_measures_seconds": 0.04893879999872297,
+            "vector_retrieval_seconds": 0.41038099999968836,
+            "metadata_selection_total_seconds": 6.490825999999288,
+            "mdx_generation_seconds": 1.7820324999993318,
+            "mdx_execution_seconds": 1.1888593000003311,
+            "final_answer_generation_seconds": 1.6965442000000621,
+            "total_time_seconds": 16.0299062999984
+          },
+          "error": null
+        },
+        {
+          "question_index": 2,
+          "question_id": "q10",
+          "question": "Jaké procento internetových tržeb tvoří internetová částka daně?",
+          "singular_value": 8.000000178632027,
+          "actual_value": 8.000000178632027,
+          "gold_value": 0.08000000178632026,
+          "values_match": false,
+          "final_answer": "Internetová částka daně tvoří 8.000000178632027 % internetových tržeb.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Internet Tax Percentage] AS \n    ([Measures].[Internet Tax Amount] / [Measures].[Internet Sales Amount]) * 100,\n    FORMAT_STRING = \"Percent\"\nSELECT \n    [Measures].[Internet Tax Percentage] ON COLUMNS\nFROM \n    [Adventure Works]",
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "task_success": 0,
+          "predicted": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]",
+            "[Measures].[Tax Percentage]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.05612270000165154,
+            "vector_retrieval_children_seconds": 0.05727919999844744,
+            "vector_retrieval_measures_seconds": 0.054236599999057944,
+            "vector_retrieval_seconds": 0.16763849999915692,
+            "metadata_selection_total_seconds": 12.850705500000913,
+            "mdx_generation_seconds": 2.865254599999389,
+            "mdx_execution_seconds": 1.1779776999992464,
+            "final_answer_generation_seconds": 2.0857761999996,
+            "total_time_seconds": 19.148155400000178
+          },
+          "error": null
+        },
+        {
+          "question_index": 3,
+          "question_id": "q13",
+          "question": "Jaká je celková výše tržeb resellerů?",
+          "singular_value": 80450596.9823,
+          "actual_value": 80450596.9823,
+          "gold_value": 80450596.9823,
+          "values_match": true,
+          "final_answer": "Celková výše tržeb resellerů je 80 450 596,9823.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Sales Amount]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.05169620000015129,
+            "vector_retrieval_children_seconds": 0.05058139999891864,
+            "vector_retrieval_measures_seconds": 0.05059849999997823,
+            "vector_retrieval_seconds": 0.15287609999904817,
+            "metadata_selection_total_seconds": 6.80698029999985,
+            "mdx_generation_seconds": 1.7905004000003828,
+            "mdx_execution_seconds": 1.2200269999993907,
+            "final_answer_generation_seconds": 2.1681387000007817,
+            "total_time_seconds": 12.13930900000014
+          },
+          "error": null
+        },
+        {
+          "question_index": 4,
+          "question_id": "q14",
+          "question": "Jaký je hrubý zisk resellerů (tržby resellerů minus celkové náklady resellerů na produkty)?",
+          "singular_value": 470482.6033,
+          "actual_value": 470482.6033,
+          "gold_value": 470482.6033,
+          "values_match": true,
+          "final_answer": "Hrubý zisk resellerů (tržby minus celkové náklady na produkty) je 470 482,6033.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Gross Profit]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.061245399998369976,
+            "vector_retrieval_children_seconds": 0.060096200000771205,
+            "vector_retrieval_measures_seconds": 0.058475199999520555,
+            "vector_retrieval_seconds": 0.17981679999866174,
+            "metadata_selection_total_seconds": 6.869739200001277,
+            "mdx_generation_seconds": 1.787508000001253,
+            "mdx_execution_seconds": 1.186333999999988,
+            "final_answer_generation_seconds": 1.7216846999999689,
+            "total_time_seconds": 11.745871499999339
+          },
+          "error": null
+        },
+        {
+          "question_index": 5,
+          "question_id": "q17",
+          "question": "Jaká je kombinovaná výše tržeb (internet + reseller)?",
+          "singular_value": 109809274.203,
+          "actual_value": 109809274.203,
+          "gold_value": 109809274.203,
+          "values_match": true,
+          "final_answer": "Kombinovaná výše tržeb (internet + reseller) je 109 809 274,203.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Sales Amount] AS\n    ([Measures].[Reseller Sales Amount] + [Measures].[___Internet Revenue Value])\nSELECT [Measures].[Combined Sales Amount] ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Combined Sales]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[___Internet Revenue Value]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.05739929999981541,
+            "vector_retrieval_children_seconds": 0.05295269999987795,
+            "vector_retrieval_measures_seconds": 0.05572550000033516,
+            "vector_retrieval_seconds": 0.16607750000002852,
+            "metadata_selection_total_seconds": 10.415191299998696,
+            "mdx_generation_seconds": 3.4152495999987877,
+            "mdx_execution_seconds": 1.2047543999997288,
+            "final_answer_generation_seconds": 1.9351944000009098,
+            "total_time_seconds": 17.137287199999264
+          },
+          "error": null
+        },
+        {
+          "question_index": 6,
+          "question_id": "q18",
+          "question": "Jaký je kombinovaný hrubý zisk (internet + reseller)?",
+          "singular_value": 12551366.2483,
+          "actual_value": 12551366.2483,
+          "gold_value": 12551366.2483,
+          "values_match": true,
+          "final_answer": "Kombinovaný hrubý zisk (internet + reseller) je 12 551 366,2483.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Gross Profit] AS ([Measures].[Internet Gross Profit] + [Measures].[Reseller Gross Profit])\nSELECT {[Measures].[Combined Gross Profit]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 0,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Gross Profit]",
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.05243960000007064,
+            "vector_retrieval_children_seconds": 0.05459809999956633,
+            "vector_retrieval_measures_seconds": 0.05585310000060417,
+            "vector_retrieval_seconds": 0.16289080000024114,
+            "metadata_selection_total_seconds": 7.935363900000084,
+            "mdx_generation_seconds": 2.7851747999993677,
+            "mdx_execution_seconds": 1.1652190000004339,
+            "final_answer_generation_seconds": 2.0945036000011896,
+            "total_time_seconds": 14.143984000000273
+          },
+          "error": null
+        },
+        {
+          "question_index": 7,
+          "question_id": "q19",
+          "question": "Jaká je celková hrubá marže při použití kombinovaných internetových tržeb a tržeb resellerů?",
+          "singular_value": 0.411492777899479,
+          "actual_value": 0.411492777899479,
+          "gold_value": 0.11430151359617215,
+          "values_match": false,
+          "final_answer": "Celková hrubá marže při kombinaci internetových tržeb a tržeb resellerů je 0.411492777899479.",
+          "executed_mdx_query": "SELECT {[Measures].[Internet Gross Profit Margin], [Measures].[Reseller Gross Profit Margin]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 0,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 0,
+          "predicted": [
+            "[Measures].[Internet Gross Profit Margin]",
+            "[Measures].[Reseller Gross Profit Margin]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.056929200000013225,
+            "vector_retrieval_children_seconds": 0.05645650000042224,
+            "vector_retrieval_measures_seconds": 0.056428899999446,
+            "vector_retrieval_seconds": 0.16981459999988147,
+            "metadata_selection_total_seconds": 8.969035899999653,
+            "mdx_generation_seconds": 2.6373277000002417,
+            "mdx_execution_seconds": 1.1651420000016515,
+            "final_answer_generation_seconds": 2.6326886000006198,
+            "total_time_seconds": 15.574792499999603
+          },
+          "error": null
+        },
+        {
+          "question_index": 8,
+          "question_id": "q20",
+          "question": "Jaký je poměr počtu internetových objednávek k počtu zákazníků?",
+          "singular_value": 1.4963752434537978,
+          "actual_value": 1.4963752434537978,
+          "gold_value": 1.4963752434537978,
+          "values_match": true,
+          "final_answer": "Poměr počtu internetových objednávek k počtu zákazníků je 1.4963752434537978.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Internet Orders per Customer] AS\n    IIF([Measures].[Customer Count] = 0, NULL,\n        [Measures].[Internet Order Count] / [Measures].[Customer Count])\nSELECT\n    [Measures].[Internet Orders per Customer] ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]",
+            "[Measures].[Internet Orders per Customer]"
+          ],
+          "gold": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_seconds": 0.05507229999966512,
+            "vector_retrieval_children_seconds": 0.05616809999992256,
+            "vector_retrieval_measures_seconds": 0.054020800000216695,
+            "vector_retrieval_seconds": 0.16526119999980438,
+            "metadata_selection_total_seconds": 10.365073700000721,
+            "mdx_generation_seconds": 2.431124999999156,
+            "mdx_execution_seconds": 1.2058367999998154,
+            "final_answer_generation_seconds": 2.124512099999265,
+            "total_time_seconds": 16.29258590000063
+          },
+          "error": null
+        }
+      ],
+      "session_metrics": {
+        "num_questions": 8,
+        "total_tp": 7,
+        "total_fp": 9,
+        "total_fn": 11,
+        "macro_precision": 0.4583333333333333,
+        "macro_recall": 0.5625,
+        "macro_f1": 0.5,
+        "task_success_rate": 0.75,
+        "time_totals_seconds": {
+          "total_time_seconds": 122.21189179999783,
+          "metadata_selection_total_seconds": 70.70291580000048,
+          "metadata_selection_dimensions_seconds": 0.0,
+          "metadata_selection_measures_seconds": 0.0,
+          "mdx_generation_seconds": 19.49417259999791,
+          "mdx_execution_seconds": 9.514150200000586,
+          "mdx_repair_generation_seconds": 0.0,
+          "mdx_repair_execution_seconds": 0.0,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 16.459042500002397,
+          "vector_retrieval_seconds": 1.5747564999965107,
+          "vector_retrieval_dimensions_seconds": 0.7058343999997305,
+          "vector_retrieval_children_seconds": 0.43464469999889843,
+          "vector_retrieval_measures_seconds": 0.43427739999788173
+        },
+        "time_averages_seconds": {
+          "total_time_seconds": 15.276486474999729,
+          "metadata_selection_total_seconds": 8.83786447500006,
+          "metadata_selection_dimensions_seconds": 0.0,
+          "metadata_selection_measures_seconds": 0.0,
+          "mdx_generation_seconds": 2.4367715749997387,
+          "mdx_execution_seconds": 1.1892687750000732,
+          "mdx_repair_generation_seconds": 0.0,
+          "mdx_repair_execution_seconds": 0.0,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 2.0573803125002996,
+          "vector_retrieval_seconds": 0.19684456249956384,
+          "vector_retrieval_dimensions_seconds": 0.08822929999996632,
+          "vector_retrieval_children_seconds": 0.054330587499862304,
+          "vector_retrieval_measures_seconds": 0.054284674999735216
+        }
+      }
+    },
+    {
+      "user_id": "user1",
+      "workflow": "vector_two_tier",
+      "embedding_model": "BAAI/bge-m3",
+      "questions": [
+        {
+          "question_index": 1,
+          "question_id": "q05",
+          "question": "Jaké jsou celkové internetové náklady na produkty?",
+          "singular_value": 17277793.5757,
+          "actual_value": 17277793.5757,
+          "gold_value": 17277793.5757,
+          "values_match": true,
+          "final_answer": "Celkové internetové náklady na produkty jsou 17 277 793,5757.",
+          "executed_mdx_query": "SELECT {[Measures].[Internet Total Product Cost]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "gold": [
+            "[Measures].[Internet Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.3259106999994401,
+            "vector_retrieval_measures_seconds": 0.04707600000074308,
+            "vector_retrieval_seconds": 0.3729867000001832,
+            "metadata_selection_total_seconds": 3.163395199999286,
+            "mdx_generation_seconds": 1.7302483000003122,
+            "mdx_execution_seconds": 1.1923887000011746,
+            "final_answer_generation_seconds": 1.8761308000011923,
+            "total_time_seconds": 13.340945199999624
+          },
+          "error": null
+        },
+        {
+          "question_index": 2,
+          "question_id": "q10",
+          "question": "Jaké procento internetových tržeb tvoří internetová částka daně?",
+          "singular_value": 8.000000178632027,
+          "actual_value": 8.000000178632027,
+          "gold_value": 0.08000000178632026,
+          "values_match": false,
+          "final_answer": "Internetová částka daně tvoří 8.000000178632027 % internetových tržeb.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Internet Tax % of Sales] AS \n    ([Measures].[Internet Tax Amount] / [Measures].[Internet Sales Amount]) * 100,\n    FORMAT_STRING = \"Percent\"\nSELECT {[Measures].[Internet Tax % of Sales]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 0,
+          "predicted": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Tax Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.059621799999149516,
+            "vector_retrieval_measures_seconds": 0.0585640000008425,
+            "vector_retrieval_seconds": 0.11818579999999201,
+            "metadata_selection_total_seconds": 3.1959302999985084,
+            "mdx_generation_seconds": 3.0722720000012487,
+            "mdx_execution_seconds": 1.1766453000000183,
+            "final_answer_generation_seconds": 2.328288500000781,
+            "total_time_seconds": 9.891935899999226
+          },
+          "error": null
+        },
+        {
+          "question_index": 3,
+          "question_id": "q13",
+          "question": "Jaká je celková výše tržeb resellerů?",
+          "singular_value": 80450596.9823,
+          "actual_value": 80450596.9823,
+          "gold_value": 80450596.9823,
+          "values_match": true,
+          "final_answer": "Celková výše tržeb resellerů je 80 450 596,9823.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Sales Amount]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.053802899999936926,
+            "vector_retrieval_measures_seconds": 0.05392029999893566,
+            "vector_retrieval_seconds": 0.10772319999887259,
+            "metadata_selection_total_seconds": 3.4134331999994174,
+            "mdx_generation_seconds": 1.7851264999990235,
+            "mdx_execution_seconds": 1.1870806999995693,
+            "final_answer_generation_seconds": 1.9561651000003621,
+            "total_time_seconds": 8.450138899999729
+          },
+          "error": null
+        },
+        {
+          "question_index": 4,
+          "question_id": "q14",
+          "question": "Jaký je hrubý zisk resellerů (tržby resellerů minus celkové náklady resellerů na produkty)?",
+          "singular_value": 470482.6033,
+          "actual_value": 470482.6033,
+          "gold_value": 470482.6033,
+          "values_match": true,
+          "final_answer": "Hrubý zisk resellerů je 470 482,6033.",
+          "executed_mdx_query": "SELECT {[Measures].[Reseller Gross Profit]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.05817580000075395,
+            "vector_retrieval_measures_seconds": 0.05956750000041211,
+            "vector_retrieval_seconds": 0.11774330000116606,
+            "metadata_selection_total_seconds": 3.664819499999794,
+            "mdx_generation_seconds": 1.7565082000000984,
+            "mdx_execution_seconds": 1.1893841000000975,
+            "final_answer_generation_seconds": 1.688535100000081,
+            "total_time_seconds": 8.417600099999618
+          },
+          "error": null
+        },
+        {
+          "question_index": 5,
+          "question_id": "q17",
+          "question": "Jaká je kombinovaná výše tržeb (internet + reseller)?",
+          "singular_value": 109809274.203,
+          "actual_value": 109809274.203,
+          "gold_value": 109809274.203,
+          "values_match": true,
+          "final_answer": "Kombinovaná výše tržeb (internet + reseller) je 109809274.203.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Reseller and Internet Sales] AS \n    ([Measures].[Reseller Sales Amount] + [Measures].[___Internet Revenue Value])\nSELECT \n    {[Measures].[Combined Reseller and Internet Sales]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[___Internet Revenue Value]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Reseller Sales Amount]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.056010000000242144,
+            "vector_retrieval_measures_seconds": 0.0569883000007394,
+            "vector_retrieval_seconds": 0.11299830000098154,
+            "metadata_selection_total_seconds": 6.205720800000563,
+            "mdx_generation_seconds": 2.814769900000101,
+            "mdx_execution_seconds": 1.1869805000005726,
+            "final_answer_generation_seconds": 1.9468667000001005,
+            "total_time_seconds": 12.267973300000449
+          },
+          "error": null
+        },
+        {
+          "question_index": 6,
+          "question_id": "q18",
+          "question": "Jaký je kombinovaný hrubý zisk (internet + reseller)?",
+          "singular_value": 12551366.2483,
+          "actual_value": 12551366.2483,
+          "gold_value": 12551366.2483,
+          "values_match": true,
+          "final_answer": "Kombinovaný hrubý zisk (internet + reseller) je 12 551 366,2483.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Combined Gross Profit] AS \n    ([Measures].[Reseller Gross Profit] + [Measures].[Internet Gross Profit])\nSELECT \n    {[Measures].[Combined Gross Profit]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 0,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Internet Gross Profit]",
+            "[Measures].[Reseller Gross Profit]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.05630609999934677,
+            "vector_retrieval_measures_seconds": 0.051715399999011424,
+            "vector_retrieval_seconds": 0.1080214999983582,
+            "metadata_selection_total_seconds": 6.691418300000805,
+            "mdx_generation_seconds": 2.781542699998681,
+            "mdx_execution_seconds": 1.183842899999945,
+            "final_answer_generation_seconds": 2.0430182999989484,
+            "total_time_seconds": 12.808531000000585
+          },
+          "error": null
+        },
+        {
+          "question_index": 7,
+          "question_id": "q19",
+          "question": "Jaká je celková hrubá marže při použití kombinovaných internetových tržeb a tržeb resellerů?",
+          "singular_value": 0.411492777899479,
+          "actual_value": 0.411492777899479,
+          "gold_value": 0.11430151359617215,
+          "values_match": false,
+          "final_answer": "Celková hrubá marže při kombinovaných internetových tržbách a tržbách resellerů je 0.411492777899479.",
+          "executed_mdx_query": "SELECT {[Measures].[Internet Gross Profit Margin], [Measures].[Reseller Gross Profit Margin]} ON COLUMNS FROM [Adventure Works]",
+          "tp": 0,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "task_success": 0,
+          "predicted": [
+            "[Measures].[Internet Gross Profit Margin]",
+            "[Measures].[Reseller Gross Profit Margin]"
+          ],
+          "gold": [
+            "[Measures].[Internet Sales Amount]",
+            "[Measures].[Internet Total Product Cost]",
+            "[Measures].[Reseller Sales Amount]",
+            "[Measures].[Reseller Total Product Cost]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.06329250000089814,
+            "vector_retrieval_measures_seconds": 0.058947100000295904,
+            "vector_retrieval_seconds": 0.12223960000119405,
+            "metadata_selection_total_seconds": 7.919670600000245,
+            "mdx_generation_seconds": 3.2203040000003966,
+            "mdx_execution_seconds": 1.161352099999931,
+            "final_answer_generation_seconds": 2.4387541000014608,
+            "total_time_seconds": 14.862916199999745
+          },
+          "error": null
+        },
+        {
+          "question_index": 8,
+          "question_id": "q20",
+          "question": "Jaký je poměr počtu internetových objednávek k počtu zákazníků?",
+          "singular_value": 1.4963752434537978,
+          "actual_value": 1.4963752434537978,
+          "gold_value": 1.4963752434537978,
+          "values_match": true,
+          "final_answer": "Poměr počtu internetových objednávek k počtu zákazníků je 1.4963752434537978.",
+          "executed_mdx_query": "WITH MEMBER [Measures].[Internet Orders per Customer] AS\n    IIF([Measures].[Customer Count] = 0, NULL,\n        ([Measures].[Internet Order Count]) / ([Measures].[Customer Count])\n    )\nSELECT\n    {[Measures].[Internet Orders per Customer]} ON COLUMNS\nFROM [Adventure Works]",
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "task_success": 1,
+          "predicted": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]",
+            "[Measures].[Internet Orders per Customer]"
+          ],
+          "gold": [
+            "[Measures].[Customer Count]",
+            "[Measures].[Internet Order Count]"
+          ],
+          "timings": {
+            "vector_retrieval_dimensions_and_children_seconds": 0.05386759999964852,
+            "vector_retrieval_measures_seconds": 0.055627300000196556,
+            "vector_retrieval_seconds": 0.10949489999984507,
+            "metadata_selection_total_seconds": 6.754896299999018,
+            "mdx_generation_seconds": 2.610902200000055,
+            "mdx_execution_seconds": 1.1779979999992065,
+            "final_answer_generation_seconds": 2.01448100000016,
+            "total_time_seconds": 12.66839599999912
+          },
+          "error": null
+        }
+      ],
+      "session_metrics": {
+        "num_questions": 8,
+        "total_tp": 7,
+        "total_fp": 7,
+        "total_fn": 11,
+        "macro_precision": 0.5208333333333334,
+        "macro_recall": 0.5625,
+        "macro_f1": 0.5375,
+        "task_success_rate": 0.75,
+        "time_totals_seconds": {
+          "total_time_seconds": 92.7084365999981,
+          "metadata_selection_total_seconds": 41.00928419999764,
+          "metadata_selection_dimensions_seconds": 0.0,
+          "metadata_selection_measures_seconds": 0.0,
+          "mdx_generation_seconds": 19.771673799999917,
+          "mdx_execution_seconds": 9.455672300000515,
+          "mdx_repair_generation_seconds": 0.0,
+          "mdx_repair_execution_seconds": 0.0,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 16.292239600003086,
+          "vector_retrieval_seconds": 1.1693933000005927,
+          "vector_retrieval_dimensions_seconds": 0.0,
+          "vector_retrieval_children_seconds": 0.0,
+          "vector_retrieval_measures_seconds": 0.44240590000117663
+        },
+        "time_averages_seconds": {
+          "total_time_seconds": 11.588554574999762,
+          "metadata_selection_total_seconds": 5.126160524999705,
+          "metadata_selection_dimensions_seconds": 0.0,
+          "metadata_selection_measures_seconds": 0.0,
+          "mdx_generation_seconds": 2.4714592249999896,
+          "mdx_execution_seconds": 1.1819590375000644,
+          "mdx_repair_generation_seconds": 0.0,
+          "mdx_repair_execution_seconds": 0.0,
+          "mdx_auto_repair_execution_seconds": 0.0,
+          "final_answer_generation_seconds": 2.0365299500003857,
+          "vector_retrieval_seconds": 0.1461741625000741,
+          "vector_retrieval_dimensions_seconds": 0.0,
+          "vector_retrieval_children_seconds": 0.0,
+          "vector_retrieval_measures_seconds": 0.05530073750014708
+        }
+      }
+    }
+  ],
+  "overall_metrics": {
+    "num_questions": 32,
+    "total_tp": 33,
+    "total_fp": 33,
+    "total_fn": 39,
+    "macro_precision": 0.5375,
+    "macro_recall": 0.6171875,
+    "macro_f1": 0.5663194444444445,
+    "task_success_rate": 0.75,
+    "time_totals_seconds": {
+      "total_time_seconds": 468.0090706999981,
+      "metadata_selection_total_seconds": 252.20628419999412,
+      "metadata_selection_dimensions_seconds": 77.4127922000007,
+      "metadata_selection_measures_seconds": 26.490197199998875,
+      "mdx_generation_seconds": 84.20148340000014,
+      "mdx_execution_seconds": 38.02513280000312,
+      "mdx_repair_generation_seconds": 6.346045199999935,
+      "mdx_repair_execution_seconds": 2.382796199999575,
+      "mdx_auto_repair_execution_seconds": 0.0,
+      "final_answer_generation_seconds": 62.13083490000645,
+      "vector_retrieval_seconds": 3.5186970999966434,
+      "vector_retrieval_dimensions_seconds": 0.7058343999997305,
+      "vector_retrieval_children_seconds": 0.43464469999889843,
+      "vector_retrieval_measures_seconds": 0.8766832999990584
+    },
+    "time_averages_seconds": {
+      "total_time_seconds": 14.625283459374941,
+      "metadata_selection_total_seconds": 7.881446381249816,
+      "metadata_selection_dimensions_seconds": 2.4191497562500217,
+      "metadata_selection_measures_seconds": 0.8278186624999648,
+      "mdx_generation_seconds": 2.6312963562500045,
+      "mdx_execution_seconds": 1.1882854000000975,
+      "mdx_repair_generation_seconds": 0.19831391249999797,
+      "mdx_repair_execution_seconds": 0.07446238124998672,
+      "mdx_auto_repair_execution_seconds": 0.0,
+      "final_answer_generation_seconds": 1.9415885906252015,
+      "vector_retrieval_seconds": 0.1099592843748951,
+      "vector_retrieval_dimensions_seconds": 0.02205732499999158,
+      "vector_retrieval_children_seconds": 0.013582646874965576,
+      "vector_retrieval_measures_seconds": 0.027396353124970574
+    }
+  },
+  "metrics_by_workflow": {
+    "classic": {
+      "num_questions": 8,
+      "total_tp": 9,
+      "total_fp": 11,
+      "total_fn": 9,
+      "macro_precision": 0.525,
+      "macro_recall": 0.65625,
+      "macro_f1": 0.5652777777777778,
+      "task_success_rate": 0.625,
+      "time_totals_seconds": {
+        "total_time_seconds": 155.76419940000233,
+        "metadata_selection_total_seconds": 103.90298939999957,
+        "metadata_selection_dimensions_seconds": 77.4127922000007,
+        "metadata_selection_measures_seconds": 26.490197199998875,
+        "mdx_generation_seconds": 24.837840700001834,
+        "mdx_execution_seconds": 9.604563700004292,
+        "mdx_repair_generation_seconds": 2.8731915999997,
+        "mdx_repair_execution_seconds": 1.1922766999996384,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 13.347085000001243,
+        "vector_retrieval_seconds": 0.0,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 19.47052492500029,
+        "metadata_selection_total_seconds": 12.987873674999946,
+        "metadata_selection_dimensions_seconds": 9.676599025000087,
+        "metadata_selection_measures_seconds": 3.3112746499998593,
+        "mdx_generation_seconds": 3.1047300875002293,
+        "mdx_execution_seconds": 1.2005704625005365,
+        "mdx_repair_generation_seconds": 0.3591489499999625,
+        "mdx_repair_execution_seconds": 0.1490345874999548,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 1.6683856250001554,
+        "vector_retrieval_seconds": 0.0,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      }
+    },
+    "vector": {
+      "num_questions": 8,
+      "total_tp": 10,
+      "total_fp": 6,
+      "total_fn": 8,
+      "macro_precision": 0.6458333333333334,
+      "macro_recall": 0.6875,
+      "macro_f1": 0.6625,
+      "task_success_rate": 0.875,
+      "time_totals_seconds": {
+        "total_time_seconds": 97.32454289999987,
+        "metadata_selection_total_seconds": 36.591094799996426,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 20.097796300000482,
+        "mdx_execution_seconds": 9.450746599997728,
+        "mdx_repair_generation_seconds": 3.472853600000235,
+        "mdx_repair_execution_seconds": 1.1905194999999367,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 16.032467799999722,
+        "vector_retrieval_seconds": 0.77454729999954,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 12.165567862499984,
+        "metadata_selection_total_seconds": 4.573886849999553,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 2.5122245375000603,
+        "mdx_execution_seconds": 1.181343324999716,
+        "mdx_repair_generation_seconds": 0.4341067000000294,
+        "mdx_repair_execution_seconds": 0.14881493749999208,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.0040584749999653,
+        "vector_retrieval_seconds": 0.0968184124999425,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      }
+    },
+    "vector_hierarchical": {
+      "num_questions": 8,
+      "total_tp": 7,
+      "total_fp": 9,
+      "total_fn": 11,
+      "macro_precision": 0.4583333333333333,
+      "macro_recall": 0.5625,
+      "macro_f1": 0.5,
+      "task_success_rate": 0.75,
+      "time_totals_seconds": {
+        "total_time_seconds": 122.21189179999783,
+        "metadata_selection_total_seconds": 70.70291580000048,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 19.49417259999791,
+        "mdx_execution_seconds": 9.514150200000586,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 16.459042500002397,
+        "vector_retrieval_seconds": 1.5747564999965107,
+        "vector_retrieval_dimensions_seconds": 0.7058343999997305,
+        "vector_retrieval_children_seconds": 0.43464469999889843,
+        "vector_retrieval_measures_seconds": 0.43427739999788173
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 15.276486474999729,
+        "metadata_selection_total_seconds": 8.83786447500006,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 2.4367715749997387,
+        "mdx_execution_seconds": 1.1892687750000732,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.0573803125002996,
+        "vector_retrieval_seconds": 0.19684456249956384,
+        "vector_retrieval_dimensions_seconds": 0.08822929999996632,
+        "vector_retrieval_children_seconds": 0.054330587499862304,
+        "vector_retrieval_measures_seconds": 0.054284674999735216
+      }
+    },
+    "vector_two_tier": {
+      "num_questions": 8,
+      "total_tp": 7,
+      "total_fp": 7,
+      "total_fn": 11,
+      "macro_precision": 0.5208333333333334,
+      "macro_recall": 0.5625,
+      "macro_f1": 0.5375,
+      "task_success_rate": 0.75,
+      "time_totals_seconds": {
+        "total_time_seconds": 92.7084365999981,
+        "metadata_selection_total_seconds": 41.00928419999764,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 19.771673799999917,
+        "mdx_execution_seconds": 9.455672300000515,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 16.292239600003086,
+        "vector_retrieval_seconds": 1.1693933000005927,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.44240590000117663
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 11.588554574999762,
+        "metadata_selection_total_seconds": 5.126160524999705,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 2.4714592249999896,
+        "mdx_execution_seconds": 1.1819590375000644,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.0365299500003857,
+        "vector_retrieval_seconds": 0.1461741625000741,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.05530073750014708
+      }
+    }
+  },
+  "metrics_by_model": {
+    "BAAI/bge-m3": {
+      "num_questions": 32,
+      "total_tp": 33,
+      "total_fp": 33,
+      "total_fn": 39,
+      "macro_precision": 0.5375,
+      "macro_recall": 0.6171875,
+      "macro_f1": 0.5663194444444445,
+      "task_success_rate": 0.75,
+      "time_totals_seconds": {
+        "total_time_seconds": 468.0090706999981,
+        "metadata_selection_total_seconds": 252.20628419999412,
+        "metadata_selection_dimensions_seconds": 77.4127922000007,
+        "metadata_selection_measures_seconds": 26.490197199998875,
+        "mdx_generation_seconds": 84.20148340000014,
+        "mdx_execution_seconds": 38.02513280000312,
+        "mdx_repair_generation_seconds": 6.346045199999935,
+        "mdx_repair_execution_seconds": 2.382796199999575,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 62.13083490000645,
+        "vector_retrieval_seconds": 3.5186970999966434,
+        "vector_retrieval_dimensions_seconds": 0.7058343999997305,
+        "vector_retrieval_children_seconds": 0.43464469999889843,
+        "vector_retrieval_measures_seconds": 0.8766832999990584
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 14.625283459374941,
+        "metadata_selection_total_seconds": 7.881446381249816,
+        "metadata_selection_dimensions_seconds": 2.4191497562500217,
+        "metadata_selection_measures_seconds": 0.8278186624999648,
+        "mdx_generation_seconds": 2.6312963562500045,
+        "mdx_execution_seconds": 1.1882854000000975,
+        "mdx_repair_generation_seconds": 0.19831391249999797,
+        "mdx_repair_execution_seconds": 0.07446238124998672,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 1.9415885906252015,
+        "vector_retrieval_seconds": 0.1099592843748951,
+        "vector_retrieval_dimensions_seconds": 0.02205732499999158,
+        "vector_retrieval_children_seconds": 0.013582646874965576,
+        "vector_retrieval_measures_seconds": 0.027396353124970574
+      }
+    }
+  },
+  "metrics_by_workflow_model": {
+    "BAAI/bge-m3::classic": {
+      "num_questions": 8,
+      "total_tp": 9,
+      "total_fp": 11,
+      "total_fn": 9,
+      "macro_precision": 0.525,
+      "macro_recall": 0.65625,
+      "macro_f1": 0.5652777777777778,
+      "task_success_rate": 0.625,
+      "time_totals_seconds": {
+        "total_time_seconds": 155.76419940000233,
+        "metadata_selection_total_seconds": 103.90298939999957,
+        "metadata_selection_dimensions_seconds": 77.4127922000007,
+        "metadata_selection_measures_seconds": 26.490197199998875,
+        "mdx_generation_seconds": 24.837840700001834,
+        "mdx_execution_seconds": 9.604563700004292,
+        "mdx_repair_generation_seconds": 2.8731915999997,
+        "mdx_repair_execution_seconds": 1.1922766999996384,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 13.347085000001243,
+        "vector_retrieval_seconds": 0.0,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 19.47052492500029,
+        "metadata_selection_total_seconds": 12.987873674999946,
+        "metadata_selection_dimensions_seconds": 9.676599025000087,
+        "metadata_selection_measures_seconds": 3.3112746499998593,
+        "mdx_generation_seconds": 3.1047300875002293,
+        "mdx_execution_seconds": 1.2005704625005365,
+        "mdx_repair_generation_seconds": 0.3591489499999625,
+        "mdx_repair_execution_seconds": 0.1490345874999548,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 1.6683856250001554,
+        "vector_retrieval_seconds": 0.0,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      }
+    },
+    "BAAI/bge-m3::vector": {
+      "num_questions": 8,
+      "total_tp": 10,
+      "total_fp": 6,
+      "total_fn": 8,
+      "macro_precision": 0.6458333333333334,
+      "macro_recall": 0.6875,
+      "macro_f1": 0.6625,
+      "task_success_rate": 0.875,
+      "time_totals_seconds": {
+        "total_time_seconds": 97.32454289999987,
+        "metadata_selection_total_seconds": 36.591094799996426,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 20.097796300000482,
+        "mdx_execution_seconds": 9.450746599997728,
+        "mdx_repair_generation_seconds": 3.472853600000235,
+        "mdx_repair_execution_seconds": 1.1905194999999367,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 16.032467799999722,
+        "vector_retrieval_seconds": 0.77454729999954,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 12.165567862499984,
+        "metadata_selection_total_seconds": 4.573886849999553,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 2.5122245375000603,
+        "mdx_execution_seconds": 1.181343324999716,
+        "mdx_repair_generation_seconds": 0.4341067000000294,
+        "mdx_repair_execution_seconds": 0.14881493749999208,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.0040584749999653,
+        "vector_retrieval_seconds": 0.0968184124999425,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.0
+      }
+    },
+    "BAAI/bge-m3::vector_hierarchical": {
+      "num_questions": 8,
+      "total_tp": 7,
+      "total_fp": 9,
+      "total_fn": 11,
+      "macro_precision": 0.4583333333333333,
+      "macro_recall": 0.5625,
+      "macro_f1": 0.5,
+      "task_success_rate": 0.75,
+      "time_totals_seconds": {
+        "total_time_seconds": 122.21189179999783,
+        "metadata_selection_total_seconds": 70.70291580000048,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 19.49417259999791,
+        "mdx_execution_seconds": 9.514150200000586,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 16.459042500002397,
+        "vector_retrieval_seconds": 1.5747564999965107,
+        "vector_retrieval_dimensions_seconds": 0.7058343999997305,
+        "vector_retrieval_children_seconds": 0.43464469999889843,
+        "vector_retrieval_measures_seconds": 0.43427739999788173
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 15.276486474999729,
+        "metadata_selection_total_seconds": 8.83786447500006,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 2.4367715749997387,
+        "mdx_execution_seconds": 1.1892687750000732,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.0573803125002996,
+        "vector_retrieval_seconds": 0.19684456249956384,
+        "vector_retrieval_dimensions_seconds": 0.08822929999996632,
+        "vector_retrieval_children_seconds": 0.054330587499862304,
+        "vector_retrieval_measures_seconds": 0.054284674999735216
+      }
+    },
+    "BAAI/bge-m3::vector_two_tier": {
+      "num_questions": 8,
+      "total_tp": 7,
+      "total_fp": 7,
+      "total_fn": 11,
+      "macro_precision": 0.5208333333333334,
+      "macro_recall": 0.5625,
+      "macro_f1": 0.5375,
+      "task_success_rate": 0.75,
+      "time_totals_seconds": {
+        "total_time_seconds": 92.7084365999981,
+        "metadata_selection_total_seconds": 41.00928419999764,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 19.771673799999917,
+        "mdx_execution_seconds": 9.455672300000515,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 16.292239600003086,
+        "vector_retrieval_seconds": 1.1693933000005927,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.44240590000117663
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 11.588554574999762,
+        "metadata_selection_total_seconds": 5.126160524999705,
+        "metadata_selection_dimensions_seconds": 0.0,
+        "metadata_selection_measures_seconds": 0.0,
+        "mdx_generation_seconds": 2.4714592249999896,
+        "mdx_execution_seconds": 1.1819590375000644,
+        "mdx_repair_generation_seconds": 0.0,
+        "mdx_repair_execution_seconds": 0.0,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 2.0365299500003857,
+        "vector_retrieval_seconds": 0.1461741625000741,
+        "vector_retrieval_dimensions_seconds": 0.0,
+        "vector_retrieval_children_seconds": 0.0,
+        "vector_retrieval_measures_seconds": 0.05530073750014708
+      }
+    }
+  },
+  "metrics_by_user": {
+    "user1": {
+      "num_questions": 32,
+      "total_tp": 33,
+      "total_fp": 33,
+      "total_fn": 39,
+      "macro_precision": 0.5375,
+      "macro_recall": 0.6171875,
+      "macro_f1": 0.5663194444444445,
+      "task_success_rate": 0.75,
+      "time_totals_seconds": {
+        "total_time_seconds": 468.0090706999981,
+        "metadata_selection_total_seconds": 252.20628419999412,
+        "metadata_selection_dimensions_seconds": 77.4127922000007,
+        "metadata_selection_measures_seconds": 26.490197199998875,
+        "mdx_generation_seconds": 84.20148340000014,
+        "mdx_execution_seconds": 38.02513280000312,
+        "mdx_repair_generation_seconds": 6.346045199999935,
+        "mdx_repair_execution_seconds": 2.382796199999575,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 62.13083490000645,
+        "vector_retrieval_seconds": 3.5186970999966434,
+        "vector_retrieval_dimensions_seconds": 0.7058343999997305,
+        "vector_retrieval_children_seconds": 0.43464469999889843,
+        "vector_retrieval_measures_seconds": 0.8766832999990584
+      },
+      "time_averages_seconds": {
+        "total_time_seconds": 14.625283459374941,
+        "metadata_selection_total_seconds": 7.881446381249816,
+        "metadata_selection_dimensions_seconds": 2.4191497562500217,
+        "metadata_selection_measures_seconds": 0.8278186624999648,
+        "mdx_generation_seconds": 2.6312963562500045,
+        "mdx_execution_seconds": 1.1882854000000975,
+        "mdx_repair_generation_seconds": 0.19831391249999797,
+        "mdx_repair_execution_seconds": 0.07446238124998672,
+        "mdx_auto_repair_execution_seconds": 0.0,
+        "final_answer_generation_seconds": 1.9415885906252015,
+        "vector_retrieval_seconds": 0.1099592843748951,
+        "vector_retrieval_dimensions_seconds": 0.02205732499999158,
+        "vector_retrieval_children_seconds": 0.013582646874965576,
+        "vector_retrieval_measures_seconds": 0.027396353124970574
+      }
+    }
+  }
+}
